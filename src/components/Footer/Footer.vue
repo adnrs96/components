@@ -100,7 +100,7 @@
             <font-awesome-icon :icon="['fab', 'twitter']" />
           </a>
         </div>
-        <p>&copy; 2018 Asyncy, Inc.</p>
+        <p>&copy; 2018-2019 Asyncy, Inc.</p>
       </div>
     </div>
     <h4 :class="['signature', [dark ? 'text--light' : 'text--dark'], 'text--center']">
