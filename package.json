@@ -1,6 +1,6 @@
 {
   "name": "@asyncy/vue",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "scripts": {
     "build": "yarn build:book && yarn build:lib",
     "build:book": "build-storybook -c .storybook -o dist_storybook",
