@@ -1,6 +1,6 @@
 {
   "name": "@asyncy/vue",
-  "version": "0.2.11",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service styleguidist",
@@ -38,10 +38,6 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
-      "vue-cli-service lint",
-      "git add"
-    ],
     "*.vue": [
       "vue-cli-service lint",
       "git add"
