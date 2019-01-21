@@ -6,4 +6,4 @@ Based on [Vuejs](https://vuejs.org) and [bulma](https://bulma.io)
 
 ### Maintainers
 
-This project is open-source under licence MIT. Contribute on [Github](https://github.com/asyncy/components)
+This project is open-source under licence Apache-2.0. Contribute on [Github](https://github.com/asyncy/components)

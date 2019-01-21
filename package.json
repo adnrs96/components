@@ -48,7 +48,13 @@
   "bugs": {
     "url": "https://github.com/asyncy/components/issues"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asyncy/components.git"
