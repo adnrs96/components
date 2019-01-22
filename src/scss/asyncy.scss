@@ -6,40 +6,17 @@
 // Import material design icons
 @import url("//cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css");
 
+// Import variables
+@import "variables/index.scss";
+
 // Import font
-@import "./gilroy.scss";
+@import "gilroy.scss";
 
-// Set colors
-$primary: #8c67ef;
-$primary-invert: findColorInvert($primary);
-
-// Setup $colors to use as bulma classes
-$colors: (
-    "white": ($white, $black),
-    "black": ($black, $white),
-    "light": ($light, $light-invert),
-    "dark": ($dark, $dark-invert),
-    "primary": ($primary, $primary-invert),
-    "info": ($info, $info-invert),
-    "success": ($success, $success-invert),
-    "warning": ($warning, $warning-invert),
-    "danger": ($danger, $danger-invert)
-);
-
-// font family
-$family-sans-serif: "Gilroy", sans-serif !important;
-$family-primary: $family-sans-serif;
-
-// sizes
-$sizes: 5.5rem, 3.125rem, 2.8125rem, 2.25rem, 1.5rem, 1.125rem, 1rem;
-
-// Links
-$link: $primary;
-$link-invert: $primary-invert;
-$link-focus-border: $primary;
+// Init Asyncy by rewriting bulma
+@import "init.scss";
 
 // Import Bulma
 @import "~bulma";
 
-// Import Asyncy custom files
-@import "./colors.scss";
+// Init Asyncy by rewriting bulma
+@import "custom/index.scss";

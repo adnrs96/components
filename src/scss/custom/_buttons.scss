@@ -1,0 +1,59 @@
+.button {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-size: .9rem;
+  padding: .85rem 2.25rem;
+  height: auto;
+
+  &.is-primary[disabled] {
+    opacity: 1;
+    background-color: nth($grays, 3);
+  }
+
+  &.is-secondary {
+    color: $primary;
+    border-color: $primary;
+
+    &:hover,
+    &:focus {
+      color: darken($primary, 10%);
+      border-color: darken($primary, 10%);
+    }
+    &:focus {
+      background-color: rgba($primary, 0.11);
+    }
+    &[disabled] {
+      background-color: $white;
+      border-color: nth($grays, 4);
+      color: nth($grays, 4);
+    }
+  }
+
+  &.is-rounded {
+    border-radius: 3rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
+  &.is-loading {
+    background-color: nth($grays, 2);
+    box-shadow: none !important;
+    border-color: transparent;
+    svg { visibility: hidden }
+  }
+
+  svg.arrow {
+    margin-left: .5rem;
+    height: .5rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 4px;
+    fill-rule: evenodd;
+  }
+}
+
+// make the loader rounded
+.is-loading::after {
+  border-radius: 100% / 100%;
+}
