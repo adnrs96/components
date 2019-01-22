@@ -13,6 +13,7 @@
     >
     <a-button
       type="submit"
+      arrow-mobile
       :loading="sending"
     >
       join beta

@@ -1,16 +1,34 @@
 <template>
   <button
     class="button"
-    :class="['button', `is-${state}`, { [`is-${size}`]: size !== 'normal' }, { 'is-loading': loading }, { 'is-fullwidth': full }, { 'is-rounded': rounded }]"
+    :class="['button', `is-${state}`, { [`is-${size}`]: size !== 'normal' }, { 'is-loading': loading }, { 'is-fullwidth': full }, { 'is-rounded': rounded }, { 'is-link': link }]"
     @click="handleClick"
   >
     <!-- @slot Use this slot to place the button content -->
-    <slot />
+    <span :class="{ 'is-hidden-mobile': arrowMobile }">
+      <slot />
+    </span>
     <template v-if="arrow">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 45.81 18.82"
         class="arrow"
+      >
+        <path
+          d="M1502,4202l8,7.99-8,8.01"
+          transform="translate(-1467 -4200.59)"
+        />
+        <path
+          d="M1467,4210l42-.01"
+          transform="translate(-1467 -4200.59)"
+        />
+      </svg>
+    </template>
+    <template v-else-if="arrowMobile">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 45.81 18.82"
+        class="arrow is-hidden-tablet"
       >
         <path
           d="M1502,4202l8,7.99-8,8.01"
@@ -35,7 +53,14 @@ export default {
     state: {
       type: String,
       default: 'primary',
-      validator: v => ['primary', 'secondary', 'link'].includes(v)
+      validator: v => ['primary', 'secondary'].includes(v)
+    },
+    /**
+     * Sets the button as a link
+     */
+    link: {
+      type: Boolean,
+      default: false
     },
     /**
      * Sets background color of the button
@@ -70,6 +95,13 @@ export default {
      * Sets arrow at the right of the button
      */
     arrow: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * Replace the button text by an arrow (for mobile sizes only)
+     */
+    arrowMobile: {
       type: Boolean,
       default: false
     }

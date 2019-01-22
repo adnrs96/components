@@ -2,7 +2,9 @@
 
 @each $color, $value in $colors {
   .fill--#{$color} {
-    fill: #{nth($value, 1)};
-    fill-rule: evenodd;
+    &, *, & > * {
+      fill: #{nth($value, 1)};
+      fill-rule: evenodd;
+    }
   }
 }

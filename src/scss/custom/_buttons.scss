@@ -6,8 +6,11 @@
   padding: .85rem 2.25rem;
   height: auto;
 
-  &.is-primary[disabled] {
+  &[disabled] {
     opacity: 1;
+  }
+
+  &.is-primary[disabled] {
     background-color: nth($grays, 3);
   }
 
@@ -30,6 +33,34 @@
     }
   }
 
+  &.is-link {
+    &, &:hover, &:focus, &:active {
+      background-color: transparent;
+      border-color: transparent;
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+
+    &.is-#{$name} {
+      &.is-link {
+        color: $color;
+        &:hover, &:focus, &:active { color: darken($color, 5%); }
+        &, &:hover, &:focus, &:active {
+          background-color: transparent;
+          border-color: transparent;
+          box-shadow: none;
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+
   &.is-rounded {
     border-radius: 3rem;
     padding-left: 2.25rem;
@@ -44,7 +75,7 @@
   }
 
   svg.arrow {
-    margin-left: .5rem;
+    margin: .5rem;
     height: .5rem;
     fill: none;
     stroke: currentColor;
