@@ -1,0 +1,15 @@
+.is-stars {
+  background-image: url('~@/assets/img/bg/header.png');
+  background-position: center center;
+  background-size: cover;
+
+  h1, p {
+    color: $white;
+  }
+}
+
+.has-spans {
+  span, a {
+    margin: 0 .5rem;
+  }
+}

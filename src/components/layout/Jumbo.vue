@@ -50,20 +50,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "~@/scss/variables/index.scss";
-
-.is-stars {
-  background-image: url('~@/assets/img/bg/header.png');
-  background-position: center center;
-  background-size: cover;
-
-  h1, p {
-    color: $white;
-  }
-}
-</style>
-
 <docs>
 ### Playground
 
