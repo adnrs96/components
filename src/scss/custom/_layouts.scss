@@ -22,6 +22,9 @@
 }
 
 .jumbo {
+  .navbar {
+    padding: 3rem 2rem;
+  }
   $intos: (bracket, chevron, slash);
   @each $into in $intos {
     .into-#{$into} {

@@ -11,7 +11,11 @@
         <h1 :class="['is-size-1', 'has-text-centered', { [`into-${into}`]: into }]">
           {{ title }}
         </h1>
+        <slot />
       </div>
+    </div>
+    <div class="hero-footer">
+      <slot name="footer" />
     </div>
   </section>
 </template>
@@ -64,7 +68,17 @@ export default {
 
 ```jsx
 <div>
-  <a-jumbo size="fullheight" into="bracket" title="Asyncy amplifies the developer" />
+  <a-jumbo size="fullheight" into="bracket" title="Asyncy amplifies the developer" small="developer marketplace runtime">
+    <a-navbar slot="header" dark :items="[{ name: 'Blog' }, { name: 'Documentation' }]" />
+    <div class="columns is-centered is-desktop">
+      <div class="column is-half">
+        <form-beta />
+      </div>
+    </div>
+    <div slot="footer" class="has-text-centered">
+      <p>Discover our mission to raise any developer <br />into a 10x developer.</p>
+    </div>
+  </a-jumbo>
 </div>
 ```
 </docs>
