@@ -79,19 +79,24 @@
     }
   }
   .navbar-burger {
+    span {
+      transition-duration: .3s;
+      height: 2px;
+      border-radius: 2px;
+    }
     span:nth-child(1) {
-      top: calc(50% - 4px);
+      top: calc(50% - 3px);
     }
     span:nth-child(2) {
-      top: calc(50% + 4px);
+      top: calc(50% + 3px);
     }
   
     &.is-active {
       span:nth-child(1) {
-        transform: translateY(4px) rotate(45deg);
+        transform: translateY(3px) rotate(135deg);
       }
       span:nth-child(2) {
-        transform: translateY(-4px) rotate(-45deg);
+        transform: translateY(-3px) rotate(45deg);
         opacity: 1;
       }
     }
