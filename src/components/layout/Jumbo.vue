@@ -1,5 +1,5 @@
 <template>
-  <section :class="['hero', { 'is-stars': stars }, { [`is-${size}`]: size }]">
+  <section :class="['hero', 'jumbo', { 'is-stars': stars }, { [`is-${size}`]: size }]">
     <div class="hero-head">
       <slot name="header" />
     </div>
@@ -8,7 +8,7 @@
         <p class="is-size-8 has-text-uppercase has-text-centered">
           {{ small }}
         </p>
-        <h1 class="is-size-1 has-text-centered">
+        <h1 :class="['is-size-1', 'has-text-centered', { [`into-${into}`]: into }]">
           {{ title }}
         </h1>
       </div>
@@ -34,6 +34,15 @@ export default {
       type: String,
       default: 'hello world'
     },
+    /** The outside character of the title
+     *
+     * possible values: `bracket, chevron, slash`
+     */
+    into: {
+      type: String,
+      default: undefined,
+      validator: v => ['bracket', 'chevron', 'slash'].includes(v)
+    },
     /**
      * Sets the stars background
      */
@@ -54,6 +63,8 @@ export default {
 ### Playground
 
 ```jsx
-<a-jumbo />
+<div>
+  <a-jumbo size="fullheight" into="bracket" title="Asyncy amplifies the developer" />
+</div>
 ```
 </docs>

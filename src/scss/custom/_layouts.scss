@@ -14,9 +14,43 @@
   }
 }
 
-.footer {
+.footer, .jumbo {
   p {
     font-weight: 700;
     letter-spacing: .1rem;
   }
+}
+
+.jumbo {
+  $intos: (bracket, chevron, slash);
+  @each $into in $intos {
+    .into-#{$into} {
+      padding: 0 40px;
+      &:before, &:after {
+        content: '';
+        background-image: url('~@/assets/img/#{$into}.svg');
+        background-size: contain;
+        width: 40px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        margin: 0 0 -20px;
+        color: $info;
+        @include touch {
+          display: none;
+        }
+        left: 0;
+        top: 0;
+        bottom: 0;
+      }
+      &:after {
+        @if $into != 'slash' {
+          transform: rotate(180deg);
+        }
+        left: unset;
+        right: 0;
+      }
+    }
+  }      
 }
