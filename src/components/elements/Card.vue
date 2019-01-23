@@ -20,8 +20,11 @@
         xlink:href="#path-1"
       />
     </svg>
-    <div :class="['a-card-content', { 'a-card-bg-alternative': alternative }]">
-      <slot />
+    <div class="a-card-container">
+      <div :class="['a-card-background', { 'a-card-bg-alternative': alternative }]" />
+      <div class="a-card-content">
+        <slot />
+      </div>
     </div>
     <svg
       width="100%"
@@ -57,30 +60,32 @@ export default {
   svg {
     vertical-align: top;
   }
-  .a-card-content {
-    background-color: #F2F3F9;
+  .a-card-container {
     padding: 2rem 4rem;
-    margin: 0;
-    &:before {
-      content: '';
+    position: relative;
+    .a-card-content {
+      position: relative;
+    }
+    .a-card-background {
+      width: 100%;
+      height: 100%;
+      z-index: 0;
       position: absolute;
+      background-color: #F2F3F9;
       left: 0;
       right: 0;
+      display: block;
       top: 0;
       bottom: 0;
       background-repeat: no-repeat;
-      background-position: 100% 15px;
-    }
-    &:not(.a-card-bg-alternative) {
-      &:before {
+      background-position: 100% 0;
+      &:not(.a-card-bg-alternative) {
         background-image: url('~@/assets/img/bg/box.svg');
-        background-size: 200px 130px;
+        background-size: 350px 230px;
       }
-    }
-    &.a-card-bg-alternative {
-      &:before {
+      &.a-card-bg-alternative {
         background-image: url('~@/assets/img/bg/box-alternative.svg');
-        background-size: 200px 130px;
+        background-size: 399px 185px;
       }
     }
   }
@@ -93,12 +98,12 @@ export default {
 ```jsx
 <div>
   <a-card>
-    <h1>Hello world</h1>
-    <p>lorem ipsum dolor sit amet</p>
+    <h1 class="is-size-1 title">Hello world</h1>
+    <p class="is-size-4">lorem ipsum dolor sit amet</p>
   </a-card>
   <a-card alternative>
-    <h1>Hello world</h1>
-    <p>lorem ipsum dolor sit amet</p>
+    <h1 class="is-size-1 title">Hello world</h1>
+    <p class="is-size-4">lorem ipsum dolor sit amet</p>
   </a-card>
 </div>
 ```
