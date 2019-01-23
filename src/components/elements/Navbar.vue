@@ -78,10 +78,17 @@
 export default {
   name: 'ANavbar',
   props: {
+    /**
+     * setup the dark theme
+     */
     dark: {
       type: Boolean,
       default: false
     },
+    /** the items array
+     *
+     * possible values of item: `{ name, link, route, icon, active, button }`
+     */
     items: {
       type: Array,
       default: () => []
@@ -101,7 +108,7 @@ new Vue({
                   { name: 'Home', active: true },
                   { name: 'Examples' },
                   { name: 'Documentation' },
-                  { name: 'Download', button: { state: 'primary', link: true, }, icon: 'github-circle' }
+                  { name: 'Sign in', button: {}, icon: 'account-circle' }
                 ]"
               />`,
   methods: {
@@ -121,8 +128,7 @@ new Vue({
       :items="[
         { name: 'Home', active: true },
         { name: 'Examples' },
-        { name: 'Documentation' },
-        { name: 'Download', button: { state: 'primary', link: true, }, icon: 'github-circle' }
+        { name: 'Documentation' }
       ]"
     />
   </div>
