@@ -82,7 +82,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "~@/scss/variables/index.scss";
-@import "~@/scss/animations.scss";
+@import "~@/scss/custom/_animations.scss";
 
 .form-beta {
   background-color: nth($grays, 1);
