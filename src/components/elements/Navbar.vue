@@ -45,17 +45,10 @@
               <a-button
                 v-if="item.button"
                 v-bind="item.button"
+                :icon="item.icon || undefined"
                 @click="$emit('click', {$event, item})"
               >
-                <template v-if="item.icon">
-                  <span class="icon">
-                    <i :class="`mdi mdi-${item.icon}`" />
-                  </span>
-                  <span>{{ item.name }}</span>
-                </template>
-                <template v-else>
-                  {{ item.name }}
-                </template>
+                {{ item.name }}
               </a-button>
               <template v-else-if="item.icon">
                 <span class="icon">
