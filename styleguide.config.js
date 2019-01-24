@@ -23,14 +23,17 @@ module.exports = {
       sections: [
         {
           name: 'Installation',
-          content: 'src/docs/installation.md',
-          description: 'installation '
+          content: 'src/docs/installation.md'
         },
         {
           name: 'Configuration',
           content: 'src/docs/configuration.md'
         }
       ]
+    },
+    {
+      name: 'Typography',
+      content: 'src/docs/typography.md'
     },
     {
       name: 'Elements Components',
