@@ -1,12 +1,12 @@
 .navbar {
   background-color: transparent;
 
-  .fill--white .is-separator { background-color: $white }
+  .fill--white .is-separator { background-color: nth($grays, 2) }
   .is-separator {
     width: 1px;
     height: 1.5rem;
     margin: 0 1rem;
-    background-color: $black;
+    background-color: nth($grays, 2);
   }
 
   &.dark {
