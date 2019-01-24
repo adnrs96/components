@@ -1,7 +1,6 @@
 .button {
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .5px;
   font-size: .9rem;
   padding: .85rem 2.25rem .7rem;
   height: auto;
@@ -107,12 +106,14 @@
     @include mobile {
       margin: .5rem;
     }
-    margin: .5rem 0 .5rem 2rem;
+    margin: .4rem 0 .5rem 2rem;
     height: .5rem;
     fill: none;
     stroke: currentColor;
+    stroke-linecap: round;
     stroke-width: 4px;
     fill-rule: evenodd;
+    overflow: visible;
   }
 }
 

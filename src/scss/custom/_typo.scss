@@ -4,7 +4,7 @@ h2, h3, h4, h5, p { font-weight: 500 }
 
 h1, h2, h3, h4, h5, p, input, span { letter-spacing: .5px }
 
-button, a { letter-spacing: 1.5px }
+button, a, .button { letter-spacing: 1.5px }
 
 input { font-size: nth($sizes, 7) }
 
