@@ -59,7 +59,8 @@
     "url": "git+https://github.com/asyncy/components.git"
   },
   "files": [
-    "dist"
+    "dist",
+    "src/scss"
   ],
   "homepage": "https://github.com/asyncy/components#readme",
   "style": "dist/asyncy-vue.css",
