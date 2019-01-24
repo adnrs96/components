@@ -98,8 +98,8 @@ export default {
 ```jsx
 <div>
   <a-card>
-    <h1 class="is-size-1 title">Hello world</h1>
-    <p class="is-size-4">lorem ipsum dolor sit amet</p>
+    <h2 class="is-size-2 has-text-dark">Hello world <b>Bolded</b></h2>
+    <h5 class="is-size-5 has-text-gray-2">lorem ipsum dolor sit amet</h5>
   </a-card>
   <a-card alternative>
     <h1 class="is-size-1 title">Hello world</h1>

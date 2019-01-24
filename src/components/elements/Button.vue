@@ -1,7 +1,7 @@
 <template>
   <button
     class="button"
-    :class="['button', `is-${state}`, { [`is-${size}`]: size !== 'normal' }, { 'is-loading': loading }, { 'is-fullwidth': full }, { 'is-rounded': rounded }, { 'is-link': link }]"
+    :class="['button', `is-${state}`, { [`is-${size}`]: size !== 'normal' }, { 'is-loading': loading }, { 'is-fullwidth': full }, { 'is-rounded': rounded }, { 'is-link': link }, { 'is-outlined': outlined }]"
     @click="handleClick"
   >
     <!-- @slot Use this slot to place the button content -->
@@ -104,6 +104,13 @@ export default {
     arrowMobile: {
       type: Boolean,
       default: false
+    },
+    /**
+     * Sets the outlined style button
+     */
+    outlined: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -124,6 +131,16 @@ export default {
 ### Playground
 
 ```jsx
-<a-button state="primary">Push Me</a-button>
+<div class="columns is-vcentered has-text-centered">
+  <div class="column">
+    <a-button state="primary">Push Me</a-button>
+  </div>
+  <div class="column">
+    <a-button state="primary" link>Push Me</a-button>
+  </div>
+  <div class="column">
+    <a-button state="primary" outlined>Push Me</a-button>
+  </div>
+</div>
 ```
 </docs>

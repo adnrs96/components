@@ -64,6 +64,13 @@ Asyncy logo as a component
 ## Playground
 
 ```jsx
-<a-logo />
+<div class="columns has-text-centered is-desktop">
+  <div class="column">
+    <a-logo />
+  </div>
+  <div class="column">
+    <a-logo icon />
+  </div>
+</div>
 ```
 </docs>
