@@ -2,6 +2,7 @@
   font-weight: 700;
   text-transform: uppercase;
   font-size: .9rem;
+  letter-spacing: 2px;
   padding: .85rem 2.25rem .7rem;
   height: auto;
 
@@ -33,6 +34,8 @@
   }
 
   &.is-outlined {
+    padding-top: .6rem;
+    padding-bottom: .55rem;
     &[disabled] {
       background-color: $white;
       border-color: nth($grays, 4);
@@ -68,6 +71,8 @@
       }
 
       &.is-outlined {
+        padding-top: .6rem;
+        padding-bottom: .55rem;
         &:focus {
           background-color: darken($color, 5%);
         }
