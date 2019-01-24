@@ -1,10 +1,11 @@
 const path = require('path')
+const version = require('./package.json').version
 
 module.exports = {
   // set your styleguidist configuration here
   title: 'Λsyncy',
   pagePerSection: true,
-  version: '1.0.2',
+  version: version,
   usageMode: 'expand',
   exampleMode: 'expand',
   template: {
