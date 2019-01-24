@@ -3,8 +3,6 @@ import directives from '@/directives'
 import utils from '@/utils'
 import '@/scss/asyncy.scss'
 
-const name = (name) => `a-${name}`
-
 const plugin = {
   install (Vue, options) {
     if (Vue._asyncy_vue_installed) return
@@ -13,14 +11,14 @@ const plugin = {
     // install componentscomponents
     for (let item in components) {
       if (!options || !options.components || options.components.includes(item)) {
-        Vue.component(name(item), components[item])
+        Vue.component(item, components[item])
       }
     }
 
     // install directives
     for (let item in directives) {
       if (!options || !options.directives || options.directives.includes(item)) {
-        Vue.directive(name(item), directives[item])
+        Vue.directive(item, directives[item])
       }
     }
 

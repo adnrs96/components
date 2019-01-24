@@ -15,9 +15,11 @@
 }
 
 .footer, .jumbo {
-  p {
-    font-weight: 700;
-    letter-spacing: .1rem;
+  :not(.hero-footer) {
+    p {
+      font-weight: 700;
+      letter-spacing: .1rem;
+    }
   }
 }
 

@@ -1,21 +1,21 @@
-import Button from './elements/Button'
-import Card from './elements/Card'
-import Icon from './elements/Icon'
-import Logo from './elements/Logo'
-import Navbar from './elements/Navbar'
-import FormBeta from './form/FormBeta'
-import Footer from './layout/Footer'
-import Jumbo from './layout/Jumbo'
+import AButton from './elements/Button'
+import ACard from './elements/Card'
+import AIcon from './elements/Icon'
+import ALogo from './elements/Logo'
+import ANavbar from './elements/Navbar'
+import AFormBeta from './form/FormBeta'
+import AFooter from './layout/Footer'
+import AJumbo from './layout/Jumbo'
 
 export const plugin = {
-  Button,
-  Card,
-  Icon,
-  Logo,
-  Navbar,
-  FormBeta,
-  Footer,
-  Jumbo
+  AButton,
+  ACard,
+  AIcon,
+  ALogo,
+  ANavbar,
+  AFormBeta,
+  AFooter,
+  AJumbo
 }
 
 export default plugin

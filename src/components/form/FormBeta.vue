@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'FormBeta',
+  name: 'AFormBeta',
   props: {
     /**
      * The process function called after submit Should return a Promise
@@ -89,6 +89,7 @@ export default {
   display: flex;
   align-items: center;
   flex: 1 1 100%;
+  margin: 0 auto;
   max-width: 450px;
   justify-content: space-between;
   padding: .2rem .25rem;
@@ -118,6 +119,6 @@ export default {
 ### Playground
 
 ```jsx
-<form-beta />
+<a-form-beta />
 ```
 </docs>

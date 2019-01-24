@@ -72,7 +72,7 @@ export default {
     <a-navbar slot="header" dark :items="[{ name: 'Blog' }, { name: 'Documentation' }]" />
     <div class="columns is-centered is-desktop">
       <div class="column is-half">
-        <form-beta />
+        <a-form-beta />
       </div>
     </div>
     <div slot="footer" class="has-text-centered">
