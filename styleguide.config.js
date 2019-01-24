@@ -4,7 +4,7 @@ module.exports = {
   // set your styleguidist configuration here
   title: 'Λsyncy',
   pagePerSection: true,
-  version: '1.0.0',
+  version: '1.0.2',
   usageMode: 'expand',
   exampleMode: 'expand',
   template: {
