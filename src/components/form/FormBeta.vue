@@ -91,7 +91,7 @@ export default {
   flex: 1 1 100%;
   max-width: 450px;
   justify-content: space-between;
-  padding: .2rem .25rsem;
+  padding: .2rem .25rem;
   border-radius: 2rem;
   &.error { @include animate-shake; }
 
