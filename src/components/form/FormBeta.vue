@@ -86,15 +86,18 @@ export default {
 
 .form-beta {
   background-color: nth($grays, 1);
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  flex: 1 1 100%;
+  max-width: 450px;
   justify-content: space-between;
-  padding: .25rem;
+  padding: .2rem .3rem;
   border-radius: 2rem;
   &.error { @include animate-shake; }
 
   input {
-    font-size: 1rem;
+    width: max-content;
+    min-width: 50px;
     border: none;
     outline: none;
     background: none;

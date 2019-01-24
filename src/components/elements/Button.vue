@@ -1,9 +1,15 @@
 <template>
   <button
     class="button"
-    :class="['button', `is-${state}`, { [`is-${size}`]: size !== 'normal' }, { 'is-loading': loading }, { 'is-fullwidth': full }, { 'is-rounded': rounded }, { 'is-link': link }, { 'is-outlined': outlined }]"
+    :class="['button', `is-${state}`, { [`is-${size}`]: size !== 'normal' }, { 'is-loading': loading }, { 'is-fullwidth': full }, { 'is-rounded': rounded }, { 'is-link': link }, { 'is-outlined': outlined }, { 'is-borderless': borderless }]"
     @click="handleClick"
   >
+    <span
+      v-if="icon"
+      class="icon"
+    >
+      <i :class="`mdi mdi-${icon}`" />
+    </span>
     <!-- @slot Use this slot to place the button content -->
     <span :class="{ 'is-hidden-mobile': arrowMobile }">
       <slot />
@@ -111,6 +117,20 @@ export default {
     outlined: {
       type: Boolean,
       default: false
+    },
+    /**
+     * Sets the button icon
+     */
+    icon: {
+      type: String,
+      default: undefined
+    },
+    /**
+     * Remove the button padding
+     */
+    borderless: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -131,15 +151,18 @@ export default {
 ### Playground
 
 ```jsx
-<div class="columns is-vcentered has-text-centered">
+<div class="columns is-vcentered has-text-centered is-multiline">
   <div class="column">
-    <a-button state="primary">Push Me</a-button>
+    <a-button state="primary">Primary</a-button>
   </div>
   <div class="column">
     <a-button state="primary" link>Push Me</a-button>
   </div>
   <div class="column">
-    <a-button state="primary" outlined>Push Me</a-button>
+    <a-button state="primary" outlined arrow borderless>Secondary</a-button>
+  </div>
+  <div class="column">
+    <a-button state="primary" outlined icon="check-circle">Tertiary</a-button>
   </div>
 </div>
 ```

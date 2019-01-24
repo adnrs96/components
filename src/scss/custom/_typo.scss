@@ -1,22 +1,14 @@
-h1, h4 {
-  font-weight: 700;
-}
+h1 { font-weight: 700 }
 
-h2, h5 {
-  font-weight: 600;
-}
+h2, h3, h4, h5, p { font-weight: 500 }
 
-h3, p {
-  font-weight: 500;
-}
+h1, h2, h3, h4, h5, p, input, span { letter-spacing: .5px }
 
-h1, h2, h3, h4, h5, p {
-  letter-spacing: .05rem;
-}
+button, a { letter-spacing: 1.5px }
 
-.has-text-uppercase {
-  text-transform: uppercase;
-}
+input { font-size: nth($sizes, 7) }
+
+.has-text-uppercase { text-transform: uppercase }
 
 h1 { line-height: 6.5625rem }
 h2 { line-height: 4.25rem }

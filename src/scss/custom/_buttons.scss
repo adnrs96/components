@@ -1,9 +1,9 @@
 .button {
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: .5px;
   font-size: .9rem;
-  padding: .85rem 2.25rem;
+  padding: .85rem 2.25rem .7rem;
   height: auto;
 
   &[disabled] {
@@ -33,12 +33,20 @@
     }
   }
 
+  &.is-outlined {
+    &[disabled] {
+      background-color: $white;
+      border-color: nth($grays, 4);
+      color: nth($grays, 4);
+    }
+  }
+
   &.is-link {
     &, &:hover, &:focus, &:active {
       background-color: transparent;
       border-color: transparent;
       box-shadow: none;
-      padding: 0;
+      padding: .2rem 0 0 0;
       margin: 0;
     }
   }
@@ -49,13 +57,25 @@
     &.is-#{$name} {
       &.is-link {
         color: $color;
-        &:hover, &:focus, &:active { color: darken($color, 5%); }
+        &:hover { color: darken($color, 2%); }
+        &:focus, &:active { color: darken($color, 5%); }
         &, &:hover, &:focus, &:active {
           background-color: transparent;
           border-color: transparent;
           box-shadow: none;
-          padding: 0;
+          padding: .2rem 0 0 0;
           margin: 0;
+        }
+      }
+
+      &.is-outlined {
+        &:focus {
+          background-color: darken($color, 5%);
+        }
+        &[disabled] {
+          background-color: $white;
+          border-color: nth($grays, 4);
+          color: nth($grays, 4);
         }
       }
     }
@@ -74,8 +94,20 @@
     svg { visibility: hidden }
   }
 
+  &.is-borderless  {
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
   svg.arrow {
-    margin: .5rem;
+    @include mobile {
+      margin: .5rem;
+    }
+    margin: .5rem 0 .5rem 2rem;
     height: .5rem;
     fill: none;
     stroke: currentColor;
