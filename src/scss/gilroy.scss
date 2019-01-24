@@ -14,7 +14,7 @@ $fonts: (
 @each $style, $weight in $fonts {
   @font-face {
     font-family: "Gilroy";
-    src: url("../assets/fonts/Gilroy-#{$style}.ttf") format("truetype");
+    src: url("../assets/fonts/Gilroy-#{$style}.otf") format("opentype");
     font-weight: $weight;
   }
 }
