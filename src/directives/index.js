@@ -1,7 +1,7 @@
-import ClickOutside from './click-outside'
-import Waves from './waves'
+import ClickOutside from '@/directives/ClickOutside'
 
-export {
-  ClickOutside,
-  Waves
+export const plugin = {
+  ClickOutside
 }
+
+export default plugin

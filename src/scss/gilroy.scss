@@ -1,0 +1,20 @@
+$fonts: (
+  // Thin: 100,
+  // UltraLight: 200,
+  // Light: 300,
+  Regular: 400,
+  Medium: 500,
+  SemiBold: 600,
+  Bold: 700,
+  // ExtraBold: 800,
+  // Black: 900,
+  // Heavy: 1000,
+);
+
+@each $style, $weight in $fonts {
+  @font-face {
+    font-family: "Gilroy";
+    src: url("../assets/fonts/Gilroy-#{$style}.otf") format("opentype");
+    font-weight: $weight;
+  }
+}

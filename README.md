@@ -6,7 +6,7 @@
 yarn
 ```
 
-### Run storybook
+### Run styleguide
 
 ```
 yarn serve
@@ -15,18 +15,13 @@ yarn serve
 ### Compiles and minifies the library for production
 
 ```
-yarn build:lib
-```
-
-### Compiles the storybook for production
-
-```
-yarn build:book
-```
-
-### Compiles everything
-```
 yarn build
+```
+
+### Compiles the styleguide for production
+
+```
+yarn build:guide
 ```
 
 ### Lints and fixes files

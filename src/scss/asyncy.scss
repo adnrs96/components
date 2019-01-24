@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Import material design icons
+@import url("//cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css");
+
+// Import variables
+@import "variables/index.scss";
+
+// Import font
+@import "gilroy.scss";
+
+// Init Asyncy by rewriting bulma
+@import "init.scss";
+
+// Import Bulma
+@import "~bulma";
+
+// Init Asyncy by rewriting bulma
+@import "custom/index.scss";
