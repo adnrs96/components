@@ -11,9 +11,25 @@ input { font-size: nth($sizes, 7) }
 .has-text-uppercase { text-transform: uppercase }
 .has-letter-spacing-large { letter-spacing: .1rem }
 
-h1 { line-height: 6.5625rem }
-h2 { line-height: 4.25rem }
-h3 { line-height: 4rem }
-h4 { line-height: 3.375rem }
-h5 { line-height: 2.3125rem }
-p { line-height: 1.75rem }
+h1, .is-size-1 { line-height: nth($line-heights, 1) }
+h2, .is-size-2 { line-height: nth($line-heights, 2) }
+h3, .is-size-3 { line-height: nth($line-heights, 3) }
+h4, .is-size-4 { line-height: nth($line-heights, 4) }
+h5, .is-size-5 { line-height: nth($line-heights, 5) }
+p, .is-size-6 { line-height: nth($line-heights, 6) }
+.is-size-7 { line-height: nth($line-heights, 7) }
+.is-size-8 { line-height: nth($line-heights, 8) }
+
+.is-size-1 {
+  @include touch {
+    font-size: nth($sizes, 2) !important;
+    line-height: nth($line-heights, 2) !important;
+  }
+}
+
+.is-size-2 {
+  @include touch {
+    font-size: nth($sizes, 3) !important;
+    line-height: nth($line-heights, 3) !important;
+  }
+}

@@ -4,11 +4,11 @@
       <slot name="header" />
     </div>
     <div class="hero-body">
-      <div class="container">
+      <div class="container is-jumbo-container">
         <p class="is-size-8 has-text-uppercase has-text-centered has-text-weight-bold has-letter-spacing-large">
           {{ small }}
         </p>
-        <h1 :class="['is-size-1', 'has-text-centered', { [`into-${into}`]: into }]">
+        <h1 :class="['is-size-1 is-auto-resize', 'has-text-centered', { [`into-${into}`]: into }]">
           {{ title }}
         </h1>
         <slot />
