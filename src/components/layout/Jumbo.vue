@@ -5,7 +5,7 @@
     </div>
     <div class="hero-body">
       <div class="container">
-        <p class="is-size-8 has-text-uppercase has-text-centered">
+        <p class="is-size-8 has-text-uppercase has-text-centered has-text-weight-bold has-letter-spacing-large">
           {{ small }}
         </p>
         <h1 :class="['is-size-1', 'has-text-centered', { [`into-${into}`]: into }]">
@@ -76,7 +76,9 @@ export default {
       </div>
     </div>
     <div slot="footer" class="has-text-centered">
-      <p>Discover our mission to raise any developer <br />into a 10x developer.</p>
+      <a-icon icon="separator" />
+      <p class="has-text-weight-normal">Discover our mission to raise <br />any developer into a 10x developer.</p>
+      <a-icon icon="arrow-down" stroke="white" />
     </div>
   </a-jumbo>
 </div>

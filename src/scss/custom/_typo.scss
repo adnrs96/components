@@ -9,6 +9,7 @@ button, a, .button { letter-spacing: 1.5px }
 input { font-size: nth($sizes, 7) }
 
 .has-text-uppercase { text-transform: uppercase }
+.has-letter-spacing-large { letter-spacing: .1rem }
 
 h1 { line-height: 6.5625rem }
 h2 { line-height: 4.25rem }

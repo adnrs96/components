@@ -16,7 +16,7 @@ export default {
       type: String,
       default: undefined,
       required: true,
-      validator: v => ['heart'].includes(v)
+      validator: v => ['heart', 'arrow-down'].includes(v)
     }
   }
 }
@@ -26,6 +26,9 @@ export default {
 ### Playground
 
 ```jsx
-<a-icon icon="heart" />
+<div>
+  <a-icon icon="heart" />
+  <a-icon icon="arrow-down" />
+</div>
 ```
 </docs>
