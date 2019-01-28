@@ -2,6 +2,7 @@
   <component
     :is="`a-icon-${icon}`"
     v-if="icon"
+    v-bind="props"
   />
 </template>
 
@@ -20,6 +21,11 @@ export default {
       default: undefined,
       required: true,
       validator: v => names.includes(v)
+    },
+    props: {
+      type: Object,
+      default: undefined,
+      required: false
     }
   },
   data: () => ({ values: names })
