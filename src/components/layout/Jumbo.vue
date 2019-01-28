@@ -6,10 +6,24 @@
     <div class="hero-body">
       <div class="container">
         <p class="is-size-8 has-text-uppercase has-text-centered has-text-weight-bold has-letter-spacing-large">
-          {{ small }}
+          <template v-if="$slots.small">
+            <slot name="small" />
+          </template>
+          <template v-else>
+            {{ small }}
+          </template>
         </p>
         <h1 :class="['is-size-1', 'has-text-centered', { [`into-${into}`]: into }]">
-          {{ title }}
+          <span v-if="into" />
+          <span>
+            <template v-if="$slots.title">
+              <slot name="title" />
+            </template>
+            <template v-else>
+              {{ title }}
+            </template>
+          </span>
+          <span v-if="into" />
         </h1>
         <slot />
       </div>
@@ -68,8 +82,11 @@ export default {
 
 ```jsx
 <div>
-  <a-jumbo size="fullheight" into="bracket" title="Asyncy amplifies the developer" small="developer marketplace runtime">
+  <a-jumbo size="fullheight" into="bracket" small="developer marketplace runtime">
     <a-navbar slot="header" dark :items="[{ name: 'Blog' }, { name: 'Documentation' }]" />
+    <template slot="title">
+      Asyncy amplifies <br /> the developer
+    </template>
     <div class="columns is-centered is-desktop">
       <div class="column is-half">
         <a-form-beta />

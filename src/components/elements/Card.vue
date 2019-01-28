@@ -23,6 +23,12 @@
     <div class="a-card-container">
       <div :class="['a-card-background', { 'a-card-bg-alternative': alternative }]" />
       <div class="a-card-content">
+        <div
+          v-if="$slots.head"
+          class="a-card-head"
+        >
+          <slot name="head" />
+        </div>
         <slot />
       </div>
     </div>
@@ -63,6 +69,9 @@ export default {
   .a-card-container {
     padding: 2rem 4rem;
     position: relative;
+    .a-card-head {
+      margin: 3rem 0;
+    }
     .a-card-content {
       position: relative;
     }
@@ -98,12 +107,18 @@ export default {
 ```jsx
 <div>
   <a-card>
-    <h2 class="is-size-2 has-text-dark">Hello world <b>Bold</b></h2>
-    <h5 class="is-size-5 has-text-gray-2">lorem ipsum dolor sit amet</h5>
+    <template slot="head">
+      <h2 class="is-size-2 has-text-dark">Hello world <b>Bold</b></h2>
+      <h5 class="is-size-5 has-text-gray-2">lorem ipsum dolor sit amet</h5>
+    </template>
+    <p class="is-size-6 has-text-dark">Place your content here</p>
   </a-card>
   <a-card alternative>
-    <h3 class="is-size-3">Hello world <b>bold</b></h3>
-    <h5 class="is-size-5">lorem ipsum dolor sit amet</h5>
+    <template slot="head">
+      <h3 class="is-size-3 has-text-dark">Hello world <b>bold</b></h3>
+      <p class="is-size-6 has-text-gray-2">lorem ipsum dolor sit amet</p>
+    </template>
+    <p class="is-size-6 has-text-dark">Place your content here</p>
   </a-card>
 </div>
 ```

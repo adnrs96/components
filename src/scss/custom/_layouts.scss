@@ -15,6 +15,7 @@
 }
 
 .footer {
+  padding: 1.5rem;
   p {
     a {
       i {
@@ -28,34 +29,39 @@
   .navbar {
     padding: 3rem 2rem;
   }
+
+  h1 {
+    margin-bottom: 3rem;
+  }
+
   $intos: (bracket, chevron, slash);
   @each $into in $intos {
     .into-#{$into} {
-      padding: 0 40px;
-      &:before, &:after {
-        content: '';
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      & > span {
+        display: block;
+        flex: 0 0 auto;
+        padding: 0 25px;
+      }
+      span:first-child, span:last-child {
         background-image: url('~@/assets/img/#{$into}.svg');
         background-size: contain;
-        width: 40px;
+        min-width: 40px;
+        min-height: 125px;
         background-position: center center;
         background-repeat: no-repeat;
-        display: block;
-        position: absolute;
-        margin: 0 0 -20px;
         color: $info;
         @include touch {
           display: none;
         }
-        left: 0;
-        top: 0;
-        bottom: 0;
       }
-      &:after {
+      span:last-child {
         @if $into != 'slash' {
           transform: rotate(180deg);
         }
-        left: unset;
-        right: 0;
       }
     }
   }      
