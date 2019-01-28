@@ -15,36 +15,16 @@
       <slot />
     </span>
     <template v-if="arrow">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 45.81 18.82"
+      <a-icon
         class="arrow"
-      >
-        <path
-          d="M1502,4202l8,7.99-8,8.01"
-          transform="translate(-1467 -4200.59)"
-        />
-        <path
-          d="M1467,4210l42-.01"
-          transform="translate(-1467 -4200.59)"
-        />
-      </svg>
+        icon="arrow"
+      />
     </template>
     <template v-else-if="arrowMobile">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 45.81 18.82"
+      <a-icon
         class="arrow is-hidden-tablet"
-      >
-        <path
-          d="M1502,4202l8,7.99-8,8.01"
-          transform="translate(-1467 -4200.59)"
-        />
-        <path
-          d="M1467,4210l42-.01"
-          transform="translate(-1467 -4200.59)"
-        />
-      </svg>
+        icon="arrow"
+      />
     </template>
   </button>
 </template>
