@@ -8,6 +8,10 @@
   }
 }
 
+.is-reversed {
+  flex-direction: row-reverse;
+}
+
 .has-spans {
   span, a {
     margin: 0 .5rem;
