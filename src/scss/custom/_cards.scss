@@ -3,14 +3,22 @@
   box-sizing: content-box;
   max-width: fit-content;
   margin: 0 auto;
-  svg {
-    vertical-align: top;
-    position: relative;
-  }
+  padding: 2rem 0;
   .a-card-container {
+    svg {
+      vertical-align: top;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      &:first-child { top: -2rem }
+      &:last-child { bottom: -2rem }
+    }
     box-shadow: 0 20px 60px -20px rgba($primary, .38);
     padding: 3rem 4rem;
     position: relative;
+    width: auto;
+    max-width: fit-content;
     .a-card-head {
       margin: 2rem 0;
     }
