@@ -1,6 +1,6 @@
 <template>
   <section :class="[{ 'is-stars': dark }, 'footer']">
-    <div class="containter">
+    <div class="container">
       <div class="columns is-desktop">
         <div class="column">
           <p class="is-size-8 has-text-uppercase has-text-centered has-text-weight-bold">
