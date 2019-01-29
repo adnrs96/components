@@ -2,7 +2,7 @@
   <div class="a-card">
     <svg
       width="100%"
-      height="30px"
+      height="40px"
       viewBox="0 20 1344 1"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -23,18 +23,20 @@
     <div class="a-card-container">
       <div :class="['a-card-background', { 'a-card-bg-alternative': alternative }]" />
       <div class="a-card-content">
-        <div
-          v-if="$slots.head"
-          class="a-card-head"
-        >
-          <slot name="head" />
+        <div class="container">
+          <div
+            v-if="$slots.head"
+            class="a-card-head"
+          >
+            <slot name="head" />
+          </div>
+          <slot />
         </div>
-        <slot />
       </div>
     </div>
     <svg
       width="100%"
-      height="30px"
+      height="40px"
       viewBox="0 800 1344 1"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
@@ -59,47 +61,6 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.a-card {
-  position: relative;
-  svg {
-    vertical-align: top;
-  }
-  .a-card-container {
-    padding: 2rem 4rem;
-    position: relative;
-    .a-card-head {
-      margin: 3rem 0;
-    }
-    .a-card-content {
-      position: relative;
-    }
-    .a-card-background {
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      position: absolute;
-      background-color: #F2F3F9;
-      left: 0;
-      right: 0;
-      display: block;
-      top: 0;
-      bottom: 0;
-      background-repeat: no-repeat;
-      background-position: 100% 0;
-      &:not(.a-card-bg-alternative) {
-        background-image: url('~@/assets/img/bg/box.svg');
-        background-size: 350px 230px;
-      }
-      &.a-card-bg-alternative {
-        background-image: url('~@/assets/img/bg/box-alternative.svg');
-        background-size: 399px 185px;
-      }
-    }
-  }
-}
-</style>
 
 <docs>
 ### Playground

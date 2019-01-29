@@ -1,0 +1,45 @@
+.a-card {
+  position: relative;
+  box-sizing: content-box;
+  svg {
+    vertical-align: top;
+    position: relative;
+    &:last-child {
+      margin-top: -10px;
+    }
+  }
+  .a-card-container {
+    max-width: fit-content;
+    box-shadow: 0 20px 60px -20px rgba($primary, .38);
+    padding: 3rem 4rem;
+    position: relative;
+    .a-card-head {
+      margin: 2rem 0;
+    }
+    .a-card-content {
+      position: relative;
+    }
+    .a-card-background {
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      position: absolute;
+      background-color: $light;
+      left: 0;
+      right: 0;
+      display: block;
+      top: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+      &:not(.a-card-bg-alternative) {
+        background-image: url('~@/assets/img/bg/box.svg');
+        background-size: 350px 230px;
+      }
+      &.a-card-bg-alternative {
+        background-image: url('~@/assets/img/bg/box-alternative.svg');
+        background-size: 399px 185px;
+      }
+    }
+  }
+}
