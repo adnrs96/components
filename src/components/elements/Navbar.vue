@@ -40,7 +40,7 @@
               :href="!item.button && !item.route ? item.link : undefined"
               :to="item.route ? item.route : undefined"
               :title="item.name"
-              :class="['navbar-item', { 'is-active': item.active }, { 'has-button': item.button }]"
+              :class="['navbar-item', { 'is-active': item.active }, { 'is-underlined': item.underlined }, { 'has-button': item.button }]"
             >
               <a-button
                 v-if="item.button"
@@ -80,7 +80,7 @@ export default {
     },
     /** the items array
      *
-     * possible values of item: `{ name, link, route, icon, active, button }`
+     * possible values of item: `{ name, link, route, icon, active, button, underlined }`
      */
     items: {
       type: Array,
@@ -120,7 +120,7 @@ new Vue({
       dark
       :items="[
         { name: 'Home', active: true },
-        { name: 'Examples' },
+        { name: 'Examples', underlined: true },
         { name: 'Documentation' }
       ]"
     />

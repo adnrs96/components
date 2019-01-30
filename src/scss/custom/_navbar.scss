@@ -58,6 +58,13 @@
       &.has-button:before {
         display: none;
       }
+      &.is-underlined:not(.is-active) {
+        & {
+          &:before {
+            left: 50%;
+          }
+        }
+      }
       &:before {
         content: '';
         position: absolute;
