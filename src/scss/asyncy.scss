@@ -7,16 +7,16 @@
 @import url("//cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css");
 
 // Import variables
-@import "variables/index.scss";
+@import "variables/index";
 
 // Import font
-@import "gilroy.scss";
+@import "gilroy";
 
 // Init Asyncy by rewriting bulma
-@import "init.scss";
+@import "init";
 
 // Import Bulma
 @import "~bulma";
 
 // Init Asyncy by rewriting bulma
-@import "custom/index.scss";
+@import "custom/index";
