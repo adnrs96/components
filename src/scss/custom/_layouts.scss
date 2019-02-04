@@ -54,7 +54,10 @@
       & > span {
         display: block;
         flex: 0 0 auto;
-        padding: 0;
+        padding: 0 25px;
+        @include touch {
+          padding: 0 !important;
+        }
       }
       span:first-child, span:last-child {
         background-image: url('~@/assets/img/#{$into}.svg');
