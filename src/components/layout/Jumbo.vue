@@ -59,7 +59,7 @@ export default {
     into: {
       type: String,
       default: undefined,
-      validator: v => ['bracket', 'chevron', 'slash'].includes(v)
+      validator: v => ['bracket', 'chevron', 'hash', 'slash'].includes(v)
     },
     /**
      * Sets the stars background

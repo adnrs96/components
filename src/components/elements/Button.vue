@@ -1,7 +1,12 @@
 <template>
-  <button
+  <component
+    :is="url ? 'a' : to ? 'router-link' : 'button'"
     class="button"
-    :class="['button', `is-${state}`, { [`is-${size}`]: size !== 'normal' }, { 'is-loading': loading }, { 'is-fullwidth': full }, { 'is-rounded': rounded }, { 'is-link': link }, { 'is-outlined': outlined }, { 'is-borderless': borderless }]"
+    :href="getUrl"
+    :target="getTarget"
+    :title="getTitle"
+    :to="to"
+    :class="['button', `is-${state}`, { [`is-${size}`]: size !== 'normal' }, { 'is-loading': loading }, { 'is-fullwidth': full }, { 'is-rounded': rounded }, { 'is-link': link }, { 'is-outlined': outlined }, { 'is-borderless': borderless }, { 'has-arrow': arrow }]"
     @click="handleClick"
   >
     <span
@@ -26,7 +31,7 @@
         icon="arrow"
       />
     </template>
-  </button>
+  </component>
 </template>
 
 <script>
@@ -111,6 +116,34 @@ export default {
     borderless: {
       type: Boolean,
       default: false
+    },
+    /**
+     * the url te redirect to (button as link)
+     *
+     * `url="//domain.tld" or :url="{ href: '//domain.tld', target: '_blank' }"`
+     */
+    url: {
+      type: [String, Object],
+      default: undefined,
+      validator: v => ((typeof v === typeof '') || (Object.keys(v || {}).length === 2 && Object.keys(v).includes('href') && Object.keys(v).includes('target')))
+    },
+    /**
+     * the route to redirect (button as router-link)
+     */
+    to: {
+      type: [String, Object],
+      default: undefined
+    }
+  },
+  computed: {
+    getUrl: function () {
+      return (this.url && typeof this.url !== typeof '') ? this.url.href : this.url
+    },
+    getTarget: function () {
+      return (this.url && typeof this.url !== typeof '') ? this.url.target : this.url
+    },
+    getTitle: function () {
+      return this.$slots.default[0].text
     }
   },
   methods: {
@@ -139,10 +172,11 @@ export default {
     <a-button state="primary" link>Push Me</a-button>
   </div>
   <div class="column">
-    <a-button state="primary" outlined arrow borderless>Secondary</a-button>
+    <a-button state="secondary" arrow>Secondary</a-button>
+    <a-button state="primary" outlined :url="{ href: '//asyncy.com', target: '_blank' }">asyncy.com</a-button>
   </div>
   <div class="column">
-    <a-button state="primary" outlined icon="check-circle">Tertiary</a-button>
+    <a-button state="primary" outlined icon="check-circle" size="small">Small</a-button>
   </div>
 </div>
 ```

@@ -16,15 +16,16 @@
 
   &.is-secondary {
     color: $primary;
-    border-color: $primary;
+    border-color: nth($grays, 4);
 
     &:hover,
-    &:focus {
-      color: darken($primary, 10%);
-      border-color: darken($primary, 10%);
+    &:active {
+      border-color: $primary;
+      color: $white;
+      background-color: darken($primary, 5%);
     }
-    &:focus {
-      background-color: rgba($primary, 0.11);
+    &:active {
+      background-color: darken($primary, 10%);
     }
     &[disabled] {
       background-color: $white;
@@ -34,8 +35,8 @@
   }
 
   &.is-outlined {
-    padding-top: .6rem;
-    padding-bottom: .55rem;
+    border-color: nth($grays, 4);
+    background-color: $white;
     &[disabled] {
       background-color: $white;
       border-color: nth($grays, 4);
@@ -60,8 +61,8 @@
       &.is-link {
         color: $color;
         &:hover { color: darken($color, 2%); }
-        &:focus, &:active { color: darken($color, 5%); }
-        &, &:hover, &:focus, &:active {
+        &:active { color: darken($color, 5%); }
+        &, &:hover, &:active {
           background-color: transparent;
           border-color: transparent;
           box-shadow: none;
@@ -71,9 +72,8 @@
       }
 
       &.is-outlined {
-        padding-top: .6rem;
-        padding-bottom: .55rem;
-        &:focus {
+        border-color: nth($grays, 4);
+        &:active {
           background-color: darken($color, 5%);
         }
         &[disabled] {
@@ -98,6 +98,12 @@
     svg { visibility: hidden }
   }
 
+  &.is-small {
+    padding-top: .6rem;
+    padding-bottom: .55rem;
+  }
+
+  &.has-arrow,
   &.is-borderless  {
     padding-left: .75rem;
     padding-right: .75rem;

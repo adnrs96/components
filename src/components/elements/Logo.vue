@@ -43,7 +43,7 @@ export default {
     variant: {
       type: String,
       default: undefined,
-      validator: v => ['dark', 'primary'].includes(v)
+      validator: v => ['dark', 'primary', 'light'].includes(v)
     },
 
     /**

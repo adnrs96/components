@@ -1,7 +1,7 @@
 <template>
-  <section :class="[{ 'is-stars': dark }, 'footer']">
+  <section :class="[{ 'is-stars': dark }, 'footer', 'section']">
     <div class="container">
-      <div class="columns is-desktop">
+      <div class="columns">
         <div class="column">
           <p class="is-size-8 has-text-uppercase has-text-weight-bold">
             PASSIONATELY BUILT WITH <a-icon icon="heart" /> IN AMSTERDAM

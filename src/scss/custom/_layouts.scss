@@ -24,6 +24,9 @@
 .footer {
   padding: 1.5rem;
   p {
+    @include mobile {
+      text-align: center !important;
+    }
     a {
       i {
         font-size: 150%;
@@ -41,7 +44,7 @@
     margin-bottom: 3rem;
   }
 
-  $intos: (bracket, chevron, slash);
+  $intos: (bracket, chevron, hash, slash);
   @each $into in $intos {
     .into-#{$into} {
       justify-content: center;
