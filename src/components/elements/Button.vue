@@ -43,8 +43,7 @@ export default {
      */
     state: {
       type: String,
-      default: 'primary',
-      validator: v => ['primary', 'secondary'].includes(v)
+      default: 'primary'
     },
     /**
      * Sets the button as a link
