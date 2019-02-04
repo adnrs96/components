@@ -54,7 +54,7 @@
       & > span {
         display: block;
         flex: 0 0 auto;
-        padding: 0 25px;
+        padding: 0;
       }
       span:first-child, span:last-child {
         background-image: url('~@/assets/img/#{$into}.svg');
