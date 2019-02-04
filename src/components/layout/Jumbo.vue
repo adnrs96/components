@@ -43,14 +43,14 @@ export default {
      */
     title: {
       type: String,
-      default: 'Hello'
+      default: undefined
     },
     /**
      * The top description
      */
     small: {
       type: String,
-      default: 'hello world'
+      default: undefined
     },
     /** The outside character of the title
      *
