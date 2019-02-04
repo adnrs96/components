@@ -49,6 +49,14 @@
 
   .navbar-menu {
     border-radius: .5rem;
+    &.is-active {
+      @include touch {
+        position: absolute;
+        right: 1rem;
+        left: 1rem;
+        top: 5rem;
+      }
+    }
     .navbar-item {
       text-transform: uppercase;
       font-size: nth($sizes, 8);
