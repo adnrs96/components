@@ -30,6 +30,7 @@
       <transition name="navbar-collapse">
         <div
           :id="`navbar-${_uid}`"
+          v-click-outside="close"
           :class="['navbar-menu', { 'is-active': active }]"
         >
           <div class="navbar-end">
@@ -41,6 +42,7 @@
               :to="item.route ? item.route : undefined"
               :title="item.name"
               :class="['navbar-item', { 'is-active': item.active }, { 'is-underlined': item.underlined }, { 'has-button': item.button }]"
+              @click="close"
             >
               <a-button
                 v-if="item.button"
@@ -68,8 +70,11 @@
 </template>
 
 <script>
+import ClickOutside from '@/directives/ClickOutside'
+
 export default {
   name: 'ANavbar',
+  directives: { ClickOutside },
   props: {
     /**
      * setup the dark theme
@@ -87,7 +92,14 @@ export default {
       default: () => []
     }
   },
-  data: () => ({ active: false })
+  data: () => ({ active: false }),
+  methods: {
+    close: function () {
+      if (this.active) {
+        this.active = false
+      }
+    }
+  }
 }
 </script>
 
