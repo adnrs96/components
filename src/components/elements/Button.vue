@@ -6,7 +6,7 @@
     :target="getTarget"
     :title="getTitle"
     :to="to"
-    :class="['button', `is-${state}`, { [`is-${size}`]: size !== 'normal' }, { 'is-loading': loading }, { 'is-fullwidth': full }, { 'is-rounded': rounded }, { 'is-link': link }, { 'is-outlined': outlined }, { 'is-borderless': borderless }, { 'has-arrow': arrow }]"
+    :class="['button', `is-${state}`, { [`is-${size}`]: size !== 'normal' }, { 'is-loading': loading }, { 'is-fullwidth': full }, { 'is-rounded': rounded }, { 'is-link': link }, { 'is-outlined': outlined }, { 'is-borderless': borderless }, { 'has-arrow': arrow }, { 'has-mobile-arrow': arrowMobile }]"
     @click="handleClick"
   >
     <span
