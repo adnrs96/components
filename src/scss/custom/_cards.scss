@@ -3,29 +3,23 @@
   box-sizing: content-box;
   max-width: fit-content;
   margin: 0 auto;
-  padding: 3rem 0;
-  .a-card-container {
-    svg.card-svg {
-      vertical-align: top;
-      position: absolute;
-      height: auto;
-      @include mobile {
-        height: 0;
-      }
-      width: 100%;
-      left: 0;
-      right: 0;
-      &:first-child {
-        top: -2rem;
-        @include touch { top: -1rem }
-        @include mobile { top: 0 }
-      }
-      &:last-child {
-        bottom: -2rem;
-        @include touch { bottom: -1rem }
-        @include mobile { bottom: 0 }
-      }
+  svg.card-svg {
+    position: relative;
+    height: auto;
+    @include mobile {
+      height: 0;
     }
+    width: 100%;
+    &:first-child {
+      margin-bottom: -1rem;
+      @include mobile { margin-bottom: 0 }
+    }
+    &:last-child {
+      margin-top: -1rem;
+      @include mobile { margin-top: 0 }
+    }
+  }
+  .a-card-container {
     padding: 3rem 4rem;
     position: relative;
     width: auto;

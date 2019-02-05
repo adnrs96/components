@@ -1,7 +1,7 @@
 <template>
   <div class="a-card">
+    <card-svg position="top" />
     <div class="a-card-container">
-      <card-svg position="top" />
       <div :class="['a-card-background', { 'a-card-bg-alternative': alternative }]" />
       <div class="a-card-content">
         <div class="container">
@@ -14,8 +14,8 @@
           <slot />
         </div>
       </div>
-      <card-svg position="bottom" />
     </div>
+    <card-svg position="bottom" />
   </div>
 </template>
 
