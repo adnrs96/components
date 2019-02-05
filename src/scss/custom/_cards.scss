@@ -12,6 +12,7 @@
     height: auto;
     @include mobile {
       height: 0;
+      display: none;
     }
     width: 100%;
     &:first-child {
