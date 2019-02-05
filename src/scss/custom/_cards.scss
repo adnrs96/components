@@ -3,6 +3,10 @@
   box-sizing: content-box;
   max-width: fit-content;
   margin: 0 auto;
+  @include touch {
+    max-width: 100%;
+    margin: auto;
+  }
   svg.card-svg {
     position: relative;
     height: auto;
@@ -24,6 +28,9 @@
     position: relative;
     width: auto;
     max-width: fit-content;
+    @include touch {
+      max-width: 100%;
+    }
     .a-card-head {
       margin: 2rem 0;
     }
