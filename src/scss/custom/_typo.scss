@@ -33,11 +33,27 @@ p { line-height: nth($line-heights, 6) }
     font-size: nth($sizes, 2) !important;
     line-height: nth($line-heights, 2) !important;
   }
+  @include mobile {
+    font-size: nth($sizes, 3) !important;
+    line-height: nth($line-heights, 3) !important;
+  }
 }
 
 .is-size-2 {
   @include touch {
     font-size: nth($sizes, 3) !important;
     line-height: nth($line-heights, 3) !important;
+  }
+  @include mobile {
+    font-size: nth($sizes, 4) !important;
+    line-height: nth($line-heights, 4) !important;
+  }
+}
+
+
+.is-size-3 {
+  @include touch {
+    font-size: nth($sizes, 4) !important;
+    line-height: nth($line-heights, 4) !important;
   }
 }
