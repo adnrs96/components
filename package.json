@@ -12,6 +12,7 @@
     "update:major": "yarn version --major"
   },
   "dependencies": {
+    "@mdi/font": "^3.4.93",
     "bulma": "^0.7.2",
     "vue": "^2.5.21"
   },

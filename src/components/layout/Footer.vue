@@ -54,13 +54,9 @@ export default {
 ### Playground
 
 ```jsx
-<div class="columns is-multiline">
-  <div class="column is-full">
-    <a-footer />
-  </div>
-  <div class="column is-full">
-    <a-footer dark />
-  </div>
-</div>
+<section class="container">
+  <a-footer />
+  <a-footer dark />
+</section>
 ```
 </docs>
