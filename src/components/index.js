@@ -6,6 +6,7 @@ import ANavbar from './elements/Navbar'
 import AFormBeta from './form/FormBeta'
 import ABoxed from './layout/Boxed'
 import AFooter from './layout/Footer'
+import AJoin from './layout/Join'
 import AJumbo from './layout/Jumbo'
 
 export const plugin = {
@@ -17,6 +18,7 @@ export const plugin = {
   AFormBeta,
   ABoxed,
   AFooter,
+  AJoin,
   AJumbo
 }
 
