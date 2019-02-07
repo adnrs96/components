@@ -2,7 +2,7 @@
   <div class="a-card">
     <card-svg position="top" />
     <div class="a-card-container">
-      <div :class="['a-card-background', { 'a-card-bg-alternative': alternative }]" />
+      <div :class="['a-card-background', { 'a-card-bg-alternative': alternative && !noBackground }, { 'a-card-no-bg': noBackground }]" />
       <div class="a-card-content">
         <div class="container">
           <div
@@ -29,6 +29,10 @@ export default {
     alternative: {
       type: Boolean,
       default: false
+    },
+    noBackground: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -47,6 +51,13 @@ export default {
     <p class="is-size-6 has-text-dark">Place your content here</p>
   </a-card>
   <a-card alternative>
+    <template slot="head">
+      <h3 class="is-size-3 has-text-dark">Hello world <b>bold</b></h3>
+      <p class="is-size-6 has-text-gray-2">lorem ipsum dolor sit amet</p>
+    </template>
+    <p class="is-size-6 has-text-dark">Place your content here</p>
+  </a-card>
+  <a-card no-background>
     <template slot="head">
       <h3 class="is-size-3 has-text-dark">Hello world <b>bold</b></h3>
       <p class="is-size-6 has-text-gray-2">lorem ipsum dolor sit amet</p>

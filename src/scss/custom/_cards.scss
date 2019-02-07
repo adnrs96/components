@@ -52,13 +52,13 @@
       bottom: 0;
       background-repeat: no-repeat;
       background-position: 100% 0;
-      &:not(.a-card-bg-alternative) {
+      &:not(.a-card-no-bg) {
         @include desktop {
           background-image: url('~@/assets/img/bg/box.svg');
           background-size: 350px 230px;
         }
       }
-      &.a-card-bg-alternative {
+      &.a-card-bg-alternative:not(.a-card-no-bg) {
         @include desktop {
           background-image: url('~@/assets/img/bg/box-alternative.svg');
           background-size: 399px 185px;
