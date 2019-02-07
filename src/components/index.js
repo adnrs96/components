@@ -4,6 +4,7 @@ import AIcon from './elements/Icon'
 import ALogo from './elements/Logo'
 import ANavbar from './elements/Navbar'
 import AFormBeta from './form/FormBeta'
+import ABoxed from './layout/Boxed'
 import AFooter from './layout/Footer'
 import AJumbo from './layout/Jumbo'
 
@@ -14,6 +15,7 @@ export const plugin = {
   ALogo,
   ANavbar,
   AFormBeta,
+  ABoxed,
   AFooter,
   AJumbo
 }
