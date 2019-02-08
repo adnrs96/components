@@ -17,14 +17,34 @@ $input-icon-active-color: $dark;
 $input-disabled-icon-color: rgba(nth($grays, 4), .5);
 $input-radius: .5rem;
 
-.input {
-  font-weight: 500;
-}
+// $control-border-width: 1px;
+// $control-padding-vertical: calc(0.5em - #{$control-border-width});
+// $control-padding-horizontal: calc(0.8em - #{$control-border-width});
 
 .field {
+  .control {
+    &.has-icons-left {
+      .input {
+        padding-left: 2.75rem;
+      }
+    }
+    .input {
+      &:not(.is-small) {
+        height: 3rem !important;
+      }
+      font-weight: 500 !important;
+      padding: 1rem;
+    }
+    .icon {
+      &:not(.is-small) {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
   &.disabled {
     .control {
-      &.has-icons-left, &.control.has-icons-right, & {
+      &.has-icons-left, &.has-icons-right, & {
         .icon {
           color: $input-disabled-icon-color;
         }
@@ -33,7 +53,7 @@ $input-radius: .5rem;
   }
   &:hover:not(.disabled) {
     .control {
-      &.has-icons-left, &.control.has-icons-right, & {
+      &.has-icons-left, &.has-icons-right, & {
         .icon {
           color: $input-icon-active-color;
         }
@@ -46,7 +66,7 @@ $input-radius: .5rem;
   }
   &:not(.disabled) {
     .control {
-      &.has-icons-left, &.control.has-icons-right, & {
+      &.has-icons-left, &.has-icons-right, & {
         .input {
           color: $input-color;
           border-color: $input-border-color;
@@ -62,7 +82,7 @@ $input-radius: .5rem;
   &.select-box {
     &, &:hover {
       .control {
-        &.has-icons-left, &.control.has-icons-right, & {
+        &.has-icons-left, &.has-icons-right, & {
           .icon {
             color: $primary;
           }
