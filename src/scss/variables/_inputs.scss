@@ -1,0 +1,96 @@
+$input-color: nth($grays, 3);
+$input-background-color: $white;
+$input-border-color: nth($grays, 4);
+$input-shadow: none;
+$input-hover-color: nth($grays, 2);
+$input-hover-border-color: nth($grays, 4);
+$input-focus-color: $dark;
+$input-focus-border-color: nth($grays, 3);
+$input-focus-box-shadow-size: 0;
+$input-focus-box-shadow-color: transparent;
+$input-disabled-color: rgba(nth($grays, 3), .5);
+$input-disabled-background-color: $white;
+$input-disabled-border-color: rgba(nth($grays, 4), .5);
+// $input-arrow: $link;
+$input-icon-color: nth($grays, 3);
+$input-icon-active-color: $dark;
+$input-disabled-icon-color: rgba(nth($grays, 4), .5);
+$input-radius: .5rem;
+
+.input {
+  font-weight: 500;
+}
+
+.field {
+  &.disabled {
+    .control {
+      &.has-icons-left, &.control.has-icons-right, & {
+        .icon {
+          color: $input-disabled-icon-color;
+        }
+      }
+    }
+  }
+  &:hover:not(.disabled) {
+    .control {
+      &.has-icons-left, &.control.has-icons-right, & {
+        .icon {
+          color: $input-icon-active-color;
+        }
+        .input {
+          color: $input-hover-color;
+          border-color: $input-hover-border-color;          
+        }
+      }
+    }
+  }
+  &:not(.disabled) {
+    .control {
+      &.has-icons-left, &.control.has-icons-right, & {
+        .input {
+          color: $input-color;
+          border-color: $input-border-color;
+        }
+        .input:active, .input:focus {
+          color: $input-focus-color;
+          border-color: $input-focus-border-color;
+        }
+      }
+    }
+  }
+
+  &.select-box {
+    &, &:hover {
+      .control {
+        &.has-icons-left, &.control.has-icons-right, & {
+          .icon {
+            color: $primary;
+          }
+          .input {
+            &, &:hover, &:active, &:focus {
+              cursor: pointer;
+              transition: background-color .1s ease-in;
+              &.open {
+                background-color: $light;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;      
+              }
+              color: $primary;
+              border-color: $input-border-color;
+            }
+          }
+        }
+      }
+      .selectable {
+        border: 1px solid $input-border-color;
+        border-top: none;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        padding-bottom: calc(0.375em - 1px);
+        padding-left: calc(0.625em - 1px);
+        padding-right: calc(0.625em - 1px);
+        padding-top: calc(0.375em - 1px);
+      }
+    }
+  }
+}
