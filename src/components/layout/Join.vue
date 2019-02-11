@@ -30,9 +30,11 @@
       </p>
       <div class="columns story is-multiline">
         <div class="column is-half has-text-white">
-          <h4 class="is-size-4">
+          <h4 class="is-size-4 has-text-light">
             Time to write
-            <b>your story.</b>
+            <b class="has-text-white">
+              your story.
+            </b>
           </h4>
         </div>
         <div class="column is-half">
