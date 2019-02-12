@@ -33,8 +33,17 @@ module.exports = {
       ]
     },
     {
-      name: 'Typography',
-      content: 'src/docs/typography.md'
+      name: 'Styelguide',
+      sections: [
+        {
+          name: 'Typography',
+          content: 'src/docs/typography.md'
+        },
+        {
+          name: 'Color palette',
+          content: 'src/docs/colors.md'
+        }
+      ]
     },
     {
       name: 'Elements Components',

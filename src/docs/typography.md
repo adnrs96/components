@@ -14,7 +14,7 @@
 
 ### Text helpers
 
-```jsx
+```js
 <div>
   <h1 class="is-size-3 has-text-left">I'm a left-centered text</h1>
   <h1 class="is-size-3 has-text-centered">I'm a middle-centered text</h1>
