@@ -1,6 +1,5 @@
 .button {
   &.is-small {
-    padding: .5rem 2.25rem .2em;
     line-height: 1.5;
     height: 2.25rem;
   }
@@ -116,8 +115,8 @@
   }
 
   &.is-small {
-    padding-top: .6rem;
-    padding-bottom: .55rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
   }
 
   &.has-arrow,
