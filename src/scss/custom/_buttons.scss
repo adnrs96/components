@@ -130,12 +130,22 @@
     box-shadow: none !important;
   }
 
-  .arrow {
-    @include mobile {
-      margin: .5rem;
+  .btn-icon {
+    &.arrow {
+      @include mobile {
+        margin: .5rem;
+      }
+      margin: .4rem 0 .5rem 2rem;
+      height: .5rem;
     }
-    margin: .4rem 0 .5rem 2rem;
-    height: .5rem;
+    &:not(.arrow):not(.search) {
+      margin: 0rem 0 0rem 2rem;
+      height: 1.4rem;
+    }
+    &.search {
+      margin: 0rem 0 0.2rem 2rem;
+      height: 1.25rem;
+    }
   }
 }
 

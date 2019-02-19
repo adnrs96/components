@@ -21,8 +21,8 @@
     </span>
     <template v-if="arrow">
       <a-icon
-        class="arrow"
-        icon="arrow"
+        :class="[{arrow: arrowIcon === 'arrow'}, 'btn-icon', {search: arrowIcon === 'search'}]"
+        :icon="arrowIcon"
       />
     </template>
     <template v-else-if="arrowMobile">
@@ -85,7 +85,7 @@ export default {
      * Sets arrow at the right of the button
      */
     arrow: {
-      type: Boolean,
+      type: [Boolean, String],
       default: false
     },
     /**
@@ -143,6 +143,9 @@ export default {
     },
     getTitle: function () {
       return this.$slots.default[0].text
+    },
+    arrowIcon: function () {
+      return typeof this.arrow === typeof true ? 'arrow' : this.arrow
     }
   },
   methods: {
