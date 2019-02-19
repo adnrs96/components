@@ -35,7 +35,7 @@ export default {
 <docs>
 ### Playground
 
-```jsx
+```jsx noeditor
 const Icons = require('./icons').default;
 const names = Object.keys(Icons).reduce((arr, i) => [...arr, i.slice(5, i.length).replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()], []);
 
@@ -43,6 +43,7 @@ const names = Object.keys(Icons).reduce((arr, i) => [...arr, i.slice(5, i.length
   <a-icon
     v-for="icon of names"
     class="column"
+    :title="icon"
     :key="'icon-list-' + icon"
     :icon="icon" />
 </div>

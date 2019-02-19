@@ -4,6 +4,7 @@ import AIconCalendar from './Calendar.vue'
 import AIconDots from './Dots.vue'
 import AIconHeart from './Heart.vue'
 import AIconRocket from './Rocket.vue'
+import AIconSearch from './Search.vue'
 import AIconSeparator from './Separator.vue'
 
 export default {
@@ -13,5 +14,6 @@ export default {
   AIconDots,
   AIconHeart,
   AIconRocket,
+  AIconSearch,
   AIconSeparator
 }
