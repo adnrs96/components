@@ -30,7 +30,15 @@
         v-if="iconLeft"
         :class="['icon', 'is-left']"
       >
-        <i :class="`mdi mdi-${iconLeft}`" />
+        <i
+          v-if="typeof iconLeft === typeof ''"
+          :class="`mdi mdi-${iconLeft}`"
+        />
+        <component
+          :is="iconLeft[0]"
+          v-else
+          v-bind="iconLeft[1]"
+        />
       </span>
       <span
         v-if="valid !== undefined"
@@ -43,7 +51,15 @@
         v-else-if="iconRight"
         :class="['icon', 'is-right']"
       >
-        <i :class="`mdi mdi-${iconRight}`" />
+        <i
+          v-if="typeof iconRight === typeof ''"
+          :class="`mdi mdi-${iconRight}`"
+        />
+        <component
+          :is="iconRight[0]"
+          v-else
+          v-bind="iconRight[1]"
+        />
       </span>
     </div>
     <div
@@ -78,8 +94,8 @@ export default {
     rounded: { type: Boolean, default: false },
     readonly: { type: Boolean, default: undefined },
     loading: { type: Boolean, default: false },
-    iconLeft: { type: String, default: undefined },
-    iconRight: { type: String, default: undefined },
+    iconLeft: { type: [String, Array], default: undefined },
+    iconRight: { type: [String, Array], default: undefined },
     valid: { type: Boolean, default: undefined }
   }
 }
@@ -93,7 +109,7 @@ new Vue({
   template: `<section>
               <a-input
                 v-model="input"
-                icon-right="magnify"
+                :icon-right="['a-icon', { icon: 'search' }]"
                 size="large"
               />
               <a-input
