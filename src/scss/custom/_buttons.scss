@@ -27,6 +27,7 @@
   &.is-secondary {
     color: $primary;
     border-color: nth($grays, 4);
+    background-color: transparent;
 
     &:hover,
     &:active {
