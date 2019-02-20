@@ -21,6 +21,10 @@ $input-radius: .5rem;
 // $control-padding-vertical: calc(0.5em - #{$control-border-width});
 // $control-padding-horizontal: calc(0.8em - #{$control-border-width});
 
+input::placeholder {
+  color: nth($grays, 3) !important;
+}
+
 .field {
   .control {
     &.has-icons-left {
@@ -32,7 +36,7 @@ $input-radius: .5rem;
       &:not(.is-small) {
         height: 3rem !important;
       }
-      font-weight: 500 !important;
+      font-weight: 600;
       padding: 1rem;
     }
     .icon {

@@ -113,7 +113,7 @@ new Vue({
                 size="large"
               />
               <a-input
-                v-model="input"
+                placeholder="hello world"
               />
               <a-input has-addons="centered" icon-left="email">
                 <template slot="right">
