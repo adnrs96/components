@@ -1,3 +1,4 @@
+import ABreadcrumbs from './elements/Breadcrumbs'
 import AButton from './elements/Button'
 import ACard from './elements/Card'
 import AIcon from './elements/Icon'
@@ -11,6 +12,7 @@ import AJoin from './layout/Join'
 import AJumbo from './layout/Jumbo'
 
 export const plugin = {
+  ABreadcrumbs,
   AButton,
   ACard,
   AIcon,
