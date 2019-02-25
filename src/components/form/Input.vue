@@ -16,7 +16,7 @@
     </div>
     <div :class="['control', {'has-icons-left': iconLeft}, {'has-icons-right': iconRight}, {'is-expanded': expanded}]">
       <input
-        :class="['input', {[`is-${size}`]: size !== 'normal'}, {'is-rounded': rounded}, {'is-loading': loading}]"
+        :class="['input', {[`is-${size}`]: size !== 'normal'}, {'is-rounded': rounded}, {'is-loading': loading}, {[`has-background-${background}`]: background}]"
         :placeholder="placeholder"
         :disabled="disabled"
         :type="type"
@@ -79,6 +79,7 @@ export default {
     hasAddons: { type: [Boolean, String], default: undefined, validator: v => [true, false, 'centered', 'right'].includes(v) },
     isGrouped: { type: [Boolean, String], default: undefined, validator: v => [true, false, 'centered', 'right'].includes(v) },
     expanded: { type: Boolean, default: undefined },
+    background: { type: String, default: undefined },
     type: {
       type: String,
       default: 'text',
@@ -113,6 +114,10 @@ new Vue({
                 size="large"
               />
               <a-input
+                placeholder="hello world"
+              />
+              <a-input
+                background="light"
                 placeholder="hello world"
               />
               <a-input has-addons="centered" icon-left="email">
