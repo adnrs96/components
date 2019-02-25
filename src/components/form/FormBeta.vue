@@ -16,7 +16,7 @@
       arrow-mobile
       :loading="sending"
     >
-      join beta
+      {{ success ? 'Thanks !' : 'Join Beta' }}
     </a-button>
   </form>
 </template>
