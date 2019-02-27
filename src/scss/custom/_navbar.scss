@@ -59,10 +59,18 @@
     }
     .navbar-item {
       text-transform: uppercase;
-      font-size: nth($sizes, 8);
+      font-size: nth($sizes, 9);
+      margin: 0 .45rem;
       font-weight: 700;
       letter-spacing: .1rem;
       position: relative;
+      &.has-button {
+        padding: 0 .75rem;
+        button {
+          height: 45px;
+          padding-top: .65rem;
+        }
+      }
       &.has-button:before {
         display: none;
       }

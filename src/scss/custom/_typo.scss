@@ -10,6 +10,7 @@ input { font-size: nth($sizes, 7) }
 
 .has-text-uppercase { text-transform: uppercase }
 .has-letter-spacing-large { letter-spacing: .1rem }
+.has-letter-spacing-xlarge { letter-spacing: .1875rem }
 
 h1 { line-height: nth($line-heights, 1) }
 h2 { line-height: nth($line-heights, 2) }
