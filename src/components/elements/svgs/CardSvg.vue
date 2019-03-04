@@ -11,7 +11,7 @@
       v-if="position"
       :d="value.d"
       :transform="value.transform"
-      fill="#F2F3F9"
+      fill="#FAFAFC"
       fill-rule="nonzero"
     />
   </svg>
