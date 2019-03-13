@@ -1,6 +1,6 @@
 <template>
   <section :class="[{ 'is-stars': dark }, 'footer', 'section']">
-    <div class="container">
+    <div class="container is-widescreen">
       <div class="columns">
         <div class="column">
           <p class="is-size-8 has-text-uppercase has-text-weight-bold">
@@ -54,7 +54,7 @@ export default {
 ### Playground
 
 ```jsx
-<section class="container">
+<section>
   <a-footer />
   <a-footer dark />
 </section>

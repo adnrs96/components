@@ -1,6 +1,6 @@
 <template>
   <section :class="['join-beta', 'is-stars', 'section', {'is-paddingless': isPaddingless }]">
-    <div class="container">
+    <div class="container is-widescreen">
       <p
         v-if="crew"
         class="is-size-6 has-text-white has-text-centered is-vcentered"

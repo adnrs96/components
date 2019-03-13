@@ -7,9 +7,12 @@ import ANavbar from './elements/Navbar'
 import AFormBeta from './form/FormBeta'
 import AInput from './form/Input'
 import ABoxed from './layout/Boxed'
+import ACol from './layout/Col'
+import AContainer from './layout/Container'
 import AFooter from './layout/Footer'
 import AJoin from './layout/Join'
 import AJumbo from './layout/Jumbo'
+import ALayout from './layout/Layout'
 
 export const plugin = {
   ABreadcrumbs,
@@ -21,9 +24,12 @@ export const plugin = {
   AFormBeta,
   AInput,
   ABoxed,
+  ACol,
+  AContainer,
   AFooter,
   AJoin,
-  AJumbo
+  AJumbo,
+  ALayout
 }
 
 export default plugin

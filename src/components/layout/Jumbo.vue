@@ -4,7 +4,7 @@
       <slot name="header" />
     </div>
     <div class="hero-body">
-      <div class="container">
+      <div class="container is-widescreen">
         <p class="is-size-8 has-text-uppercase has-text-centered has-text-weight-bold has-letter-spacing-xlarge">
           <template v-if="$slots.small">
             <slot name="small" />
