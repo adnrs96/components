@@ -1,39 +1,30 @@
 <template>
-  <div class="a-card">
-    <card-svg position="top" />
-    <div class="a-card-container">
-      <div :class="['a-card-background', { 'a-card-bg-alternative': alternative && !noBackground }, { 'a-card-no-bg': noBackground }]" />
-      <div class="a-card-content">
-        <div class="container">
-          <div
-            v-if="$slots.head"
-            class="a-card-head"
-          >
-            <slot name="head" />
-          </div>
-          <slot />
-        </div>
-      </div>
-    </div>
-    <card-svg position="bottom" />
-  </div>
+  <a-layout :full="full">
+    <a-container
+      multiline
+      :background="background"
+      rounded
+      :marged="marged"
+      :shadow="shadow"
+    >
+      <a-col size="full">
+        <slot name="head" />
+      </a-col>
+      <a-col size="full">
+        <slot />
+      </a-col>
+    </a-container>
+  </a-layout>
 </template>
 
 <script>
-import CardSvg from './svgs/CardSvg'
-
 export default {
   name: 'ACard',
-  components: { CardSvg },
   props: {
-    alternative: {
-      type: Boolean,
-      default: false
-    },
-    noBackground: {
-      type: Boolean,
-      default: false
-    }
+    full: { type: Boolean, default: false },
+    marged: { type: String, default: 'none', validator: v => ['none', 'small', 'medium', 'large'].includes(v) },
+    background: { type: String, default: 'light' },
+    shadow: { type: Boolean, default: false }
   }
 }
 </script>
@@ -43,7 +34,7 @@ export default {
 
 ```jsx
 <div>
-  <a-card>
+  <a-card shadow>
     <template slot="head">
       <h2 class="is-size-2 has-text-dark">Hello world <b>Bold</b></h2>
       <h5 class="is-size-5 has-text-gray-2">lorem ipsum dolor sit amet</h5>

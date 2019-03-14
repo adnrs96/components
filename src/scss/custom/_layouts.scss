@@ -8,6 +8,33 @@
   }
 }
 
+.is-rounded {
+  border-radius: .625rem;
+}
+
+.has-shadow {
+  box-shadow: 0 .3125rem 1.25rem rgba(0, 0, 0, .085);
+}
+
+.columns {
+  &.marged-none {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  &.marged-small {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  &.marged-medium {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+  &.marged-large {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+}
+
 .is-reversed {
   flex-direction: row-reverse;
 }
