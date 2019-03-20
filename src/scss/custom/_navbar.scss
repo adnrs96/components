@@ -1,7 +1,10 @@
 .navbar {
   background-color: transparent;
 
-  .fill--white .is-separator { background-color: nth($grays, 2) }
+  .fill--white .is-separator {
+    background-color: nth($grays, 2)
+  }
+
   .is-separator {
     width: 1px;
     height: 1.5rem;
@@ -14,17 +17,21 @@
       @include desktop {
         .navbar-item {
           color: $white;
+
           &:before {
             background-color: $info;
           }
+
           &.is-active {
             color: $info;
           }
         }
       }
     }
+
     .navbar-burger {
       color: $white;
+
       &:hover {
         background-color: rgba($white, .1);
       }
@@ -36,9 +43,11 @@
       @include desktop {
         .navbar-item {
           color: #000;
+
           &:before {
             background-color: $primary;
           }
+
           &.is-active {
             color: $primary;
           }
@@ -49,6 +58,7 @@
 
   .navbar-menu {
     border-radius: .5rem;
+
     &.is-active {
       @include touch {
         position: absolute;
@@ -57,6 +67,7 @@
         top: 5rem;
       }
     }
+
     .navbar-item {
       text-transform: uppercase;
       font-size: nth($sizes, 9);
@@ -64,16 +75,19 @@
       font-weight: 700;
       letter-spacing: .1rem;
       position: relative;
+
       &.has-button {
         padding: 0 .75rem;
+
         button {
           height: 45px;
-          padding-top: .65rem;
         }
       }
+
       &.has-button:before {
         display: none;
       }
+
       &.is-underlined:not(.is-active) {
         & {
           &:before {
@@ -81,6 +95,7 @@
           }
         }
       }
+
       &:before {
         content: '';
         position: absolute;
@@ -91,33 +106,41 @@
         right: .5rem;
         transition: all .25s ease-in;
       }
+
       &:hover:not(.is-active) {
         &:before {
           left: .5rem;
         }
       }
-      &:hover, &:active, &.is-active {
+
+      &:hover,
+      &:active,
+      &.is-active {
         background-color: transparent;
       }
     }
   }
+
   .navbar-burger {
     span {
       transition-duration: .3s;
       height: 2px;
       border-radius: 2px;
     }
+
     span:nth-child(1) {
       top: calc(50% - 3px);
     }
+
     span:nth-child(2) {
       top: calc(50% + 3px);
     }
-  
+
     &.is-active {
       span:nth-child(1) {
         transform: translateY(3px) rotate(135deg);
       }
+
       span:nth-child(2) {
         transform: translateY(-3px) rotate(45deg);
         opacity: 1;
