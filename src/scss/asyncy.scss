@@ -6,14 +6,11 @@
 // Import material design icons
 @import "~@mdi/font/css/materialdesignicons.min.css";
 
-// Import variables
-@import "variables/index";
-
 // Import font
 @import "gilroy";
 
-// Init Asyncy by rewriting bulma
-@import "init";
+// Import variables
+@import "variables/index";
 
 // Import Bulma
 @import "~bulma";

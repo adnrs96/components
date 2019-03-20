@@ -1,36 +1,68 @@
 <template>
   <section
-    :class="[{[`has-background-${background}`]: background}]"
+    :class="[...getBackground, ...getMargin]"
   >
-    <div :class="['container', 'is-widescreen', {'is-marginless': full}]">
+    <slot name="absolute" />
+    <div
+      v-if="$slots.default"
+      :class="['container', {'is-widescreen': !full}, {'is-fluid': full}, {[`has-background-${foreground}`]: foreground},
+               {'is-rounded': rounded}, {'has-shadow': shadow}, ...getPadding, ...isOutside]"
+    >
       <slot />
     </div>
   </section>
 </template>
 
 <script>
+import Background from '@/mixins/Background'
+import Padding from '@/mixins/Padding'
+
 export default {
   name: 'ALayout',
+  mixins: [Background, Padding],
   props: {
-    background: { type: String, default: undefined },
-    full: { type: Boolean, default: false }
+    foreground: { type: String, default: undefined },
+    rounded: { type: Boolean, default: false },
+    shadow: { type: Boolean, default: false },
+    full: { type: Boolean, default: false },
+    margin: { type: [Array, String], default: 'none' },
+    outside: { type: Boolean, default: false }
+  },
+  computed: {
+    isOutside: function () {
+      const top = typeof this.margin === typeof '' ? this.margin : this.margin[0]
+      return this.outside ? [`has-top-outside-${top}`] : []
+    },
+    getMargin: function () {
+      if (typeof this.margin === typeof '') {
+        return [`has-padding-${this.margin}`]
+      } else if (this.margin.length === 1) {
+        return [`has-padding-${this.margin[0]}`]
+      }
+      return [`has-padding-top-${this.margin[0]}`, `has-padding-bottom-${this.margin[1]}`]
+    }
   }
 }
 </script>
 
 <docs>
 ```jsx
-<a-layout background="success">
-  <a-container multiline margin="3" vh-centered>
-    <a-col size="one-quarter" background="light">
+<a-layout background="light" foreground="white" rounded shadow padding="large" margin="max" outside>
+  <a-container vh-centered>
+    <a-div size="one-quarter" background="light">
       hello
-    </a-col>
-    <a-col size="full">
+    </a-div>
+    <a-div size="half">
+      <a-container>
+        <a-div size="1" v-for="i in 6" background="black">
+          <p>d</p>
+        </a-div>
+        <a-div background="dark">a</a-div>
+      </a-container>
+    </a-div>
+    <a-div v-for="i in 15" size="1" background="dark">
       hello
-    </a-col>
-    <a-col v-for="i in 4" size="one-quarter" background="light">
-      hello
-    </a-col>
+    </a-div>
   </a-container>
 </a-layout>
 ```

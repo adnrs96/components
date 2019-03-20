@@ -1,15 +1,23 @@
 <template>
-  <section :class="[{ 'is-stars': dark }, 'footer', 'section']">
-    <div class="container is-widescreen">
-      <div class="columns">
-        <div class="column">
-          <p class="is-size-8 has-text-uppercase has-text-weight-bold">
-            PASSIONATELY BUILT WITH <a-icon icon="heart" /> IN AMSTERDAM
+  <a-layout
+    :class="[{'is-stars': dark}]"
+    padding="normal"
+  >
+    <a-container>
+      <a-div>
+        <a-level>
+          <p
+            slot="left"
+            class="is-footer-text is-size-8 has-text-uppercase has-text-weight-bold has-letter-spacing-large"
+          >
+            PASSIONATELY BUILT WITH
+            <a-icon icon="heart" />IN AMSTERDAM
           </p>
-        </div>
-        <div class="column">
-          <p class="is-size-8 has-text-uppercase has-text-right has-spans has-text-weight-bold has-letter-spacing-large">
-            <span>&copy; 2019 ASYNCY, Inc.</span>
+          <p
+            slot="right"
+            class="is-footer-text is-size-8 has-text-uppercase has-text-right has-spans has-text-weight-bold"
+          >
+            <span class="has-letter-spacing-large">&copy; 2019 ASYNCY, Inc.</span>
             <a
               :class="[`has-text-${dark ? 'white' : 'dark'}`]"
               href="//asyncy.click/slack"
@@ -32,10 +40,10 @@
               <i class="mdi mdi-github-circle" />
             </a>
           </p>
-        </div>
-      </div>
-    </div>
-  </section>
+        </a-level>
+      </a-div>
+    </a-container>
+  </a-layout>
 </template>
 
 <script>

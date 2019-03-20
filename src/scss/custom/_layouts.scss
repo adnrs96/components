@@ -16,27 +16,29 @@
   box-shadow: 0 .3125rem 1.25rem rgba(0, 0, 0, .085);
 }
 
-.columns {
-  &.marged-none {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-  &.marged-small {
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
-  }
-  &.marged-medium {
-    margin-top: 2rem !important;
-    margin-bottom: 2rem !important;
-  }
-  &.marged-large {
-    margin-top: 3rem !important;
-    margin-bottom: 3rem !important;
-  }
-}
-
 .is-reversed {
   flex-direction: row-reverse;
+}
+
+$paddings: (
+  "none": 0,
+  "min": .25,
+  "small": .5,
+  "1x": 1,
+  "normal": 1.5,
+  "2x": 2,
+  "medium": 3,
+  "3x5": 3.5,
+  "large": 5,
+  "7x5": 7.5,
+  "9xx": 9.375,
+  "max": 12.5
+);
+
+@each $padding, $value in $paddings {
+  .has-padding-#{$padding}, .has-padding-top-#{$padding} { padding-top: #{$value}rem }
+  .has-padding-#{$padding}, .has-padding-bottom-#{$padding} { padding-bottom: #{$value}rem }
+  .has-top-outside-#{$padding} { top: #{-$value - 2.5}rem }
 }
 
 .has-spans {
@@ -48,16 +50,15 @@
   }
 }
 
-.footer {
-  padding: 1.5rem;
-  p {
-    @include mobile {
-      text-align: center !important;
-    }
-    a {
-      i {
-        font-size: 150%;
-      }
+.is-footer-text {
+  line-height: nth($line-heights, 2) !important;
+  @include touch {
+    line-height: nth($line-heights, 5) !important;
+    text-align: center !important;
+  }
+  a {
+    i {
+      font-size: 150%;
     }
   }
 }

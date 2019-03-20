@@ -1,0 +1,17 @@
+@import "~bulma/sass/utilities/mixins";
+
+$column-gap: 1.171875rem;
+$container-padding: calc(5.4375rem + #{$column-gap});
+$container-padding-touch: calc(1rem + #{$column-gap});
+
+.container {
+  padding: 0 #{$container-padding};
+  @include touch {
+    padding: 0 #{$container-padding-touch}
+  }
+}
+
+.column .columns {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}

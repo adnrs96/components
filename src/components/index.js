@@ -7,7 +7,7 @@ import ANavbar from './elements/Navbar'
 import AFormBeta from './form/FormBeta'
 import AInput from './form/Input'
 import ABoxed from './layout/Boxed'
-import ACol from './layout/Col'
+import ADiv from './layout/Div'
 import AContainer from './layout/Container'
 import AFooter from './layout/Footer'
 import AJoin from './layout/Join'
@@ -24,7 +24,7 @@ export const plugin = {
   AFormBeta,
   AInput,
   ABoxed,
-  ACol,
+  ADiv,
   AContainer,
   AFooter,
   AJoin,
