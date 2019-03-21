@@ -5,10 +5,12 @@ $container-padding: calc(5.4375rem + #{$column-gap});
 $container-padding-touch: calc(1rem + #{$column-gap});
 
 .container {
-  padding: 0 #{$container-padding};
+  padding-left: #{$container-padding};
+  padding-right: #{$container-padding};
 
   @include touch {
-    padding: 0 #{$container-padding-touch}
+    padding-left: #{$container-padding-touch};
+    padding-right: #{$container-padding-touch};
   }
 }
 
