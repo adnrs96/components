@@ -13,6 +13,7 @@ import AFooter from './layout/Footer'
 import AJoin from './layout/Join'
 import AJumbo from './layout/Jumbo'
 import ALayout from './layout/Layout'
+import ALevel from './layout/Level'
 
 export const plugin = {
   ABreadcrumbs,
@@ -29,7 +30,8 @@ export const plugin = {
   AFooter,
   AJoin,
   AJumbo,
-  ALayout
+  ALayout,
+  ALevel
 }
 
 export default plugin
