@@ -6,6 +6,7 @@ $container-padding-touch: calc(1rem + #{$column-gap});
 
 .container {
   padding: 0 #{$container-padding};
+
   @include touch {
     padding: 0 #{$container-padding-touch}
   }
@@ -14,4 +15,9 @@ $container-padding-touch: calc(1rem + #{$column-gap});
 .column .columns {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+}
+
+.columns:first-child:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
 }
