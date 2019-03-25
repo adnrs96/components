@@ -1,8 +1,5 @@
 <template>
-  <a-layout
-    :class="[{'is-stars': dark}]"
-    padding="normal"
-  >
+  <a-layout :class="[{'is-stars': dark}]">
     <a-container>
       <a-div>
         <a-level>
