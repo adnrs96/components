@@ -3,15 +3,18 @@
     margin-top: -10rem !important;
     padding-top: 15rem !important;
   }
+
   &.is-paddingless {
     padding-top: 3rem !important;
   }
 
   .story {
     padding: 10rem 0;
+
     @include mobile {
       padding: 3rem 0;
     }
+
     .column {
       @include touch {
         text-align: center;
@@ -19,10 +22,13 @@
     }
   }
 
-  .form-beta {
-    margin-right: 0;
-    @include touch {
-      margin-right: auto;
+  .is-half {
+    .form-beta {
+      margin-right: 0;
+
+      @include touch {
+        margin-right: auto;
+      }
     }
   }
 
@@ -30,10 +36,11 @@
     padding-bottom: 5rem;
 
     ul {
-      li + li {
+      li+li {
         margin-top: 1.5rem;
       }
-      li.list-head + li {
+
+      li.list-head+li {
         margin-top: 2rem;
       }
     }

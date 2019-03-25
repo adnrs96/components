@@ -33,7 +33,7 @@
           :size="bigger ? 'full' : 'half'"
           class="has-text-white"
         >
-          <h4 :class="['is-size-4', 'has-text-light', {'has-text-centered': bigger}, {'has-padding-bottom-medium': bigger}]">
+          <h4 :class="[`is-size-${bigger ? '2' : '4'}`, 'has-text-light', {'has-text-centered': bigger}, {'has-padding-bottom-medium': bigger}]">
             Time to write
             <b class="has-text-white">
               your story.
