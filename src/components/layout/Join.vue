@@ -28,19 +28,22 @@
         </a>
         <span>.</span>
       </p>
-      <div class="columns story is-multiline">
-        <div class="column is-half has-text-white">
-          <h4 class="is-size-4 has-text-light">
+      <a-container class="story">
+        <a-div
+          :size="bigger ? 'full' : 'half'"
+          class="has-text-white"
+        >
+          <h4 :class="['is-size-4', 'has-text-light', {'has-text-centered': bigger}, {'has-padding-bottom-medium': bigger}]">
             Time to write
             <b class="has-text-white">
               your story.
             </b>
           </h4>
-        </div>
-        <div class="column is-half">
+        </a-div>
+        <a-div :size="bigger ? 'full' : 'half'">
           <a-form-beta />
-        </div>
-      </div>
+        </a-div>
+      </a-container>
       <div
         v-if="footer"
         class="footer-container"
@@ -228,6 +231,10 @@ export default {
       default: false
     },
     isPaddingless: {
+      type: Boolean,
+      default: false
+    },
+    bigger: {
       type: Boolean,
       default: false
     }
