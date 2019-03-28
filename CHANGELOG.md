@@ -1,3 +1,11 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.4.10](https://github.com/asyncy/components/compare/v1.4.9...v1.4.10) (2019-03-28)
+
+
+
 ## [1.4.9](https://github.com/asyncy/components/compare/v1.4.8...v1.4.9) (2019-03-28)
 
 
@@ -703,6 +711,3 @@
 * **typo:** add typo line-height ([f731665](https://github.com/asyncy/components/commit/f731665))
 * **typo:** add typography styleguidist ([18bbcdd](https://github.com/asyncy/components/commit/18bbcdd))
 * **unit:** add unit testing with first Alert test ([dbfd1b9](https://github.com/asyncy/components/commit/dbfd1b9))
-
-
-
