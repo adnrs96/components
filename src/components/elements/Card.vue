@@ -7,15 +7,15 @@
       :marged="marged"
       :shadow="shadow"
     >
-      <a-col
+      <a-div
         v-if="$slots.head"
         size="full"
       >
         <slot name="head" />
-      </a-col>
-      <a-col size="full">
+      </a-div>
+      <a-div size="full">
         <slot />
-      </a-col>
+      </a-div>
     </a-container>
   </a-layout>
 </template>

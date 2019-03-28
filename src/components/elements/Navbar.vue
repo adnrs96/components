@@ -35,14 +35,14 @@
         >
           <div class="navbar-end">
             <component
-              :is="item.button ? 'span' : item.route ? 'router-link' : 'a'"
+              :is="item.button ? 'span' : item.route ? 'router-link' : item.children ? 'div' : 'a'"
               v-for="(item, id) of items"
               :key="`navbar-${_uid}-item-${id}`"
               :href="!item.button && !item.route ? item.link : undefined"
               :to="item.route ? item.route : undefined"
               :title="item.name"
-              :class="['navbar-item', { 'is-active': item.active }, { 'is-underlined': item.underlined }, { 'has-button': item.button }]"
-              @click="close"
+              :class="['navbar-item', { 'is-active': item.active || isDropped(id) }, { 'is-underlined': item.underlined }, { 'has-button': item.button }, { 'has-dropdown': item.children }, {'is-pure is-mobile-first': item.avatar}]"
+              @click.stop="close(item.children ? id : -1)"
             >
               <a-button
                 v-if="item.button"
@@ -57,6 +57,33 @@
                   <i :class="`mdi mdi-${item.icon}`" />
                 </span>
                 <span>{{ item.name }}</span>
+              </template>
+              <template v-else-if="item.children">
+                <a :class="['navbar-link', {'is-arrowless': item.avatar}]">
+                  <template v-if="item.avatar">
+                    <figure class="image is-avatar">
+                      <img :src="item.avatar">
+                      <span class="is-hidden-desktop">
+                        {{ item.name }}
+                      </span>
+                    </figure>
+                  </template>
+                  <template v-else>
+                    {{ item.name }}
+                  </template>
+                </a>
+                <div :class="['navbar-dropdown', {'is-right': item.avatar}]">
+                  <component
+                    :is="child.divider ? 'hr' : 'a'"
+                    v-for="(child, idx) of item.children"
+                    :key="`navbar-${_uid}-item-${id}-children-${idx}`"
+                    :class="child.divider ? 'navbar-divider' : 'navbar-item'"
+                    :title="child.name"
+                    @click="$emit('click', { $event, children: true, parent: item, item: child })"
+                  >
+                    {{ child.divider ? '' : child.name }}
+                  </component>
+                </div>
               </template>
               <template v-else>
                 {{ item.name }}
@@ -92,11 +119,24 @@ export default {
       default: () => []
     }
   },
-  data: () => ({ active: false }),
+  data: () => ({ active: false, dropped: [] }),
+  computed: {
+    isDropped: function () {
+      return (id) => this.dropped.includes(id)
+    }
+  },
   methods: {
-    close: function () {
-      if (this.active) {
+    close: function (id = undefined) {
+      if (typeof id === typeof 0) {
+        if (this.dropped.indexOf(id) !== -1) {
+          this.dropped.splice(this.dropped.indexOf(id), 1)
+        } else {
+          this.dropped.push(id)
+        }
+      } else if (this.active) {
         this.active = false
+      } else {
+        this.dropped = []
       }
     }
   }
@@ -113,7 +153,8 @@ new Vue({
                   { name: 'Home', active: true },
                   { name: 'Examples' },
                   { name: 'Documentation' },
-                  { name: 'Sign in', button: {}, icon: 'account-circle' }
+                  { name: 'Sign in', button: {}, icon: 'account-circle' },
+                  { name: 'Jean Barriere', avatar: 'https://avatars2.githubusercontent.com/u/11390722?v=4', children: [{name: 'hello'}, {name: 'logout'}] }
                 ]"
               />`,
   methods: {
@@ -126,20 +167,20 @@ new Vue({
 ### Playground
 
 ```jsx
-<div class="columns is-multiline">
-  <div class="column is-full has-background-black">
+<a-container>
+  <a-div background="white" size="full">
+    <a-navbar />
+  </a-div>
+  <a-div padding="medium" size="full" background="dark" class="has-background-black">
     <a-navbar
       dark
       :items="[
         { name: 'Home', active: true },
         { name: 'Examples', underlined: true },
-        { name: 'Documentation' }
+        { name: 'Jean Barriere', avatar: 'https://avatars2.githubusercontent.com/u/11390722?v=4', children: [{ name: 'hello' }, { name: 'doc' }] }
       ]"
     />
-  </div>
-  <div class="column is-full bg--white">
-    <a-navbar />
-  </div>
-</div>
+  </a-div>
+</a-container>
 ```
 </docs>

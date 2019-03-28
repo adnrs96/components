@@ -14,6 +14,21 @@
 
   &.dark {
     .navbar-menu {
+      @include touch {
+        .navbar-end {
+          display: flex;
+          flex: 1 1 100%;
+          flex-direction: column;
+        }
+
+        .navbar-item.is-mobile-first {
+          order: -1;
+          border-bottom: 1px solid nth($grays, 4);
+          padding: 0 .45rem;
+          margin: 0;
+        }
+      }
+
       @include desktop {
         .navbar-item {
           color: $white;
@@ -23,7 +38,40 @@
           }
 
           &.is-active {
-            color: $info;
+
+            &,
+            .navbar-link {
+              color: $info;
+              background-color: $dark;
+
+              &:not(.is-arrowless):after {
+                border-color: $info;
+              }
+
+            }
+          }
+
+          .navbar-link {
+            color: $white;
+
+            &:not(.is-arrowless):after {
+              border-color: $white;
+            }
+
+            &:hover {
+              background-color: transparent;
+            }
+          }
+
+          .navbar-dropdown {
+            z-index: 99999;
+            background-color: $dark;
+
+            .navbar-item {
+              &:hover {
+                background-color: lighten($dark, 3%);
+              }
+            }
           }
         }
       }
@@ -76,6 +124,64 @@
       letter-spacing: .1rem;
       position: relative;
 
+      .is-avatar {
+        border-radius: 100%;
+
+        @include desktop {
+          border: 1px solid $info;
+          transition: border .1s ease-in-out;
+        }
+
+        position: relative;
+
+        // overflow: hidden;
+
+        img {
+          z-index: 1;
+          border-radius: 100%;
+          width: 1.75rem;
+          height: 1.75rem;
+          display: inline-block;
+          vertical-align: middle;
+
+          @include touch {
+            &+span {
+              margin-left: .5rem;
+              vertical-align: middle;
+            }
+          }
+        }
+
+        @include desktop {
+          &:before {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            transition: all .1s ease-in;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            background-color: rgba($white, 0);
+            border-radius: 100%;
+          }
+        }
+
+      }
+
+      &:hover {
+        .is-avatar {
+          &:before {
+            top: -.4rem;
+            left: -.4rem;
+            right: -.4rem;
+            bottom: -.4rem;
+            background-color: rgba($white, .15);
+          }
+        }
+      }
+
       &.has-button {
         padding: 0 .75rem;
 
@@ -96,7 +202,7 @@
         }
       }
 
-      &:before {
+      &:not(.is-pure):before {
         content: '';
         position: absolute;
         left: 100%;
@@ -117,6 +223,14 @@
       &:active,
       &.is-active {
         background-color: transparent;
+      }
+    }
+
+    .navbar-dropdown {
+      &>.navbar-item {
+        &:before {
+          display: none !important;
+        }
       }
     }
   }
