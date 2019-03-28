@@ -7,13 +7,12 @@
     "build:guide": "vue-cli-service styleguidist:build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "update:patch": "yarn version --patch",
-    "update:minor": "yarn version --minor",
-    "update:major": "yarn version --major"
+    "update": "standard-version"
   },
   "dependencies": {
     "@mdi/font": "^3.5.95",
     "bulma": "^0.7.4",
+    "standard-version": "^5.0.2",
     "vue": "^2.6.9"
   },
   "devDependencies": {
@@ -49,12 +48,10 @@
     "url": "https://github.com/asyncy/components/issues"
   },
   "license": "Apache-2.0",
-  "licenses": [
-    {
-      "type": "Apache-2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }
-  ],
+  "licenses": [{
+    "type": "Apache-2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  }],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asyncy/components.git"
