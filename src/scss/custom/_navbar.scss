@@ -40,14 +40,16 @@
           &.is-active {
 
             &,
-            .navbar-link {
-              color: $info;
-              background-color: $dark;
+            &.has-dropdown {
 
-              &:not(.is-arrowless):after {
-                border-color: $info;
+              &,
+              .navbar-link {
+                color: $info;
+
+                &:not(.is-arrowless):after {
+                  border-color: $info;
+                }
               }
-
             }
           }
 
@@ -73,7 +75,23 @@
               }
             }
           }
+
+          &.is-active,
+          &:hover {
+            .is-avatar {
+              &:before {
+                background-color: rgba($white, .1);
+              }
+            }
+          }
+
+          &.is-active .is-avatar {
+            &:before {
+              background-color: rgba($white, .15);
+            }
+          }
         }
+
       }
     }
 
@@ -128,8 +146,8 @@
         border-radius: 100%;
 
         @include desktop {
-          border: 1px solid $info;
-          transition: border .1s ease-in-out;
+          // border: 1px solid $light;
+          // transition: border .1s ease-in-out;
         }
 
         position: relative;
@@ -157,7 +175,7 @@
             z-index: -1;
             content: '';
             position: absolute;
-            transition: all .1s ease-in;
+            transition: all .2s ease-in;
             top: 0;
             left: 0;
             right: 0;
@@ -170,15 +188,26 @@
 
       }
 
+      &.is-active,
       &:hover {
         .is-avatar {
           &:before {
-            top: -.4rem;
-            left: -.4rem;
-            right: -.4rem;
-            bottom: -.4rem;
-            background-color: rgba($white, .15);
+            top: -.2rem;
+            left: -.2rem;
+            right: -.2rem;
+            bottom: -.2rem;
+            background-color: rgba($black, .1);
           }
+        }
+      }
+
+      &.is-active .is-avatar {
+        &:before {
+          // top: -.3rem;
+          // left: -.3rem;
+          // right: -.3rem;
+          // bottom: -.3rem;
+          background-color: rgba($black, .15);
         }
       }
 
@@ -219,10 +248,20 @@
         }
       }
 
+      &,
       &:hover,
       &:active,
       &.is-active {
-        background-color: transparent;
+
+        &,
+        &.has-dropdown {
+
+          &,
+          .navbar-link {
+            background-color: transparent;
+          }
+        }
+
       }
     }
 
