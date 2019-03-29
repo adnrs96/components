@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.5.0](https://github.com/asyncy/components/compare/v1.4.11...v1.5.0) (2019-03-29)
+
+
+### Features
+
+* **navbar:** improve navbar avatar/icons buttons ([d52f8f1](https://github.com/asyncy/components/commit/d52f8f1))
+
+
+
 ## [1.4.11](https://github.com/asyncy/components/compare/v1.4.10...v1.4.11) (2019-03-29)
 
 
