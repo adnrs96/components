@@ -14,19 +14,9 @@
 
   &.dark {
     .navbar-menu {
-      @include touch {
-        .navbar-end {
-          display: flex;
-          flex: 1 1 100%;
-          flex-direction: column;
-        }
 
-        .navbar-item.is-mobile-first {
-          order: -1;
-          border-bottom: 1px solid nth($grays, 4);
-          padding: 0 .45rem;
-          margin: 0;
-        }
+      .navbar-divider {
+        opacity: .25;
       }
 
       @include desktop {
@@ -125,6 +115,26 @@
   .navbar-menu {
     border-radius: .5rem;
 
+
+    @include touch {
+      .navbar-end {
+        display: flex;
+        flex: 1 1 100%;
+        flex-direction: column;
+      }
+
+      .navbar-item.is-mobile-first {
+        order: -1;
+        border-bottom: 1px solid nth($grays, 4);
+        padding: 0 .45rem;
+        margin: 0;
+      }
+    }
+
+    .navbar-divider {
+      height: 1px;
+    }
+
     &.is-active {
       @include touch {
         position: absolute;
@@ -144,15 +154,22 @@
 
       .is-avatar {
         border-radius: 100%;
-
-        @include desktop {
-          // border: 1px solid $light;
-          // transition: border .1s ease-in-out;
-        }
-
         position: relative;
 
-        // overflow: hidden;
+        &.icon {
+          border-radius: 100%;
+          width: 1.75rem;
+          height: 1.75rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+          i {
+            font-size: 1.5rem
+          }
+        }
+
 
         img {
           z-index: 1;
@@ -185,7 +202,21 @@
             border-radius: 100%;
           }
         }
+      }
 
+      &.navbar-dropdown-spans {
+        text-transform: none;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 100%;
+        align-items: flex-start;
+        justify-content: left;
+
+        span {
+          &:not(:first-child) {
+            color: nth($grays, 3);
+          }
+        }
       }
 
       &.is-active,

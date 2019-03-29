@@ -41,7 +41,7 @@
               :href="!item.button && !item.route ? item.link : undefined"
               :to="item.route ? item.route : undefined"
               :title="item.name"
-              :class="['navbar-item', { 'is-active': item.active || isDropped(id) }, { 'is-underlined': item.underlined }, { 'has-button': item.button }, { 'has-dropdown': item.children }, {'is-pure is-mobile-first': item.avatar}]"
+              :class="['navbar-item', { 'is-active': item.active || isDropped(id) }, { 'is-underlined': item.underlined }, { 'has-button': item.button }, { 'has-dropdown': item.children }, {'is-pure': item.avatar}, {'is-mobile-first': item.mobileFirst}]"
               @click.stop="close(item.children ? id : -1)"
             >
               <a-button
@@ -52,15 +52,9 @@
               >
                 {{ item.name }}
               </a-button>
-              <template v-else-if="item.icon">
-                <span class="icon">
-                  <i :class="`mdi mdi-${item.icon}`" />
-                </span>
-                <span>{{ item.name }}</span>
-              </template>
               <template v-else-if="item.children">
                 <a :class="['navbar-link', {'is-arrowless': item.avatar}]">
-                  <template v-if="item.avatar">
+                  <template v-if="typeof item.avatar === typeof ''">
                     <figure class="image is-avatar">
                       <img :src="item.avatar">
                       <span class="is-hidden-desktop">
@@ -68,25 +62,66 @@
                       </span>
                     </figure>
                   </template>
-                  <template v-else>
-                    {{ item.name }}
+                  <template v-else-if="item.avatar">
+                    <div class="is-avatar icon is-hidden-touch">
+                      <i
+                        v-if="item.avatar.mdi"
+                        :class="`mdi mdi-${item.avatar.mdi}`"
+                      />
+                      <a-icon
+                        v-else
+                        v-bind="item.avatar"
+                      />
+                    </div>
+                    <span class="is-hidden-desktop">
+                      {{ item.name }}
+                    </span>
                   </template>
+                  <span v-else>
+                    <template v-if="item.icon">
+                      <span class="icon">
+                        <i :class="`mdi mdi-${item.icon}`" />
+                      </span>
+                      <span>{{ item.name }}</span>
+                    </template>
+                    <template v-else>
+                      {{ item.name }}
+                    </template>
+                  </span>
                 </a>
                 <div :class="['navbar-dropdown', {'is-right': item.avatar}]">
                   <component
                     :is="child.divider ? 'hr' : 'a'"
                     v-for="(child, idx) of item.children"
                     :key="`navbar-${_uid}-item-${id}-children-${idx}`"
-                    :class="child.divider ? 'navbar-divider' : 'navbar-item'"
+                    :class="[child.divider ? 'navbar-divider' : 'navbar-item', {'is-hidden-touch': child.hiddenTouch}, {'navbar-dropdown-spans': child.spans}]"
                     :title="child.name"
                     @click="$emit('click', { $event, children: true, parent: item, item: child })"
                   >
-                    {{ child.divider ? '' : child.name }}
+                    <template v-if="child.spans">
+                      <span
+                        v-for="(span, spanIdx) of child.spans"
+                        :key="`navbar-${_uid}-item-${id}-children-${idx}-span-${spanIdx}`"
+                      >
+                        {{ span }}
+                      </span>
+                    </template>
+                    <template v-else>
+                      {{ child.divider ? '' : child.name }}
+                    </template>
                   </component>
                 </div>
               </template>
               <template v-else>
-                {{ item.name }}
+                <template v-if="item.icon">
+                  <span class="icon">
+                    <i :class="`mdi mdi-${item.icon}`" />
+                  </span>
+                  <span>{{ item.name }}</span>
+                </template>
+                <template v-else>
+                  {{ item.name }}
+                </template>
               </template>
             </component>
           </div>
@@ -154,7 +189,8 @@ new Vue({
                   { name: 'Examples' },
                   { name: 'Documentation' },
                   { name: 'Sign in', button: {}, icon: 'account-circle' },
-                  { name: 'Jean Barriere', avatar: 'https://avatars2.githubusercontent.com/u/11390722?v=4', children: [{name: 'hello'}, {name: 'logout'}] }
+                  { avatar: { icon: 'arrow-down' }, name: 'More', children: [{ name: 'submit a service' }] },
+                  { name: 'Jean Barriere', avatar: 'https://avatars2.githubusercontent.com/u/11390722?v=4', children: [{ spans: ['Jean Barrière', 'jean@barriere.io'], hiddenTouch: true }, { divider: true }, { name: 'My account' }, { name: 'My services' }, { divider: true }, { name: 'Logout' }], mobileFirst: true }
                 ]"
               />`,
   methods: {
@@ -171,13 +207,14 @@ new Vue({
   <a-div background="white" size="full">
     <a-navbar />
   </a-div>
-  <a-div padding="medium" size="full" background="dark" class="has-background-black">
+  <a-div padding="max" size="full" class="has-background-black">
     <a-navbar
       dark
       :items="[
         { name: 'Home', active: true },
         { name: 'Examples', underlined: true },
-        { name: 'Jean Barriere', avatar: 'https://avatars2.githubusercontent.com/u/11390722?v=4', children: [{ name: 'hello' }, { name: 'doc' }] }
+        { avatar: { icon: 'arrow-down', style: 'stroke: #fff;width: 16px; height: 16px;' }, name: 'More', children: [{ name: 'submit a service' }] },
+        { name: 'Jean Barriere', avatar: 'https://avatars2.githubusercontent.com/u/11390722?v=4', children: [{ spans: ['Jean Barrière', 'jean@barriere.io'], hiddenTouch: true }, { divider: true }, { name: 'My account' }, { name: 'My services' }, { divider: true }, { name: 'Logout' }], mobileFirst: true }
       ]"
     />
   </a-div>
