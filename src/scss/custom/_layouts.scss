@@ -3,7 +3,8 @@
   background-position: center center;
   background-size: cover;
 
-  h1, p {
+  h1,
+  p {
     color: $white;
   }
 }
@@ -20,30 +21,43 @@
   flex-direction: row-reverse;
 }
 
-$paddings: (
-  "none": 0,
-  "min": .25,
-  "small": .5,
-  "1x": 1,
-  "normal": 1.5,
-  "2x": 2,
-  "medium": 3,
-  "3x5": 3.5,
-  "large": 5,
-  "7x5": 7.5,
-  "9xx": 9.375,
-  "max": 12.5
-);
+$paddings: ("none": 0,
+"min": .25,
+"small": .5,
+"1x": 1,
+"normal": 1.5,
+"2x": 2,
+"medium": 3,
+"3x5": 3.5,
+"large": 5,
+"7x5": 7.5,
+"9xx": 9.375,
+"max": 12.5);
 
-@each $padding, $value in $paddings {
-  .has-padding-#{$padding}, .has-padding-top-#{$padding} { padding-top: #{$value}rem }
-  .has-padding-#{$padding}, .has-padding-bottom-#{$padding} { padding-bottom: #{$value}rem }
-  .has-top-outside-#{$padding} { top: #{-$value - 2.5}rem }
+@each $padding,
+$value in $paddings {
+
+  .has-padding-#{$padding},
+  .has-padding-top-#{$padding} {
+    padding-top: #{$value}rem
+  }
+
+  .has-padding-#{$padding},
+  .has-padding-bottom-#{$padding} {
+    padding-bottom: #{$value}rem
+  }
+
+  .has-top-outside-#{$padding} {
+    top: #{-$value - 2.75}rem
+  }
 }
 
 .has-spans {
-  span, a {
+
+  span,
+  a {
     margin: 0 .5rem;
+
     &:last-child {
       margin-right: 0;
     }
@@ -52,10 +66,12 @@ $paddings: (
 
 .is-footer-text {
   line-height: nth($line-heights, 2) !important;
+
   @include touch {
     line-height: nth($line-heights, 5) !important;
     text-align: center !important;
   }
+
   a {
     i {
       font-size: 150%;
@@ -73,21 +89,26 @@ $paddings: (
   }
 
   $intos: (bracket, chevron, hash, slash);
+
   @each $into in $intos {
     .into-#{$into} {
       justify-content: center;
       align-items: center;
       display: flex;
       flex-direction: row;
-      & > span {
+
+      &>span {
         display: block;
         flex: 0 0 auto;
         padding: 0 25px;
+
         @include touch {
           padding: 0 !important;
         }
       }
-      span:first-child, span:last-child {
+
+      span:first-child,
+      span:last-child {
         background-image: url('~@/assets/img/#{$into}.svg');
         background-size: contain;
         min-width: 40px;
@@ -95,15 +116,17 @@ $paddings: (
         background-position: center center;
         background-repeat: no-repeat;
         color: $info;
+
         @include touch {
           display: none;
         }
       }
+
       span:last-child {
-        @if $into != 'slash' {
+        @if $into !='slash' {
           transform: rotate(180deg);
         }
       }
     }
-  }      
+  }
 }

@@ -1,12 +1,9 @@
 <template>
-  <section
-    :class="[...getBackground, ...getMargin]"
-  >
+  <section :class="[...getBackground, ...getMargin]">
     <slot name="absolute" />
     <div
       v-if="$slots.default"
-      :class="['container', {'is-widescreen': !full}, {'is-fluid': full}, {[`has-background-${foreground}`]: foreground},
-               {'is-rounded': rounded}, {'has-shadow': shadow}, ...getPadding, ...isOutside]"
+      :class="['container', {'is-widescreen': !full}, {'is-fluid': full}, ...getContainerClasses(!narrow), ...getPadding, ...isOutside]"
     >
       <slot />
     </div>
@@ -20,18 +17,29 @@ import Padding from '@/mixins/Padding'
 export default {
   name: 'ALayout',
   mixins: [Background, Padding],
+  provide () {
+    return {
+      classes: this.getContainerClasses(this.narrow)
+    }
+  },
   props: {
     foreground: { type: String, default: undefined },
     rounded: { type: Boolean, default: false },
     shadow: { type: Boolean, default: false },
     full: { type: Boolean, default: false },
     margin: { type: [Array, String], default: 'none' },
-    outside: { type: Boolean, default: false }
+    outside: { type: Boolean, default: false },
+    narrow: { type: Boolean, default: false }
   },
   computed: {
     isOutside: function () {
       const top = typeof this.margin === typeof '' ? this.margin : this.margin[0]
       return this.outside ? [`has-top-outside-${top}`] : []
+    },
+    getContainerClasses: function () {
+      return (slot) => {
+        return slot ? [`${this.foreground ? 'has-background-' + this.foreground : ''} ${this.rounded ? 'is-rounded' : ''} ${this.shadow ? 'has-shadow' : ''}`] : []
+      }
     },
     getMargin: function () {
       if (typeof this.margin === typeof '') {

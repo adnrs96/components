@@ -1,25 +1,27 @@
 <template>
-  <div
-    :class="[
-      'columns',
-      {'is-multiline': !row},
-      {'is-vcentered': vCentered || vhCentered},
-      {'is-centered': hCentered || vhCentered}
-    ]"
-  >
+  <div :class="['columns', ...classes, {'is-multiline': !row}, {'is-vcentered': centeredV || centeredVH}, {'is-centered': centeredH || centeredVH}, ...getPadding]">
     <slot />
   </div>
 </template>
 
 <script>
-// padding 5rem 4.5rem can be vcentered
+import Padding from '@/mixins/Padding'
+
 export default {
   name: 'AContainer',
+  mixins: [Padding],
+  inject: {
+    classes: {
+      type: Array,
+      default: () => []
+    }
+  },
   props: {
     row: { type: Boolean, default: false },
-    vCentered: { type: Boolean, default: false },
-    hCentered: { type: Boolean, default: false },
-    vhCentered: { type: Boolean, default: false }
+    centeredV: { type: Boolean, default: false },
+    centeredH: { type: Boolean, default: false },
+    centeredVH: { type: Boolean, default: false }
+
   }
 }
 </script>
