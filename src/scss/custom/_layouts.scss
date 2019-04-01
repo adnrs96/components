@@ -64,6 +64,10 @@ $value in $paddings {
   }
 }
 
+.is-media-centered {
+  align-items: center;
+}
+
 .is-footer-text {
   line-height: nth($line-heights, 2) !important;
 

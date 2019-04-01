@@ -14,6 +14,7 @@ import AJoin from './layout/Join'
 import AJumbo from './layout/Jumbo'
 import ALayout from './layout/Layout'
 import ALevel from './layout/Level'
+import AMedia from './layout/Media'
 
 export const plugin = {
   ABreadcrumbs,
@@ -31,7 +32,8 @@ export const plugin = {
   AJoin,
   AJumbo,
   ALayout,
-  ALevel
+  ALevel,
+  AMedia
 }
 
 export default plugin
