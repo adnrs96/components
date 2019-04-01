@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.1](https://github.com/asyncy/components/compare/v1.5.0...v1.5.1) (2019-04-01)
+
+
+### Bug Fixes
+
+* **containers+layout:** add narrow possibility to layouts ([a8b5349](https://github.com/asyncy/components/commit/a8b5349))
+
+
+
 # [1.5.0](https://github.com/asyncy/components/compare/v1.4.11...v1.5.0) (2019-03-29)
 
 
