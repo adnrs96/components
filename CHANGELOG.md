@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.1](https://github.com/asyncy/components/compare/v1.7.0...v1.7.1) (2019-04-11)
+
+
+### Bug Fixes
+
+* **select:** add emit 'open' when the open action has been detected ([49b47ac](https://github.com/asyncy/components/commit/49b47ac))
+* **select:** edit emition to match open and close events ([1caf32c](https://github.com/asyncy/components/commit/1caf32c))
+
+
+
 # [1.7.0](https://github.com/asyncy/components/compare/v1.6.0...v1.7.0) (2019-04-11)
 
 
