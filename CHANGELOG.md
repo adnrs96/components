@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.7.0](https://github.com/asyncy/components/compare/v1.6.0...v1.7.0) (2019-04-11)
+
+
+### Features
+
+* **components:** add select-box component ([1430b2a](https://github.com/asyncy/components/commit/1430b2a))
+
+
+
 # [1.6.0](https://github.com/asyncy/components/compare/v1.5.1...v1.6.0) (2019-04-01)
 
 

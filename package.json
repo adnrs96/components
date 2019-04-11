@@ -1,6 +1,6 @@
 {
   "name": "@asyncy/vue",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "scripts": {
     "serve": "vue-cli-service styleguidist",
     "build": "vue-cli-service build --target lib --name asyncy-vue ./src/main.js",
