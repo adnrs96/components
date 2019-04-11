@@ -55,9 +55,10 @@ export default {
       validator: v => ['small', 'normal', 'medium', 'large'].includes(v)
     }
   },
-  data: () => ({ open: false }),
+  data: () => ({ invalidate: true, open: false }),
   watch: {
     isOpen: function () {
+      this.invalidate = true
       this.open = this.isOpen
     }
   },
@@ -66,10 +67,11 @@ export default {
   },
   methods: {
     close: function () {
-      if (this.open) {
+      if (this.open && !this.invalidate) {
         this.open = false
         this.$emit('close')
       }
+      this.invalidate = false
     },
     openOrClose: function () {
       if (!this.readonly) {
@@ -88,21 +90,22 @@ export default {
 new Vue({
   template: `<section>
               <section>
-                <a-select-box
+                <a-select
                   fold-icon
                   value="Quick Start"
+                  :is-open.sync="isQSOpen"
                 />
               </section>
               <section class="has-padding-top-large">
-                <a-select-box value="Quick Start" />
-                <a-select-box value="Storyscript" />
-                <a-select-box value="Blabla">
+                <a-select value="Quick Start" />
+                <a-select @open="isQSOpen = true" @close="isQSOpen = false" value="Storyscript" />
+                <a-select value="Blabla">
                   <li>Hello</li>
                   <li>Salut</li>
-                </a-select-box>
+                </a-select>
               </section>
             </section>`,
-  data: () => ({ input: 'value' }),
+  data: () => ({ input: 'value', isQSOpen: false }),
   watch: { input: function () { console.log('value :', this.input) } }
 })
 ```
