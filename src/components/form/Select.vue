@@ -48,6 +48,7 @@ export default {
     value: { type: String, default: '' },
     rounded: { type: Boolean, default: false },
     loading: { type: Boolean, default: false },
+    isOpen: { type: Boolean, default: false },
     size: {
       type: String,
       default: 'normal',
@@ -55,6 +56,14 @@ export default {
     }
   },
   data: () => ({ open: false }),
+  watch: {
+    isOpen: function () {
+      this.open = this.isOpen
+    }
+  },
+  mounted: function () {
+    this.open = this.isOpen
+  },
   methods: {
     close: function () {
       if (this.open) {
