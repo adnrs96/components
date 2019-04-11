@@ -39,7 +39,7 @@
 import ClickOutside from '@/directives/ClickOutside'
 
 export default {
-  name: 'ASelectBox',
+  name: 'ASelect',
   directives: { ClickOutside },
   props: {
     readonly: { type: Boolean, default: false },

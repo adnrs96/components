@@ -6,6 +6,7 @@ import ALogo from './elements/Logo'
 import ANavbar from './elements/Navbar'
 import AFormBeta from './form/FormBeta'
 import AInput from './form/Input'
+import ASelect from './form/Select'
 import ABoxed from './layout/Boxed'
 import ADiv from './layout/Div'
 import AContainer from './layout/Container'
@@ -25,6 +26,7 @@ export const plugin = {
   ANavbar,
   AFormBeta,
   AInput,
+  ASelect,
   ABoxed,
   ADiv,
   AContainer,
