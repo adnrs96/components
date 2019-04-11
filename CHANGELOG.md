@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.3](https://github.com/asyncy/components/compare/v1.7.2...v1.7.3) (2019-04-11)
+
+
+### Bug Fixes
+
+* **select:** add is-open props to auto open a select with a prop ([c0d420d](https://github.com/asyncy/components/commit/c0d420d))
+
+
+
 ## [1.7.2](https://github.com/asyncy/components/compare/v1.7.1...v1.7.2) (2019-04-11)
 
 
