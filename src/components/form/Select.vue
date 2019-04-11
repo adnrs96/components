@@ -64,6 +64,7 @@ export default {
     openOrClose: function () {
       if (!this.readonly) {
         this.open = !this.open
+        this.$emit('open')
       }
     }
   }
