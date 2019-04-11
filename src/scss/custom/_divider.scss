@@ -7,28 +7,33 @@
 $divider-background-color: nth($grays, 4) !default;
 $divider-thickness: .1rem !default;
 $divider-font-size: nth($sizes, 8) !default;
-$divider-color:  nth($grays, 2) !default;
+$divider-color: nth($grays, 2) !default;
 $divider-content-background-color : $white !default;
 
-.is-divider, .is-divider-vertical {
+.is-divider,
+.is-divider-vertical {
   display: block;
   position: relative;
   border-top: $divider-thickness solid $divider-background-color;
   height: $divider-thickness;
-  margin: 2rem 0;
+  margin: 1rem 0;
+
   &:not([data-align]),
   &[data-align=center] {
     text-align: center;
   }
+
   &[data-align=right] {
     text-align: right;
   }
+
   &[data-align=left] {
     text-align: left;
   }
 }
 
-.is-divider[data-content]::after, .is-divider-vertical[data-content]::after {
+.is-divider[data-content]::after,
+.is-divider-vertical[data-content]::after {
   background: $divider-content-background-color;
   color: $divider-color;
   content: attr(data-content);
@@ -53,6 +58,7 @@ $divider-content-background-color : $white !default;
     position: relative;
     border-top: none;
     min-height: 2rem;
+
     &::before {
       border-left: $divider-thickness solid $divider-background-color;
       bottom: 1rem;
@@ -65,6 +71,7 @@ $divider-content-background-color : $white !default;
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
     }
+
     &[data-content]::after {
       position: absolute;
       left: 50%;
@@ -79,13 +86,17 @@ $divider-content-background-color : $white !default;
 
 .is-divider,
 .is-divider-vertical {
-  @each $name, $pair in mergeColorMaps($colors, $shades) {
+
+  @each $name,
+  $pair in mergeColorMaps($colors, $shades) {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
+
     &.is-#{$name} {
       border-top-color: $color;
 
-      &[data-content]::after, &[data-content]::after {
+      &[data-content]::after,
+      &[data-content]::after {
         background: $color-invert;
         color: $color;
       }

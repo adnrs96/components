@@ -2,34 +2,35 @@
   <div
     v-click-outside="close"
     class="field select-box"
-    @click="open = !open"
   >
-    <div class="control has-icons-right">
+    <div
+      class="control has-icons-right"
+      @click="openOrClose"
+    >
       <input
-        :class="['input', {[`is-${size}`]: size !== 'normal'}, {'is-rounded': rounded}, {open}, {'is-loading': loading}]"
+        :class="['input', {[`is-${size}`]: size !== 'normal'}, {'is-rounded': rounded}, {open}, {'is-loading': loading}, {'is-readonly': readonly}]"
         disabled="true"
         type="text"
         :value="value"
       >
       <span :class="['icon', 'is-right']">
-        <i :class="`mdi mdi-${open ? 'arrow-up' : 'arrow-down'}`" />
+        <i
+          v-if="!foldIcon"
+          :class="`mdi mdi-${open ? 'chevron-up' : 'chevron-down'}`"
+        />
+        <i
+          v-else
+          :class="`mdi mdi-${open ? 'unfold-less-horizontal' : 'unfold-more-horizontal'}`"
+        />
       </span>
     </div>
     <div
-      v-if="open"
-      class="selectable"
+      v-if="open && $slots.default"
+      :class="['selectable', {absolute}]"
     >
-      <transition-group
-        tag="ul"
-        name="fade"
-      >
-        <li
-          v-if="open"
-          key="hello"
-        >
-          Hello
-        </li>
-      </transition-group>
+      <ul class="selectable-items">
+        <slot />
+      </ul>
     </div>
   </div>
 </template>
@@ -41,6 +42,9 @@ export default {
   name: 'ASelectBox',
   directives: { ClickOutside },
   props: {
+    readonly: { type: Boolean, default: false },
+    absolute: { type: Boolean, default: false },
+    foldIcon: { type: Boolean, default: false },
     value: { type: String, default: '' },
     rounded: { type: Boolean, default: false },
     loading: { type: Boolean, default: false },
@@ -56,6 +60,11 @@ export default {
       if (this.open) {
         this.open = false
       }
+    },
+    openOrClose: function () {
+      if (!this.readonly) {
+        this.open = !this.open
+      }
     }
   }
 }
@@ -67,9 +76,20 @@ export default {
 ```
 new Vue({
   template: `<section>
-              <a-select-box
-                v-model="input"
-              />
+              <section>
+                <a-select-box
+                  fold-icon
+                  value="Quick Start"
+                />
+              </section>
+              <section class="has-padding-top-large">
+                <a-select-box value="Quick Start" />
+                <a-select-box value="Storyscript" />
+                <a-select-box value="Blabla">
+                  <li>Hello</li>
+                  <li>Salut</li>
+                </a-select-box>
+              </section>
             </section>`,
   data: () => ({ input: 'value' }),
   watch: { input: function () { console.log('value :', this.input) } }

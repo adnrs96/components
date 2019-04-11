@@ -1,13 +1,5 @@
 <template>
-  <div
-    :class="[
-      'field', {disabled},
-      {'has-addons': (hasAddons && isGrouped === undefined)},
-      {[`has-addons-${hasAddons}`]: typeof hasAddons === typeof '' && isGrouped === undefined},
-      {'is-grouped': isGrouped},
-      {[`is-grouped-${isGrouped}`]: typeof isGrouped === typeof ''}
-    ]"
-  >
+  <div :class="['field', {disabled},{'has-addons': (hasAddons && isGrouped === undefined)},{[`has-addons-${hasAddons}`]: typeof hasAddons === typeof '' && isGrouped === undefined},{'is-grouped': isGrouped},{[`is-grouped-${isGrouped}`]: typeof isGrouped === typeof ''}]">
     <div
       v-if="(hasAddons || isGrouped) && $slots.left"
       class="control"
@@ -16,10 +8,10 @@
     </div>
     <div :class="['control', {'has-icons-left': iconLeft}, {'has-icons-right': iconRight}, {'is-expanded': expanded}]">
       <input
-        :class="['input', {[`is-${size}`]: size !== 'normal'}, {'is-rounded': rounded}, {'is-loading': loading}, {[`has-background-${background}`]: background}]"
         :placeholder="placeholder"
         :disabled="disabled"
         :type="type"
+        :class="['input', {[`is-${size}`]: size !== 'normal'}, {'is-rounded': rounded}, {'is-loading': loading}, {[`has-background-${background}`]: background}]"
         :value="value"
         :readonly="readonly"
         @input="$emit('input', $event.target.value)"
@@ -122,10 +114,10 @@ new Vue({
               />
               <a-input has-addons="centered" icon-left="email">
                 <template slot="right">
-                  <a class="button">
-                    <i class="mdi mdi-magnify" />
-                  </a>
-                </template>
+  <a class="button">
+    <i class="mdi mdi-magnify" />
+  </a>
+</template>
               </a-input>
             </section>`,
   data: () => ({ input: 'value' }),
