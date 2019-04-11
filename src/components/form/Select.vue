@@ -59,6 +59,7 @@ export default {
     close: function () {
       if (this.open) {
         this.open = false
+        this.$emit('close')
       }
     },
     openOrClose: function () {
