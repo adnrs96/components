@@ -1,3 +1,10 @@
 // font family
-$family-sans-serif: "Gilroy", sans-serif;
+$family-sans-serif: "Gilroy",
+sans-serif;
 $family-primary: $family-sans-serif;
+$family-secondary: "Graphik",
+sans-serif;
+
+.is-font-graphik {
+  font-family: $family-secondary;
+}
