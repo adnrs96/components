@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.8.0](https://github.com/asyncy/components/compare/v1.7.4...v1.8.0) (2019-04-14)
+
+
+### Features
+
+* **fonts:** add graphik to the fonts ([ff7d810](https://github.com/asyncy/components/commit/ff7d810))
+
+
+
 ## [1.7.4](https://github.com/asyncy/components/compare/v1.7.3...v1.7.4) (2019-04-11)
 
 
