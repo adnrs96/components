@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.2](https://github.com/asyncy/components/compare/v1.8.1...v1.8.2) (2019-04-17)
+
+
+### Bug Fixes
+
+* **select:** fix icon-left on select by adding avatar props ([3e3638b](https://github.com/asyncy/components/commit/3e3638b))
+
+
+
 ## [1.8.1](https://github.com/asyncy/components/compare/v1.8.0...v1.8.1) (2019-04-14)
 
 
