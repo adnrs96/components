@@ -4,9 +4,19 @@
     class="field select-box"
   >
     <div
-      class="control has-icons-right"
+      :class="['control', 'has-icons-right', {'has-icons-left': avatar}]"
       @click="openOrClose"
     >
+      <span
+        v-if="avatar"
+        class="icon is-left"
+      >
+        <img
+          :src="avatar"
+          class="avatar"
+          alt="avatar"
+        >
+      </span>
       <input
         :class="['input', {[`is-${size}`]: size !== 'normal'}, {'is-rounded': rounded}, {open}, {'is-loading': loading}, {'is-readonly': readonly}]"
         disabled="true"
@@ -46,6 +56,7 @@ export default {
     absolute: { type: Boolean, default: false },
     foldIcon: { type: Boolean, default: false },
     value: { type: String, default: '' },
+    avatar: { type: String, default: undefined },
     rounded: { type: Boolean, default: false },
     loading: { type: Boolean, default: false },
     isOpen: { type: Boolean, default: false },
@@ -89,6 +100,12 @@ export default {
 ```
 new Vue({
   template: `<section>
+              <section>
+                <a-select
+                  value="Username"
+                  avatar="//source.unsplash.com/64x64/?profile"
+                />
+              </section>
               <section>
                 <a-select
                   fold-icon

@@ -104,6 +104,14 @@ input::placeholder {
   &.select-box {
     position: relative;
 
+    img.avatar {
+      height: 1.75rem;
+      width: 1.75rem;
+      border-radius: 2rem;
+      border: none;
+      display: block;
+    }
+
     &:not(:first-of-type) {
 
       &,
