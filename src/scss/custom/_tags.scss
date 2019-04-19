@@ -1,0 +1,11 @@
+.tag {
+  &.is-outline {
+    background-color: $white;
+    border: 1px solid nth($grays, 4);
+    font-weight: bold;
+    font-size: nth($sizes, 9);
+    color: nth($grays, 2);
+    letter-spacing: 1.5px;
+    border-radius: .3rem;
+  }
+}

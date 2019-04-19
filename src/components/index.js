@@ -4,6 +4,7 @@ import ACard from './elements/Card'
 import AIcon from './elements/Icon'
 import ALogo from './elements/Logo'
 import ANavbar from './elements/Navbar'
+import ATag from './elements/Tag'
 import AFormBeta from './form/FormBeta'
 import AInput from './form/Input'
 import ASelect from './form/Select'
@@ -24,6 +25,7 @@ export const plugin = {
   AIcon,
   ALogo,
   ANavbar,
+  ATag,
   AFormBeta,
   AInput,
   ASelect,
