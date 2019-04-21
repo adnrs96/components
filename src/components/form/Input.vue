@@ -26,7 +26,9 @@
         @input="$emit('input', type === 'switch' ? $event.target.checked : $event.target.value)"
         @blur="$emit('blur', $event)"
         @change="$emit('change', $event.target.value)"
-      />
+      >
+        {{ type === 'textarea' ? value : undefined }}
+      </component>
       <label
         v-if="label && type === 'switch'"
         class="label is-rtl"

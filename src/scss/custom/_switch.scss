@@ -9,7 +9,7 @@ $switch-paddle-transition: all 0.25s ease-out !default;
 $switch-focus: none;
 
 @mixin switch-size($size) {
-  $switch-height: $size * 1.5;
+  $switch-height: $size * 2;
   $switch-width: $switch-height * 2;
   $paddle-height: calc(#{$switch-height} - (#{$switch-paddle-offset} * 2));
   $paddle-width: calc(#{$switch-height} - (#{$switch-paddle-offset} * 2));
@@ -27,7 +27,7 @@ $switch-focus: none;
     &:before {
       position: absolute;
       display: block;
-      top: -.1rem;
+      top: -.4rem;
       left: 0;
       width: $switch-width;
       height: $switch-height;
@@ -40,12 +40,12 @@ $switch-focus: none;
     &:after {
       display: block;
       position: absolute;
-      top: calc(#{$switch-height / 2} - #{$paddle-height / 2} - .1rem);
+      top: calc(#{$switch-height / 2} - #{$paddle-height / 2} - .4rem);
       left: $switch-paddle-offset;
       width: $paddle-width;
       height: $paddle-height;
       transform: translate3d(0, 0, 0);
-      border-radius: $switch-radius;
+      border-radius: calc(#{$switch-radius} - 1px);
       background: $switch-paddle-background;
       transition: $switch-paddle-transition;
       content: "";
