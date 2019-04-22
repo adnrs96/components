@@ -12,23 +12,29 @@
       <slot name="left" />
     </div>
     <div :class="['control', {'has-icons-left': iconLeft}, {'has-icons-right': iconRight || valid !== undefined }, {'is-loading': loading}]">
-      <component
-        :is="type === 'textarea' ? 'textarea' : 'input'"
+      <textarea
+        v-if="type ==='textarea'"
         :id="`input-${_uid}`"
         :placeholder="placeholder"
         :disabled="disabled"
-        :checked="type === 'switch' ? value : undefined"
-        :type="type === 'switch' ? 'checkbox' : type === 'textarea' ? undefined : type"
         :class="[{'input': type !== 'textarea'}, {'textarea': type === 'textarea'}, {'has-fixed-size': fixed}, {'is-rtl': type === 'switch'}, {[`is-${size}`]: size !== 'normal'}, {'switch': type === 'switch'}, {'is-rounded': rounded}, {[`is-${valid ? 'success' : 'danger'}`]: valid !== undefined }, {[`has-background-${background}`]: background}]"
-        :value="type !== 'switch' ? value : undefined"
         :readonly="readonly"
         :rows="rows"
-        @input="$emit('input', type === 'switch' ? $event.target.checked : $event.target.value)"
-        @blur="$emit('blur', $event)"
-        @change="$emit('change', $event.target.value)"
+        v-on="listeners"
+        v-text="value"
+      />
+      <input
+        v-else
+        :id="`input-${_uid}`"
+        :disabled="disabled"
+        :placeholder="placeholder"
+        :class="[{'input': type !== 'textarea'}, {'textarea': type === 'textarea'}, {'has-fixed-size': fixed}, {'is-rtl': type === 'switch'}, {[`is-${size}`]: size !== 'normal'}, {'switch': type === 'switch'}, {'is-rounded': rounded}, {[`is-${valid ? 'success' : 'danger'}`]: valid !== undefined }, {[`has-background-${background}`]: background}]"
+        :readonly="readonly"
+        :type="type === 'switch' ? 'checkbox' : type"
+        :checked="type === 'switch' ? value : undefined"
+        :value="type !== 'switch' ? value : undefined"
+        v-on="listeners"
       >
-        {{ type === 'textarea' ? value : undefined }}
-      </component>
       <label
         v-if="label && type === 'switch'"
         class="label is-rtl"
@@ -99,7 +105,7 @@ export default {
       default: 'text',
       validator: v => ['text', 'email', 'password', 'tel', 'textarea', 'switch'].includes(v)
     },
-    value: { type: [String, Boolean], default: '' },
+    value: { type: String, default: '' },
     placeholder: { type: String, default: undefined },
     size: {
       type: String,
@@ -115,6 +121,39 @@ export default {
     iconRight: { type: [String, Array], default: undefined },
     valid: { type: Boolean, default: undefined },
     help: { type: String, default: undefined }
+  },
+  computed: {
+    getType: function () {
+      return this.type === 'textarea' ? 'textarea' : 'input'
+    },
+    listeners: function () {
+      return {
+        blur: this.onBlur,
+        change: this.onChange,
+        click: this.onClick,
+        focus: this.onFocus,
+        input: this.onInput,
+        keydown: this.onKeydown,
+        keyup: this.onKeyup
+      }
+    }
+  },
+  methods: {
+    onBlur: function (e) { this.$emit('blur', e) },
+    onChange: function (e) {
+      console.log(e)
+      this.$emit('change', e)
+    },
+    onClick: function (e) { this.$emit('click', e) },
+    onFocus: function (e) { this.$emit('focus', e) },
+    onInput: function (e) {
+      console.log(e)
+      const val = e.target.value || ''
+      this.$emit('update', val)
+      this.$emit('input', val)
+    },
+    onKeydown: function (e) { this.$emit('keydown', e) },
+    onKeyup: function (e) { this.$emit('keyup', e) }
   }
 }
 </script>
@@ -132,6 +171,8 @@ new Vue({
       size="large"
     />
     <a-input
+      v-model="input"
+      @keyup.enter="input = ''"
       label="hello world"
       placeholder="hello world"
     />
@@ -153,13 +194,12 @@ new Vue({
     <a-input
       type="switch"
       v-model="checked"
-      disabled
       label="hello world"
       background="light"
       placeholder="hello world"
     />
   </section>`,
-  data: () => ({ input: 'value', checked: true }),
+  data: () => ({ input: 'value', checked: 'no' }),
   watch: { input: function () { console.log('value :', this.input) }, checked: function () { console.log('checked', this.checked) } },
   methods: {
     reset: function () {

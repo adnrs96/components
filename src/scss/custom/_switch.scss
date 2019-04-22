@@ -1,6 +1,6 @@
-$switch-background: #fafafc !default;
+$switch-background: $white !default;
 $switch-border: 1px solid nth($grays, 4) !default;
-$switch-background-active: #fafafc !default;
+$switch-background-active: $white !default;
 $switch-radius: 5px !default;
 $switch-paddle-background: $info !default;
 $switch-paddle-background-active: darken($info, 5%) !default;
@@ -144,16 +144,16 @@ $switch-focus: none;
     cursor: not-allowed;
 
     +label {
-      opacity: 0.5;
+      opacity: 0.8;
 
       &::before,
       &:before {
-        opacity: 0.5;
+        opacity: 0.8;
       }
 
       &::after,
       &:after {
-        opacity: 0.5;
+        opacity: 0.8;
       }
 
       &:hover {
