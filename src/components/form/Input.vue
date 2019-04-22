@@ -15,13 +15,13 @@
       <textarea
         v-if="type ==='textarea'"
         :id="`input-${_uid}`"
+        :value="value"
         :placeholder="placeholder"
         :disabled="disabled"
         :class="[{'input': type !== 'textarea'}, {'textarea': type === 'textarea'}, {'has-fixed-size': fixed}, {'is-rtl': type === 'switch'}, {[`is-${size}`]: size !== 'normal'}, {'switch': type === 'switch'}, {'is-rounded': rounded}, {[`is-${valid ? 'success' : 'danger'}`]: valid !== undefined }, {[`has-background-${background}`]: background}]"
         :readonly="readonly"
         :rows="rows"
         v-on="listeners"
-        v-text="value"
       />
       <input
         v-else
@@ -105,7 +105,7 @@ export default {
       default: 'text',
       validator: v => ['text', 'email', 'password', 'tel', 'textarea', 'switch'].includes(v)
     },
-    value: { type: String, default: '' },
+    value: { type: [String, Boolean], default: '' },
     placeholder: { type: String, default: undefined },
     size: {
       type: String,
@@ -141,14 +141,12 @@ export default {
   methods: {
     onBlur: function (e) { this.$emit('blur', e) },
     onChange: function (e) {
-      console.log(e)
       this.$emit('change', e)
     },
     onClick: function (e) { this.$emit('click', e) },
     onFocus: function (e) { this.$emit('focus', e) },
     onInput: function (e) {
-      console.log(e)
-      const val = e.target.value || ''
+      const val = this.type === 'switch' ? e.target.checked : e.target.value || ''
       this.$emit('update', val)
       this.$emit('input', val)
     },
@@ -199,7 +197,7 @@ new Vue({
       placeholder="hello world"
     />
   </section>`,
-  data: () => ({ input: 'value', checked: 'no' }),
+  data: () => ({ input: 'value', checked: false }),
   watch: { input: function () { console.log('value :', this.input) }, checked: function () { console.log('checked', this.checked) } },
   methods: {
     reset: function () {
