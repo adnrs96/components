@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.3](https://github.com/asyncy/components/compare/v1.9.2...v1.9.3) (2019-04-22)
+
+
+### Bug Fixes
+
+* **input:** fix input behaviors ([e323cc3](https://github.com/asyncy/components/commit/e323cc3))
+* **inputs:** fix checkbox+textarea mutations ([9a48f9f](https://github.com/asyncy/components/commit/9a48f9f))
+
+
+
 ## [1.9.2](https://github.com/asyncy/components/compare/v1.9.1...v1.9.2) (2019-04-21)
 
 
