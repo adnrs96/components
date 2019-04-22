@@ -33,6 +33,8 @@
         :type="type === 'switch' ? 'checkbox' : type"
         :checked="type === 'switch' ? value : undefined"
         :value="type !== 'switch' ? value : undefined"
+        :aria-autocomplete="autocomplete"
+        :autocomplete="autocomplete"
         v-on="listeners"
       >
       <label
@@ -100,6 +102,7 @@ export default {
     isGrouped: { type: [Boolean, String], default: undefined, validator: v => [true, false, 'centered', 'right'].includes(v) },
     background: { type: String, default: undefined },
     label: { type: String, default: undefined },
+    autocomplete: { type: String, default: undefined, validator: v => ['on', 'off'].includes(v) },
     type: {
       type: String,
       default: 'text',
