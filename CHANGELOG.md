@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0](https://github.com/storyscript/components/compare/v1.9.7...v2.0.0) (2019-04-26)
+
+
+### Features
+
+* **logo:** add new logo and new release ([ab28b2c](https://github.com/storyscript/components/commit/ab28b2c))
+
+
+### BREAKING CHANGES
+
+* **logo:** 'a-*' prefix has been renamed to 's-*' to match storyscript
+
+
+
 ## [1.9.7](https://github.com/storyscript/components/compare/v1.9.6...v1.9.7) (2019-04-26)
 
 
