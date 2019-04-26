@@ -16,6 +16,6 @@
       <div class="column is-one-quarter image is-128x128 has-background-gray-2 has-text-white has-text-centered">gray-2</div>
       <div class="column is-one-quarter image is-128x128 has-background-gray-3 has-text-white has-text-centered">gray-3</div>
       <div class="column is-one-quarter image is-128x128 has-background-gray-4 has-text-white has-text-centered">gray-4</div>
-    </div>
+</div>
 </div>
 ```
