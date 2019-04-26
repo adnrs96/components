@@ -1,6 +1,6 @@
 {
   "name": "@storyscript/vue",
-  "version": "1.9.5",
+  "version": "1.9.6",
   "scripts": {
     "serve": "vue-cli-service styleguidist",
     "build": "vue-cli-service build --target lib --name storyscript-vue ./src/main.js",
@@ -48,10 +48,12 @@
     "url": "https://github.com/storyscript/components/issues"
   },
   "license": "Apache-2.0",
-  "licenses": [{
-    "type": "Apache-2.0",
-    "url": "http://www.apache.org/licenses/LICENSE-2.0"
-  }],
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/storyscript/components.git"
