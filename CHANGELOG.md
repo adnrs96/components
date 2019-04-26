@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.1](https://github.com/storyscript/components/compare/v2.0.0...v2.0.1) (2019-04-26)
+
+
+### Bug Fixes
+
+* **tests:** fix logo tests ([dcda4be](https://github.com/storyscript/components/commit/dcda4be))
+
+
+
 # [2.0.0](https://github.com/storyscript/components/compare/v1.9.7...v2.0.0) (2019-04-26)
 
 
