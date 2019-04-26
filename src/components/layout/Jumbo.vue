@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: 'AJumbo',
+  name: 'SJumbo',
   props: {
     /**
      * The title of the jumbo
@@ -82,22 +82,22 @@ export default {
 
 ```jsx
 <div>
-  <a-jumbo size="fullheight" into="bracket" small="developer marketplace runtime">
-    <a-navbar slot="header" dark :items="[{ name: 'Blog' }, { name: 'Documentation' }]" />
+  <s-jumbo size="fullheight" into="bracket" small="developer marketplace runtime">
+    <s-navbar slot="header" dark :items="[{ name: 'Blog' }, { name: 'Documentation' }]" />
     <template slot="title">
-      Asyncy amplifies <br /> the developer
-    </template>
+  Storyscript amplifies <br /> the developer
+</template>
     <div class="columns is-centered is-desktop">
       <div class="column is-half">
-        <a-form-beta />
+        <s-form-beta />
       </div>
     </div>
     <div slot="footer" class="has-text-centered">
-      <a-icon icon="separator" />
+      <s-icon icon="separator" />
       <p class="has-text-weight-normal">Discover our mission to raise <br />any developer into a 10x developer.</p>
-      <a-icon icon="arrow-down" stroke="white" />
+      <s-icon icon="arrow-down" stroke="white" />
     </div>
-  </a-jumbo>
+  </s-jumbo>
 </div>
 ```
 </docs>

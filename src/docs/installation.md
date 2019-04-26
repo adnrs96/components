@@ -1,10 +1,10 @@
-### `@asyncy/vue` is available on NPM and yarn.
+### `@storyscript/vue` is available on NPM and yarn.
 
 Simply add it to your project by adding:
 ```bash
-npm install @asyncy/vue
+npm install @storyscript/vue
 ```
 or
 ```bash
-yarn add @asyncy/vue
+yarn add @storyscript/vue
 ```

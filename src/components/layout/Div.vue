@@ -13,7 +13,7 @@ import Background from '@/mixins/Background'
 import Padding from '@/mixins/Padding'
 
 export default {
-  name: 'ADiv',
+  name: 'SDiv',
   mixins: [Background, Padding],
   props: {
     size: { type: String, default: undefined }

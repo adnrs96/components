@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'ATag',
+  name: 'STag',
   props: {
     rounded: { type: Boolean, default: false },
     color: { type: String, default: undefined },
@@ -55,10 +55,10 @@ export default {
   new Vue({
     template: `
       <section v-tags>
-        <a-tag @click="onClick" delete-only />
-        <a-tag @click="onClick" deletable>lol</a-tag>
-        <a-tag color="primary">lol</a-tag>
-        <a-tag outline>lol</a-tag>
+        <s-tag @click="onClick" delete-only />
+        <s-tag @click="onClick" deletable>lol</s-tag>
+        <s-tag color="primary">lol</s-tag>
+        <s-tag outline>lol</s-tag>
       </section>`,
     methods: {
       onClick: function (e) {

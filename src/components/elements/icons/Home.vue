@@ -15,6 +15,6 @@
 
 <script>
 export default {
-  name: 'AIconHome'
+  name: 'SIconHome'
 }
 </script>

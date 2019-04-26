@@ -49,7 +49,7 @@
 import ClickOutside from '@/directives/ClickOutside'
 
 export default {
-  name: 'ASelect',
+  name: 'SSelect',
   directives: { ClickOutside },
   props: {
     readonly: { type: Boolean, default: false },
@@ -101,25 +101,25 @@ export default {
 new Vue({
   template: `<section>
               <section>
-                <a-select
+                <s-select
                   value="Username"
                   avatar="//source.unsplash.com/64x64/?profile"
                 />
               </section>
               <section>
-                <a-select
+                <s-select
                   fold-icon
                   value="Quick Start"
                   :is-open.sync="isQSOpen"
                 />
               </section>
               <section class="has-padding-top-large">
-                <a-select value="Quick Start" />
-                <a-select @open="isQSOpen = true" @close="isQSOpen = false" value="Storyscript" />
-                <a-select value="Blabla">
+                <s-select value="Quick Start" />
+                <s-select @open="isQSOpen = true" @close="isQSOpen = false" value="Storyscript" />
+                <s-select value="Blabla">
                   <li>Hello</li>
                   <li>Salut</li>
-                </a-select>
+                </s-select>
               </section>
             </section>`,
   data: () => ({ input: 'value', isQSOpen: false }),

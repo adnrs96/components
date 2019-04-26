@@ -10,9 +10,9 @@
           :class="['navbar-item', { 'fill--white': dark }]"
           @click="$emit('logo', $event)"
         >
-          <a-logo icon />
+          <s-logo icon />
           <span class="is-separator" />
-          <a-logo />
+          <s-logo />
         </a>
         <a
           v-if="items.length > 0"
@@ -44,14 +44,14 @@
               :class="['navbar-item', { 'is-active': item.active || isDropped(id) }, { 'is-underlined': item.underlined }, { 'has-button': item.button }, { 'has-dropdown': item.children }, {'is-pure': item.avatar}, {'is-mobile-first': item.mobileFirst}]"
               @click.stop="close(item.children ? id : -1)"
             >
-              <a-button
+              <s-button
                 v-if="item.button"
                 v-bind="item.button"
                 :icon="item.icon || undefined"
                 @click="$emit('click', {$event, item})"
               >
                 {{ item.name }}
-              </a-button>
+              </s-button>
               <template v-else-if="item.children">
                 <a :class="['navbar-link', {'is-arrowless': item.avatar}]">
                   <template v-if="typeof item.avatar === typeof ''">
@@ -68,7 +68,7 @@
                         v-if="item.avatar.mdi"
                         :class="`mdi mdi-${item.avatar.mdi}`"
                       />
-                      <a-icon
+                      <s-icon
                         v-else
                         v-bind="item.avatar"
                       />
@@ -135,7 +135,7 @@
 import ClickOutside from '@/directives/ClickOutside'
 
 export default {
-  name: 'ANavbar',
+  name: 'SNavbar',
   directives: { ClickOutside },
   props: {
     /**
@@ -181,7 +181,7 @@ export default {
 <docs>
 ```vue
 new Vue({
-  template: `<a-navbar
+  template: `<s-navbar
                 @click="log"
                 @logo="log"
                 :items="[
@@ -203,12 +203,12 @@ new Vue({
 ### Playground
 
 ```jsx
-<a-container>
-  <a-div background="white" size="full">
-    <a-navbar />
-  </a-div>
-  <a-div padding="max" size="full" class="has-background-black">
-    <a-navbar
+<s-container>
+  <s-div background="white" size="full">
+    <s-navbar />
+  </s-div>
+  <s-div padding="max" size="full" class="has-background-black">
+    <s-navbar
       dark
       :items="[
         { name: 'Home', active: true },
@@ -217,7 +217,7 @@ new Vue({
         { name: 'Jean Barriere', avatar: 'https://avatars2.githubusercontent.com/u/11390722?v=4', children: [{ spans: ['Jean Barrière', 'jean@barriere.io'], hiddenTouch: true }, { divider: true }, { name: 'My account' }, { name: 'My services' }, { divider: true }, { name: 'Logout' }], mobileFirst: true }
       ]"
     />
-  </a-div>
-</a-container>
+  </s-div>
+</s-container>
 ```
 </docs>

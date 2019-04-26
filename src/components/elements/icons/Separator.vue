@@ -20,6 +20,6 @@
 
 <script>
 export default {
-  name: 'AIconSeparator'
+  name: 'SIconSeparator'
 }
 </script>

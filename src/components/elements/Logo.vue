@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'ALogo',
+  name: 'SLogo',
   props: {
     /**
      * The color variation of the logo
@@ -66,10 +66,10 @@ Asyncy logo as a component
 ```jsx
 <div class="columns has-text-centered is-desktop">
   <div class="column">
-    <a-logo />
+    <s-logo />
   </div>
   <div class="column">
-    <a-logo icon />
+    <s-logo icon />
   </div>
 </div>
 ```

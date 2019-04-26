@@ -95,7 +95,7 @@
 
 <script>
 export default {
-  name: 'AInput',
+  name: 'SInput',
   props: {
     disabled: { type: Boolean, default: undefined },
     hasAddons: { type: [Boolean, String], default: undefined, validator: v => [true, false, 'centered', 'right'].includes(v) },
@@ -166,33 +166,33 @@ export default {
 new Vue({
   template: `
   <section>
-    <a-input
+    <s-input
       v-model="input"
-      :icon-right="['a-icon', { icon: 'search' }]"
+      :icon-right="['s-icon', { icon: 'search' }]"
       size="large"
     />
-    <a-input
+    <s-input
       v-model="input"
       @keyup.enter="input = ''"
       label="hello world"
       placeholder="hello world"
     />
-    <a-input
+    <s-input
       background="light"
       placeholder="hello world"
     />
-    <a-input has-addons="centered" icon-left="email">
+    <s-input has-addons="centered" icon-left="email">
       <a slot="right" class="button"><i class="mdi mdi-magnify" /></a>
-    </a-input>
-    <a-container centered-v-h row>
-    <a-div size="auto" v-tags>
-      <a-tag outline>lol</a-tag>
-      <a-input has-addons="centered" icon-left="tag-outline" size="small">
+    </s-input>
+    <s-container centered-v-h row>
+    <s-div size="auto" v-tags>
+      <s-tag outline>lol</s-tag>
+      <s-input has-addons="centered" icon-left="tag-outline" size="small">
         <a slot="right" class="button is-small"><i class="mdi mdi-plus" /></a>
-      </a-input>
-      </a-div>
-    </a-container>
-    <a-input
+      </s-input>
+      </s-div>
+    </s-container>
+    <s-input
       type="switch"
       v-model="checked"
       label="hello world"

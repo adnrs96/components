@@ -11,19 +11,19 @@
       placeholder="Enter your email"
       type="email"
     >
-    <a-button
+    <s-button
       type="submit"
       arrow-mobile
       :loading="sending"
     >
       {{ success ? 'Thanks !' : 'Join Beta' }}
-    </a-button>
+    </s-button>
   </form>
 </template>
 
 <script>
 export default {
-  name: 'AFormBeta',
+  name: 'SFormBeta',
   props: {
     /**
      * The process function called after submit Should return a Promise
@@ -92,9 +92,11 @@ export default {
   margin: 0 auto;
   max-width: 450px;
   justify-content: space-between;
-  padding: .2rem .25rem;
+  padding: 0.2rem 0.25rem;
   border-radius: 2rem;
-  &.error { @include animate-shake; }
+  &.error {
+    @include animate-shake;
+  }
 
   input {
     width: max-content;
@@ -105,7 +107,9 @@ export default {
     color: $light;
     padding: 1rem 1rem 1rem 1.5rem;
     &:-webkit-autofill {
-      &, &:hover, &:focus {
+      &,
+      &:hover,
+      &:focus {
         -webkit-text-fill-color: $light;
         transition: background-color 5000s ease-in-out 0s;
         background: none !important;
@@ -119,6 +123,6 @@ export default {
 ### Playground
 
 ```jsx
-<a-form-beta />
+<s-form-beta />
 ```
 </docs>

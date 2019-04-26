@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="`a-icon-${icon}`"
+    :is="`s-icon-${icon}`"
     v-if="icon"
     v-bind="props"
   />
@@ -13,7 +13,7 @@ import Icons from './icons'
 const names = Object.keys(Icons).reduce((arr, i) => [...arr, i.slice(5, i.length).replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()], [])
 
 export default {
-  name: 'AIcon',
+  name: 'SIcon',
   components: { ...Icons },
   props: {
     icon: {
@@ -40,7 +40,7 @@ const Icons = require('./icons').default;
 const names = Object.keys(Icons).reduce((arr, i) => [...arr, i.slice(5, i.length).replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()], []);
 
 <div class="columns is-vcentered is-centered is-gapless is-multiline">
-  <a-icon
+  <s-icon
     v-for="icon of names"
     class="column"
     :title="icon"

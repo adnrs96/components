@@ -3,16 +3,16 @@ const version = require('./package.json').version
 
 module.exports = {
   // set your styleguidist configuration here
-  title: 'Asyncy',
+  title: 'Storyscript',
   pagePerSection: true,
   version: version,
   usageMode: 'expand',
   exampleMode: 'expand',
   template: {
-    favicon: 'https://storage.googleapis.com/asyncyapp.com/http_assets/favicon.ico'
+    // favicon: 'https://cdn.storyscript.io/favicon.ico'
   },
   require: [
-    path.join(__dirname, 'src/scss/asyncy.scss'),
+    path.join(__dirname, 'src/scss/storyscript.scss'),
     path.join(__dirname, 'src/styleguide.js')
   ],
   sections: [{
@@ -32,7 +32,7 @@ module.exports = {
     ]
   },
   {
-    name: 'Styelguide',
+    name: 'Styleguide',
     sections: [{
       name: 'Typography',
       content: 'src/docs/typography.md'

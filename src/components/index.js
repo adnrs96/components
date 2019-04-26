@@ -1,43 +1,43 @@
-import ABreadcrumbs from './elements/Breadcrumbs'
-import AButton from './elements/Button'
-import ACard from './elements/Card'
-import AIcon from './elements/Icon'
-import ALogo from './elements/Logo'
-import ANavbar from './elements/Navbar'
-import ATag from './elements/Tag'
-import AFormBeta from './form/FormBeta'
-import AInput from './form/Input'
-import ASelect from './form/Select'
-import ABoxed from './layout/Boxed'
-import ADiv from './layout/Div'
-import AContainer from './layout/Container'
-import AFooter from './layout/Footer'
-import AJoin from './layout/Join'
-import AJumbo from './layout/Jumbo'
-import ALayout from './layout/Layout'
-import ALevel from './layout/Level'
-import AMedia from './layout/Media'
+import SBreadcrumbs from './elements/Breadcrumbs'
+import SButton from './elements/Button'
+import SCard from './elements/Card'
+import SIcon from './elements/Icon'
+import SLogo from './elements/Logo'
+import SNavbar from './elements/Navbar'
+import STag from './elements/Tag'
+import SFormBeta from './form/FormBeta'
+import SInput from './form/Input'
+import SSelect from './form/Select'
+import SBoxed from './layout/Boxed'
+import SDiv from './layout/Div'
+import SContainer from './layout/Container'
+import SFooter from './layout/Footer'
+import SJoin from './layout/Join'
+import SJumbo from './layout/Jumbo'
+import SLayout from './layout/Layout'
+import SLevel from './layout/Level'
+import SMedia from './layout/Media'
 
 export const plugin = {
-  ABreadcrumbs,
-  AButton,
-  ACard,
-  AIcon,
-  ALogo,
-  ANavbar,
-  ATag,
-  AFormBeta,
-  AInput,
-  ASelect,
-  ABoxed,
-  ADiv,
-  AContainer,
-  AFooter,
-  AJoin,
-  AJumbo,
-  ALayout,
-  ALevel,
-  AMedia
+  SBreadcrumbs,
+  SButton,
+  SCard,
+  SIcon,
+  SLogo,
+  SNavbar,
+  STag,
+  SFormBeta,
+  SInput,
+  SSelect,
+  SBoxed,
+  SDiv,
+  SContainer,
+  SFooter,
+  SJoin,
+  SJumbo,
+  SLayout,
+  SLevel,
+  SMedia
 }
 
 export default plugin

@@ -1,12 +1,12 @@
 import components from '@/components'
 import directives from '@/directives'
 import utils from '@/utils'
-import '@/scss/asyncy.scss'
+import '@/scss/storyscript.scss'
 
 const plugin = {
   install (Vue, options) {
-    if (Vue._asyncy_vue_installed) return
-    Vue._asyncy_vue_installed = true
+    if (Vue._storyscript_vue_installed) return
+    Vue._storyscript_vue_installed = true
 
     // install componentscomponents
     for (let item in components) {

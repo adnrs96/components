@@ -5,11 +5,11 @@ You can configure the library by choosing to install only some components, direc
 > If an empty array is passed, **nothing** will be loaded.
 
 ```javascript
-import AsyncyVue from '@asyncy/vue'
+import StoryscriptVue from '@storyscript/vue'
 import Vue from 'vue'
 
-Vue.use(AsyncyVue, {
-  components: ['ALogo', ...],
+Vue.use(StoryscriptVue, {
+  components: ['SLogo', ...],
   /* directives: ['directive1', ...], */
   utils: []
 })

@@ -173,6 +173,6 @@
 
 <script>
 export default {
-  name: 'AIconRocket'
+  name: 'SIconRocket'
 }
 </script>

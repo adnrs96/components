@@ -8,7 +8,7 @@
 import Padding from '@/mixins/Padding'
 
 export default {
-  name: 'AContainer',
+  name: 'SContainer',
   mixins: [Padding],
   inject: {
     classes: {

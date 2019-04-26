@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'ABoxed',
+  name: 'SBoxed',
   props: {
     shadowed: {
       type: Boolean,
@@ -23,9 +23,9 @@ export default {
 
 ```jsx
   <section>
-    <a-boxed>
+    <s-boxed>
       <h3 class="is-size-3 has-text-gray-2">Hello world</h3>
-    </a-boxed>
+    </s-boxed>
   </section>
 ```
 </docs>

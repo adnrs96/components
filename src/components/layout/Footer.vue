@@ -1,51 +1,51 @@
 <template>
-  <a-layout :class="[{'is-stars': dark}]">
-    <a-container>
-      <a-div>
-        <a-level>
+  <s-layout :class="[{'is-stars': dark}]">
+    <s-container>
+      <s-div>
+        <s-level>
           <p
             slot="left"
             class="is-footer-text is-size-8 has-text-uppercase has-text-weight-bold has-letter-spacing-large"
           >
             PASSIONATELY BUILT WITH
-            <a-icon icon="heart" />IN AMSTERDAM
+            <s-icon icon="heart" />IN AMSTERDAM
           </p>
           <p
             slot="right"
             class="is-footer-text is-size-8 has-text-uppercase has-text-right has-spans has-text-weight-bold"
           >
-            <span class="has-letter-spacing-large">&copy; 2019 ASYNCY, Inc.</span>
+            <span class="has-letter-spacing-large">&copy; 2019 STORYSCRIPT, Inc.</span>
             <a
               :class="[`has-text-${dark ? 'white' : 'dark'}`]"
               href="//asyncy.click/slack"
-              title="Asyncy Slack"
+              title="Storyscript Slack"
             >
               <i class="mdi mdi-slack" />
             </a>
             <a
               :class="[`has-text-${dark ? 'white' : 'dark'}`]"
-              href="//twitter.com/asyncy"
-              title="Asyncy Twitter"
+              href="//twitter.com/storyscript"
+              title="Storyscript Twitter"
             >
               <i class="mdi mdi-twitter" />
             </a>
             <a
               :class="[`has-text-${dark ? 'white' : 'dark'}`]"
-              href="//github.com/asyncy"
-              title="Asyncy Github"
+              href="//github.com/storyscript"
+              title="Storyscript Github"
             >
               <i class="mdi mdi-github-circle" />
             </a>
           </p>
-        </a-level>
-      </a-div>
-    </a-container>
-  </a-layout>
+        </s-level>
+      </s-div>
+    </s-container>
+  </s-layout>
 </template>
 
 <script>
 export default {
-  name: 'AFooter',
+  name: 'SFooter',
   props: {
     dark: {
       type: Boolean,
@@ -60,8 +60,8 @@ export default {
 
 ```jsx
 <section>
-  <a-footer />
-  <a-footer dark />
+  <s-footer />
+  <s-footer dark />
 </section>
 ```
 </docs>

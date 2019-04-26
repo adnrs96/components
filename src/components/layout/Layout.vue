@@ -15,7 +15,7 @@ import Background from '@/mixins/Background'
 import Padding from '@/mixins/Padding'
 
 export default {
-  name: 'ALayout',
+  name: 'SLayout',
   mixins: [Background, Padding],
   provide () {
     return {
@@ -55,23 +55,23 @@ export default {
 
 <docs>
 ```jsx
-<a-layout background="light" foreground="white" rounded shadow padding="large" margin="max" outside>
-  <a-container vh-centered>
-    <a-div size="one-quarter" background="light">
+<s-layout background="light" foreground="white" rounded shadow padding="large" margin="max" outside>
+  <s-container vh-centered>
+    <s-div size="one-quarter" background="light">
       hello
-    </a-div>
-    <a-div size="half">
-      <a-container>
-        <a-div size="1" v-for="i in 6" background="black">
+    </s-div>
+    <s-div size="half">
+      <s-container>
+        <s-div size="1" v-for="i in 6" background="black">
           <p>d</p>
-        </a-div>
-        <a-div background="dark">a</a-div>
-      </a-container>
-    </a-div>
-    <a-div v-for="i in 15" size="1" background="dark">
+        </s-div>
+        <s-div background="dark">a</s-div>
+      </s-container>
+    </s-div>
+    <s-div v-for="i in 15" size="1" background="dark">
       hello
-    </a-div>
-  </a-container>
-</a-layout>
+    </s-div>
+  </s-container>
+</s-layout>
 ```
 </docs>

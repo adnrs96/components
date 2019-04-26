@@ -18,6 +18,6 @@
 
 <script>
 export default {
-  name: 'AIconPaginationNext'
+  name: 'SIconPaginationNext'
 }
 </script>

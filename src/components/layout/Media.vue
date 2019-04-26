@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'AMedia',
+  name: 'SMedia',
   props: {
     centered: { type: Boolean, default: false }
   }
@@ -34,19 +34,19 @@ export default {
 ## Playground
 
 ```jsx
-  <a-layout background="light" full>
-    <a-container>
-      <a-div size="full">
-        <a-media padding="none">
+  <s-layout background="light" full>
+    <s-container>
+      <s-div size="full">
+        <s-media padding="none">
           <template slot="left">left</template>
           <template>content</template>
           <template slot="right">right</template>
-        </a-media>
-      </a-div>
-      <a-div v-for="i in 12" background="dark">
+        </s-media>
+      </s-div>
+      <s-div v-for="i in 12" background="dark">
         a
-      </a-div>
-    </a-container>
-  </a-layout>
+      </s-div>
+    </s-container>
+  </s-layout>
 ```
 </docs>

@@ -1,9 +1,9 @@
 {
-  "name": "@asyncy/vue",
+  "name": "@storyscript/vue",
   "version": "1.9.5",
   "scripts": {
     "serve": "vue-cli-service styleguidist",
-    "build": "vue-cli-service build --target lib --name asyncy-vue ./src/main.js",
+    "build": "vue-cli-service build --target lib --name storyscript-vue ./src/main.js",
     "build:guide": "vue-cli-service styleguidist:build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
@@ -11,27 +11,27 @@
   },
   "dependencies": {
     "bulma": "^0.7.4",
-    "vue": "^2.6.9"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@mdi/font": "^3.5.95",
-    "@vue/cli-plugin-babel": "^3.5.1",
-    "@vue/cli-plugin-eslint": "^3.5.1",
-    "@vue/cli-plugin-unit-jest": "^3.5.1",
-    "@vue/cli-service": "^3.5.1",
+    "@mdi/font": "^3.6.95",
+    "@vue/cli-plugin-babel": "^3.6.0",
+    "@vue/cli-plugin-eslint": "^3.6.0",
+    "@vue/cli-plugin-unit-jest": "^3.6.3",
+    "@vue/cli-service": "^3.6.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.5.0",
-    "eslint": "^5.15.1",
+    "babel-jest": "^24.7.1",
+    "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.2",
     "lint-staged": "^8.1.5",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "standard-version": "^5.0.2",
-    "vue-cli-plugin-styleguidist": "^3.8.3",
-    "vue-template-compiler": "^2.6.9"
+    "vue-cli-plugin-styleguidist": "^3.12.0",
+    "vue-template-compiler": "^2.6.10"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
@@ -42,29 +42,27 @@
       "git add"
     ]
   },
-  "main": "dist/asyncy-vue.common.js",
-  "web": "dist/asyncy-vue.umd.min.js",
+  "main": "dist/storyscript-vue.common.js",
+  "web": "dist/storyscript-vue.umd.min.js",
   "bugs": {
-    "url": "https://github.com/asyncy/components/issues"
+    "url": "https://github.com/storyscript/components/issues"
   },
   "license": "Apache-2.0",
-  "licenses": [
-    {
-      "type": "Apache-2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0"
-    }
-  ],
+  "licenses": [{
+    "type": "Apache-2.0",
+    "url": "http://www.apache.org/licenses/LICENSE-2.0"
+  }],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asyncy/components.git"
+    "url": "git+https://github.com/storyscript/components.git"
   },
   "files": [
     "dist",
     "src/scss"
   ],
-  "homepage": "https://github.com/asyncy/components#readme",
-  "style": "dist/asyncy-vue.css",
-  "sass": "src/scss/asyncy.scss",
-  "description": "Shared vue components for Asyncy",
-  "author": "Asyncy"
+  "homepage": "https://github.com/storyscript/components#readme",
+  "style": "dist/storyscript-vue.css",
+  "sass": "src/scss/storyscript.scss",
+  "description": "Shared vue components for Storyscript",
+  "author": "Storyscript"
 }

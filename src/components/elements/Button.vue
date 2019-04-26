@@ -20,13 +20,13 @@
       <slot />
     </span>
     <template v-if="arrow">
-      <a-icon
+      <s-icon
         :class="[{arrow: arrowIcon === 'arrow'}, 'btn-icon', {search: arrowIcon === 'search'}]"
         :icon="arrowIcon"
       />
     </template>
     <template v-else-if="arrowMobile">
-      <a-icon
+      <s-icon
         class="arrow is-hidden-tablet"
         icon="arrow"
       />
@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: 'AButton',
+  name: 'SButton',
   props: {
     /**
      * Sets the button state
@@ -168,17 +168,17 @@ export default {
 ```jsx
 <div class="columns is-vcentered has-text-centered is-multiline">
   <div class="column">
-    <a-button state="primary">Primary</a-button>
+    <s-button state="primary">Primary</s-button>
   </div>
   <div class="column">
-    <a-button state="primary" link>Push Me</a-button>
+    <s-button state="primary" link>Push Me</s-button>
   </div>
   <div class="column">
-    <a-button state="secondary" arrow>Secondary</a-button>
-    <a-button state="primary" outlined :url="{ href: '//asyncy.com', target: '_blank' }">asyncy.com</a-button>
+    <s-button state="secondary" arrow>Secondary</s-button>
+    <s-button state="primary" outlined :url="{ href: '//storyscript.io', target: '_blank' }">storyscript.io</s-button>
   </div>
   <div class="column">
-    <a-button state="primary" outlined icon="check-circle" size="small">Small</a-button>
+    <s-button state="primary" outlined icon="check-circle" size="small">Small</s-button>
   </div>
 </div>
 ```

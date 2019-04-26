@@ -38,4 +38,4 @@ babel.config.js
 
 #build unnecessary files (demo.html + unminified umd file)
 dist/demo.html
-dist/asyncy-vue.umd.js
+dist/storyscript-vue.umd.js

@@ -216,6 +216,6 @@
 
 <script>
 export default {
-  name: 'AIconCalendar'
+  name: 'SIconCalendar'
 }
 </script>

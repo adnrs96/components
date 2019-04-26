@@ -5,7 +5,7 @@
   >
     <ul>
       <li>
-        <a-icon icon="home" />
+        <s-icon icon="home" />
       </li>
       <li
         v-for="(item, idx) of items"
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'ABreadcrumbs',
+  name: 'SBreadcrumbs',
   props: {
     items: {
       type: Array,
@@ -41,7 +41,7 @@ export default {
 ### Playground
 
 ```
-<a-breadcrumbs :items="[{ name: 'hello', href: '/home' }, { name: 'salut' }]" />
+<s-breadcrumbs :items="[{ name: 'hello', href: '/home' }, { name: 'salut' }]" />
 ```
 </docs>
 
@@ -51,15 +51,18 @@ export default {
     ul {
       align-items: center;
       li {
-        span, a {
-          padding: 0 .75rem;
+        span,
+        a {
+          padding: 0 0.75rem;
           text-transform: uppercase;
-          font-size: .9rem;
+          font-size: 0.9rem;
           font-weight: 600;
           color: #464769; // nth($grays, 2);
         }
-        &.active, &:last-child {
-          span, a {
+        &.active,
+        &:last-child {
+          span,
+          a {
             font-weight: 700;
           }
         }
@@ -73,8 +76,8 @@ export default {
           display: none;
         }
         &:not(:first-child):not(:nth-child(2)):before {
-          content: '';
-          background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMSAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlPSIjOTc5Nzk3Ij48cG9seWxpbmUgcG9pbnRzPSI1IDEgMTAgNiA1IDExIiAvPjxwb2x5bGluZSBwb2ludHM9IjIgMSA3IDYgMiAxMSIgLz48L2c+PC9zdmc+');
+          content: "";
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMSAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlPSIjOTc5Nzk3Ij48cG9seWxpbmUgcG9pbnRzPSI1IDEgMTAgNiA1IDExIiAvPjxwb2x5bGluZSBwb2ludHM9IjIgMSA3IDYgMiAxMSIgLz48L2c+PC9zdmc+");
           background-repeat: no-repeat;
           background-size: contain;
           width: 1rem;

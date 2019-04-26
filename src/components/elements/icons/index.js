@@ -1,25 +1,25 @@
-import AIconArrow from './Arrow.vue'
-import AIconArrowDown from './ArrowDown.vue'
-import AIconCalendar from './Calendar.vue'
-import AIconDots from './Dots.vue'
-import AIconFileBroken from './FileBroken.vue'
-import AIconHeart from './Heart.vue'
-import AIconHome from './Home.vue'
-import AIconPaginationNext from './PaginationNext.vue'
-import AIconRocket from './Rocket.vue'
-import AIconSearch from './Search.vue'
-import AIconSeparator from './Separator.vue'
+import SIconArrow from './Arrow.vue'
+import SIconArrowDown from './ArrowDown.vue'
+import SIconCalendar from './Calendar.vue'
+import SIconDots from './Dots.vue'
+import SIconFileBroken from './FileBroken.vue'
+import SIconHeart from './Heart.vue'
+import SIconHome from './Home.vue'
+import SIconPaginationNext from './PaginationNext.vue'
+import SIconRocket from './Rocket.vue'
+import SIconSearch from './Search.vue'
+import SIconSeparator from './Separator.vue'
 
 export default {
-  AIconArrow,
-  AIconArrowDown,
-  AIconCalendar,
-  AIconDots,
-  AIconFileBroken,
-  AIconHeart,
-  AIconHome,
-  AIconPaginationNext,
-  AIconRocket,
-  AIconSearch,
-  AIconSeparator
+  SIconArrow,
+  SIconArrowDown,
+  SIconCalendar,
+  SIconDots,
+  SIconFileBroken,
+  SIconHeart,
+  SIconHome,
+  SIconPaginationNext,
+  SIconRocket,
+  SIconSearch,
+  SIconSeparator
 }

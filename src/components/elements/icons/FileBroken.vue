@@ -21,6 +21,6 @@
 
 <script>
 export default {
-  name: 'AIconFileBroken'
+  name: 'SIconFileBroken'
 }
 </script>

@@ -5,7 +5,7 @@
         v-if="crew"
         class="is-size-6 has-text-white has-text-centered is-vcentered"
       >
-        <a-icon
+        <s-icon
           icon="rocket"
           height="18px"
         />
@@ -22,14 +22,14 @@
           href="#"
           target="_blank"
           class="has-text-info has-text-weight-bold"
-          title="Asyncy Champion Initiative"
+          title="Storyscript Champion Initiative"
         >
-          Asyncy Champion Initiative
+          Storyscript Champion Initiative
         </a>
         <span>.</span>
       </p>
-      <a-container class="story">
-        <a-div
+      <s-container class="story">
+        <s-div
           :size="bigger ? 'full' : 'half'"
           class="has-text-white"
         >
@@ -39,11 +39,11 @@
               your story.
             </b>
           </h4>
-        </a-div>
-        <a-div :size="bigger ? 'full' : 'half'">
-          <a-form-beta />
-        </a-div>
-      </a-container>
+        </s-div>
+        <s-div :size="bigger ? 'full' : 'half'">
+          <s-form-beta />
+        </s-div>
+      </s-container>
       <div
         v-if="footer"
         class="footer-container"
@@ -56,7 +56,7 @@
               </li>
               <li>
                 <a
-                  href="//docs.asyncy.com"
+                  href="//docs.storyscript.io"
                   title="Documentation"
                   class="has-text-white"
                 >
@@ -65,7 +65,7 @@
               </li>
               <li>
                 <a
-                  href="//docs.asyncy.com/faq"
+                  href="//docs.storyscript.io/faq"
                   title="FAQ"
                   class="has-text-white"
                 >
@@ -99,7 +99,7 @@
                 </router-link>
                 <a
                   v-else
-                  href="//asyncy.com/events"
+                  href="//storyscript.io/events"
                   title="Events"
                   class="has-text-white"
                 >
@@ -108,7 +108,7 @@
               </li>
               <li>
                 <a
-                  href="//asyncy.com/blog"
+                  href="//storyscript.io/blog"
                   title="Blog"
                   class="has-text-white"
                 >
@@ -117,7 +117,7 @@
               </li>
               <li>
                 <a
-                  href="//status.asyncy.com"
+                  href="//status.storyscript.io"
                   title="Status"
                   class="has-text-white"
                 >
@@ -150,7 +150,7 @@
                 </router-link>
                 <a
                   v-else
-                  href="//asyncy.com/about"
+                  href="//storyscript.io/about"
                   title="About"
                   class="has-text-white"
                 >
@@ -177,7 +177,7 @@
                 </router-link>
                 <a
                   v-else
-                  href="//asyncy.com/contact"
+                  href="//storyscript.io/contact"
                   title="Contact"
                   class="has-text-white"
                 >
@@ -198,13 +198,13 @@
           <div class="column is-one-quarter">
             <ul>
               <li>
-                <a-logo
+                <s-logo
                   icon
                   class="fill--white"
                 />
               </li>
               <li class="is-size-7 has-text-uppercase has-text-weight-bold has-text-white">
-                2019 Asyncy Inc.
+                2019 Storyscript Inc.
               </li>
             </ul>
           </div>
@@ -216,7 +216,7 @@
 
 <script>
 export default {
-  name: 'AJoin',
+  name: 'SJoin',
   props: {
     crew: {
       type: Boolean,
@@ -247,7 +247,7 @@ export default {
 
 ```jsx
 <section>
-  <a-join
+  <s-join
     crew
     is-paddingless
     footer

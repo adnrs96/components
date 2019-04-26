@@ -20,6 +20,6 @@
 
 <script>
 export default {
-  name: 'AIconArrowDown'
+  name: 'SIconArrowDown'
 }
 </script>

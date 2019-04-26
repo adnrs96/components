@@ -45,6 +45,6 @@
 
 <script>
 export default {
-  name: 'AIconHeart'
+  name: 'SIconHeart'
 }
 </script>

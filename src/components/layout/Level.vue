@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'ALevel'
+  name: 'SLevel'
 }
 </script>
 
@@ -35,19 +35,19 @@ export default {
 ## Playground
 
 ```jsx
-  <a-layout background="light" full>
-    <a-container>
-      <a-div size="full">
-        <a-level padding="none">
+  <s-layout background="light" full>
+    <s-container>
+      <s-div size="full">
+        <s-level padding="none">
           <template slot="left">left</template>
           <template>center</template>
           <template slot="right">right</template>
-        </a-level>
-      </a-div>
-      <a-div v-for="i in 12" background="dark">
+        </s-level>
+      </s-div>
+      <s-div v-for="i in 12" background="dark">
         a
-      </a-div>
-    </a-container>
-  </a-layout>
+      </s-div>
+    </s-container>
+  </s-layout>
 ```
 </docs>
