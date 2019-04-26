@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.2](https://github.com/storyscript/components/compare/v2.0.1...v2.0.2) (2019-04-26)
+
+
+### Bug Fixes
+
+* **navbar:** fix logos sizes + avatar as icon ([7786e38](https://github.com/storyscript/components/commit/7786e38))
+
+
+
 ## [2.0.1](https://github.com/storyscript/components/compare/v2.0.0...v2.0.1) (2019-04-26)
 
 

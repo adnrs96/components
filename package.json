@@ -1,6 +1,6 @@
 {
   "name": "@storyscript/vue",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "scripts": {
     "serve": "vue-cli-service styleguidist",
     "build": "vue-cli-service build --target lib --name storyscript-vue ./src/main.js",
