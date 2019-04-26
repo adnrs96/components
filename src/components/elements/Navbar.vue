@@ -7,12 +7,15 @@
     <div class="container">
       <div class="navbar-brand">
         <a
-          :class="['navbar-item', { 'fill--white': dark }]"
+          :class="['navbar-item']"
           @click="$emit('logo', $event)"
         >
-          <s-logo icon />
+          <s-logo
+            icon
+            :variant="dark && !logoDark ? 'light' : undefined"
+          />
           <span class="is-separator" />
-          <s-logo />
+          <s-logo :variant="dark ? 'light' : undefined" />
         </a>
         <a
           v-if="items.length > 0"
@@ -152,6 +155,13 @@ export default {
     items: {
       type: Array,
       default: () => []
+    },
+    /**
+     * keep the logo dark when it's the dark mode
+     */
+    logoDark: {
+      type: Boolean,
+      defautt: false
     }
   },
   data: () => ({ active: false, dropped: [] }),
