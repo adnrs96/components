@@ -1,6 +1,6 @@
 <template>
   <nav
-    :class="['navbar', { 'dark': dark }]"
+    :class="['navbar', { 'dark': dark || black }]"
     role="navigation"
     aria-label="main navigation"
   >
@@ -12,10 +12,10 @@
         >
           <s-logo
             icon
-            :variant="dark && !logoDark ? 'light' : undefined"
+            :variant="black ? 'light' : dark ? 'dark' : undefined"
           />
           <span class="is-separator" />
-          <s-logo :variant="dark ? 'light' : undefined" />
+          <s-logo :variant="dark || black ? 'light' : undefined" />
         </a>
         <a
           v-if="items.length > 0"
@@ -69,7 +69,7 @@
                     <div class="is-avatar icon is-hidden-touch">
                       <i
                         v-if="item.avatar.mdi"
-                        :class="`mdi mdi-${item.avatar.mdi}`"
+                        :class="`mdi mdi-${item.avatar.mdi} is-icon`"
                       />
                       <s-icon
                         v-else
@@ -157,9 +157,9 @@ export default {
       default: () => []
     },
     /**
-     * keep the logo dark when it's the dark mode
+     * setup black theme
      */
-    logoDark: {
+    black: {
       type: Boolean,
       defautt: false
     }
@@ -221,9 +221,21 @@ new Vue({
     <s-navbar
       dark
       :items="[
-        { name: 'Home', active: true },
-        { name: 'Examples', underlined: true },
-        { avatar: { icon: 'arrow-down', style: 'stroke: #fff;width: 16px; height: 16px;' }, name: 'More', children: [{ name: 'submit a service' }] },
+        { name: 'Blog' },
+        { name: 'About' },
+        { name: 'Hub', active: true },
+        { name: 'Docs', underlined: true },
+        { avatar: { mdi: 'github-face' }, name: 'More', children: [{ name: 'Submit a service' }, { name: 'Contribute' }, { divider: true }, { name: 'Sign in' }], mobileFirst: true },
+      ]"
+    />
+    <s-div padding="large" />
+    <s-navbar
+      dark
+      :items="[
+        { name: 'Blog' },
+        { name: 'About' },
+        { name: 'Hub', active: true },
+        { name: 'Docs', underlined: true },
         { name: 'Jean Barriere', avatar: 'https://avatars2.githubusercontent.com/u/11390722?v=4', children: [{ spans: ['Jean Barrière', 'jean@barriere.io'], hiddenTouch: true }, { divider: true }, { name: 'My account' }, { name: 'My services' }, { divider: true }, { name: 'Logout' }], mobileFirst: true }
       ]"
     />
