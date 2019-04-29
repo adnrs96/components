@@ -204,7 +204,7 @@
                 />
               </li>
               <li class="is-size-7 has-text-uppercase has-text-weight-bold has-text-white">
-                2019 Storyscript Inc.
+                2019 Asyncy Inc.
               </li>
             </ul>
           </div>

@@ -56,7 +56,7 @@ export default {
 <docs>
 ```jsx
 <s-layout background="light" foreground="white" rounded shadow padding="large" margin="max" outside>
-  <s-container vh-centered>
+  <s-container centered-v-h>
     <s-div size="one-quarter" background="light">
       hello
     </s-div>

@@ -14,7 +14,7 @@
             slot="right"
             class="is-footer-text is-size-8 has-text-uppercase has-text-right has-spans has-text-weight-bold"
           >
-            <span class="has-letter-spacing-large">&copy; 2019 STORYSCRIPT, Inc.</span>
+            <span class="has-letter-spacing-large">&copy; 2019 ASYNCY, Inc.</span>
             <a
               :class="[`has-text-${dark ? 'white' : 'dark'}`]"
               href="//asyncy.click/slack"
