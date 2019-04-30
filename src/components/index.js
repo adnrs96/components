@@ -1,6 +1,5 @@
 import SBreadcrumbs from './elements/Breadcrumbs'
 import SButton from './elements/Button'
-import SCard from './elements/Card'
 import SIcon from './elements/Icon'
 import SLogo from './elements/Logo'
 import SNavbar from './elements/Navbar'
@@ -21,7 +20,6 @@ import SMedia from './layout/Media'
 export const plugin = {
   SBreadcrumbs,
   SButton,
-  SCard,
   SIcon,
   SLogo,
   SNavbar,

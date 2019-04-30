@@ -1,29 +1,87 @@
-h1 { font-weight: 700 }
+h1 {
+  font-weight: 600
+}
 
-h2, h3, h4, h5, p { font-weight: 500 }
+h2,
+h3,
+h4,
+h5,
+p {
+  font-weight: 400
+}
 
-h1, h2, h3, h4, h5, p, input, span, a { letter-spacing: .5px }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $family-sans-serif-head;
+}
 
-button, .button { letter-spacing: 1.5px }
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+input,
+span,
+a {
+  letter-spacing: .5px
+}
 
-input { font-size: nth($sizes, 7) }
+button,
+.button {
+  letter-spacing: 1.5px
+}
 
-.has-text-uppercase { text-transform: uppercase }
-.has-letter-spacing-large { letter-spacing: .1rem }
-.has-letter-spacing-xlarge { letter-spacing: .1875rem }
+input {
+  font-size: nth($sizes, 7)
+}
 
-h1 { line-height: nth($line-heights, 1) }
-h2 { line-height: nth($line-heights, 2) }
-h3 { line-height: nth($line-heights, 3) }
-h4 { line-height: nth($line-heights, 4) }
-h5 { line-height: nth($line-heights, 5) }
-p { line-height: nth($line-heights, 6) }
+.has-text-uppercase {
+  text-transform: uppercase
+}
+
+.has-letter-spacing-large {
+  letter-spacing: .1rem
+}
+
+.has-letter-spacing-xlarge {
+  letter-spacing: .1875rem
+}
+
+h1 {
+  line-height: nth($line-heights, 1)
+}
+
+h2 {
+  line-height: nth($line-heights, 2)
+}
+
+h3 {
+  line-height: nth($line-heights, 3)
+}
+
+h4 {
+  line-height: nth($line-heights, 4)
+}
+
+h5 {
+  line-height: nth($line-heights, 5)
+}
+
+p {
+  line-height: nth($line-heights, 6)
+}
 
 @each $line-height in $line-heights {
   $id: index($line-heights, $line-height);
+
   .is-size-#{$id} {
     line-height: $line-height;
   }
+
   .has-line-height-#{$id} {
     line-height: $line-height !important;
   }
@@ -34,6 +92,7 @@ p { line-height: nth($line-heights, 6) }
     font-size: nth($sizes, 2) !important;
     line-height: nth($line-heights, 2) !important;
   }
+
   @include mobile {
     font-size: nth($sizes, 3) !important;
     line-height: nth($line-heights, 3) !important;
@@ -45,6 +104,7 @@ p { line-height: nth($line-heights, 6) }
     font-size: nth($sizes, 3) !important;
     line-height: nth($line-heights, 3) !important;
   }
+
   @include mobile {
     font-size: nth($sizes, 4) !important;
     line-height: nth($line-heights, 4) !important;
