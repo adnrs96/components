@@ -24,7 +24,7 @@
             </a>
             <a
               :class="[`has-text-${dark ? 'white' : 'dark'}`]"
-              href="//twitter.com/storyscript"
+              href="//twitter.com/_storyscript"
               title="Storyscript Twitter"
             >
               <i class="mdi mdi-twitter" />
