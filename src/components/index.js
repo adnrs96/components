@@ -4,12 +4,12 @@ import SIcon from './elements/Icon'
 import SLogo from './elements/Logo'
 import SNavbar from './elements/Navbar'
 import STag from './elements/Tag'
+import SText from './elements/Text'
 import SFormBeta from './form/FormBeta'
 import SInput from './form/Input'
 import SSelect from './form/Select'
-import SBoxed from './layout/Boxed'
-import SDiv from './layout/Div'
 import SContainer from './layout/Container'
+import SDiv from './layout/Div'
 import SFooter from './layout/Footer'
 import SJoin from './layout/Join'
 import SJumbo from './layout/Jumbo'
@@ -24,12 +24,12 @@ export const plugin = {
   SLogo,
   SNavbar,
   STag,
+  SText,
   SFormBeta,
   SInput,
   SSelect,
-  SBoxed,
-  SDiv,
   SContainer,
+  SDiv,
   SFooter,
   SJoin,
   SJumbo,
