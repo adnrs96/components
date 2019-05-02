@@ -85,7 +85,8 @@ export default {
 @import "~@/scss/custom/_animations.scss";
 
 .form-beta {
-  background-color: nth($grays, 1);
+  background-color: nth($grays, 4);
+  border: 1px solid darken(nth($grays, 4), 10%);
   display: flex;
   align-items: center;
   flex: 1 1 100%;
@@ -104,13 +105,13 @@ export default {
     border: none;
     outline: none;
     background: none;
-    color: $light;
     padding: 1rem 1rem 1rem 1.5rem;
+    color: $dark;
     &:-webkit-autofill {
       &,
       &:hover,
       &:focus {
-        -webkit-text-fill-color: $light;
+        -webkit-text-fill-color: $dark;
         transition: background-color 5000s ease-in-out 0s;
         background: none !important;
       }

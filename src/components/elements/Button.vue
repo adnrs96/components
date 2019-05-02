@@ -10,10 +10,10 @@
     @click="handleClick"
   >
     <span
-      v-if="icon"
-      class="icon"
+      v-if="icon || iconLeft"
+      :class="['icon', {'round-left': iconLeft}]"
     >
-      <i :class="`mdi mdi-${icon}`" />
+      <i :class="`mdi mdi-${icon || iconLeft}`" />
     </span>
     <!-- @slot Use this slot to place the button content -->
     <span :class="{ 'is-hidden-mobile': arrowMobile }">
@@ -25,6 +25,12 @@
         :icon="arrowIcon"
       />
     </template>
+    <span
+      v-if="iconRight"
+      :class="['icon']"
+    >
+      <i :class="`mdi mdi-${iconRight}`" />
+    </span>
     <template v-else-if="arrowMobile">
       <s-icon
         class="arrow is-hidden-tablet"
@@ -110,6 +116,20 @@ export default {
       default: undefined
     },
     /**
+     * Sets the button icon in a left round
+     */
+    iconLeft: {
+      type: String,
+      default: undefined
+    },
+    /**
+     * Sets a right icon
+     */
+    iconRight: {
+      type: String,
+      default: undefined
+    },
+    /**
      * Remove the button padding
      */
     borderless: {
@@ -166,20 +186,24 @@ export default {
 ### Playground
 
 ```jsx
-<div class="columns is-vcentered has-text-centered is-multiline">
-  <div class="column">
+<s-container centered-h>
+  <s-div>
     <s-button state="primary">Primary</s-button>
-  </div>
-  <div class="column">
+  </s-div>
+  <s-div>
     <s-button state="primary" link>Push Me</s-button>
-  </div>
-  <div class="column">
+  </s-div>
+  <s-div>
     <s-button state="secondary" arrow>Secondary</s-button>
     <s-button state="primary" outlined :url="{ href: '//storyscript.io', target: '_blank' }">storyscript.io</s-button>
-  </div>
-  <div class="column">
+  </s-div>
+  <s-div>
     <s-button state="primary" outlined icon="check-circle" size="small">Small</s-button>
-  </div>
-</div>
+  </s-div>
+  <s-div>
+    <s-button state="primary" icon-left="account-circle">Join Beta</s-button>
+    <s-button state="secondary" size="small" borderless icon-right="github-face">Secondary</s-button>
+  </s-div>
+</s-container>
 ```
 </docs>

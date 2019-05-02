@@ -165,7 +165,7 @@ $switch-focus: none;
   @include switch-size(nth($sizes, 7));
 
   &.is-small {
-    @include switch-size(nth($sizes, 9));
+    @include switch-size(nth($sizes, 8));
   }
 
   &.is-medium {

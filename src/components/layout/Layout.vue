@@ -1,12 +1,25 @@
 <template>
-  <section :class="[...getBackground, ...getMargin]">
+  <section :class="[...getBackground, ...getMargin, {hero}]">
     <slot name="absolute" />
     <div
       v-if="$slots.default"
-      :class="['container', {'is-widescreen': !full}, {'is-fluid': full}, ...getContainerClasses(!narrow), ...getPadding, ...isOutside]"
+      :class="['container', {'is-fluid': full}, ...getContainerClasses(!narrow), ...getPadding, ...isOutside]"
     >
       <slot />
     </div>
+    <template v-if="hero">
+      <div class="hero-head">
+        <slot name="head" />
+      </div>
+      <div class="hero-body">
+        <s-container centered-v-h>
+          <slot name="body" />
+        </s-container>
+      </div>
+      <div class="hero-footer">
+        <slot name="footer" />
+      </div>
+    </template>
   </section>
 </template>
 
@@ -29,7 +42,8 @@ export default {
     full: { type: Boolean, default: false },
     margin: { type: [Array, String], default: 'none' },
     outside: { type: Boolean, default: false },
-    narrow: { type: Boolean, default: false }
+    narrow: { type: Boolean, default: false },
+    hero: { type: Boolean, default: false }
   },
   computed: {
     isOutside: function () {
@@ -62,13 +76,13 @@ export default {
     </s-div>
     <s-div size="half">
       <s-container>
-        <s-div size="1" v-for="i in 6" background="black">
+        <s-div size="1" v-for="i in 6" :key="`list-div-1-${i}`" background="black">
           <p>d</p>
         </s-div>
         <s-div background="dark">a</s-div>
       </s-container>
     </s-div>
-    <s-div v-for="i in 15" size="1" background="dark">
+    <s-div v-for="i in 15" size="1" :key="`list-div-2-${i}`" background="dark">
       hello
     </s-div>
   </s-container>

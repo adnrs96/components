@@ -14,6 +14,9 @@ $danger: #E73F46;
 $danger-invert: findColorInvert($danger);
 $grays: (#2E303C, #50536B, #888CA7, #F3F4F8);
 
+$dark-blue: #28227A;
+$dark-blue-invert: findColorInvert($dark-blue);
+
 $white: #FFFFFF;
 $black: #000000;
 
@@ -27,6 +30,7 @@ $colors: ("white": ($white, $black),
 "success": ($success, $success-invert),
 "warning": ($warning, $warning-invert),
 "danger": ($danger, $danger-invert),
+"dark-blue": ($dark-blue, $dark-blue-invert),
 "gray-1": (nth($grays, 1), findColorInvert(nth($grays, 1))),
 "gray-2": (nth($grays, 2), findColorInvert(nth($grays, 2))),
 "gray-3": (nth($grays, 3), findColorInvert(nth($grays, 3))),

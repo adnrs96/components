@@ -1,13 +1,31 @@
-h1 {
-  font-weight: 600
-}
-
-h2,
-h3,
-h4,
-h5,
 p {
-  font-weight: 400
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+
+  &.has-text-centered {
+    justify-content: center;
+  }
+
+  &.has-text-left {
+    justify-content: start;
+  }
+
+  &.has-text-right {
+    justify-content: end;
+  }
+
+  span+a {
+    margin-left: 1.25rem;
+  }
+
+  a>i.mdi {
+    font-size: 1.5rem;
+  }
+
+  a+a {
+    margin-left: 1rem;
+  }
 }
 
 h1,
@@ -15,24 +33,9 @@ h2,
 h3,
 h4,
 h5 {
+  font-weight: 600;
   font-family: $family-sans-serif-head;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-input,
-span,
-a {
-  letter-spacing: .5px
-}
-
-button,
-.button {
-  letter-spacing: 1.5px
+  color: $dark-blue;
 }
 
 input {
@@ -43,35 +46,41 @@ input {
   text-transform: uppercase
 }
 
-.has-letter-spacing-large {
-  letter-spacing: .1rem
+.has-letter-spacing-medium {
+  letter-spacing: .0625rem
 }
 
-.has-letter-spacing-xlarge {
-  letter-spacing: .1875rem
+.has-letter-spacing-large {
+  letter-spacing: .125rem
 }
 
 h1 {
+  font-size: nth($sizes, 1);
   line-height: nth($line-heights, 1)
 }
 
 h2 {
+  font-size: nth($sizes, 2);
   line-height: nth($line-heights, 2)
 }
 
 h3 {
+  font-size: nth($sizes, 3);
   line-height: nth($line-heights, 3)
 }
 
 h4 {
+  font-size: nth($sizes, 4);
   line-height: nth($line-heights, 4)
 }
 
 h5 {
+  font-size: nth($sizes, 4);
   line-height: nth($line-heights, 5)
 }
 
 p {
+  font-size: nth($sizes, 6);
   line-height: nth($line-heights, 6)
 }
 

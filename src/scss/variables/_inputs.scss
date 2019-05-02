@@ -1,20 +1,20 @@
-$input-color: nth($grays, 3);
+$input-color: nth($grays, 2);
 $input-background-color: $white;
-$input-border-color: nth($grays, 4);
+$input-border-color: nth($grays, 3);
 $input-shadow: none;
-$input-hover-color: nth($grays, 2);
-$input-hover-border-color: nth($grays, 4);
+$input-hover-color: $dark;
+$input-hover-border-color: nth($grays, 2);
 $input-focus-color: $dark;
-$input-focus-border-color: nth($grays, 3);
+$input-focus-border-color: rgba(nth($grays, 3), .5);
 $input-focus-box-shadow-size: 0;
 $input-focus-box-shadow-color: transparent;
 $input-disabled-color: rgba(nth($grays, 3), .5);
 $input-disabled-background-color: $white;
-$input-disabled-border-color: rgba(nth($grays, 4), .5);
+$input-disabled-border-color: rgba(nth($grays, 3), .5);
 // $input-arrow: $link;
-$input-icon-color: nth($grays, 3);
+$input-icon-color: $dark;
 $input-icon-active-color: $dark;
-$input-disabled-icon-color: rgba(nth($grays, 4), .5);
+$input-disabled-icon-color: rgba(nth($grays, 3), .5);
 $input-radius: .5rem;
 
 // $control-border-width: 1px;
@@ -29,9 +29,9 @@ textarea::placeholder {
 .field {
   .label {
     text-transform: uppercase;
-    font-size: nth($sizes, 9);
+    font-size: nth($sizes, 8);
     color: nth($grays, 3);
-    font-weight: bold;
+    font-weight: 600;
     letter-spacing: 1.5px;
 
     &:not(:last-child) {
@@ -150,10 +150,6 @@ textarea::placeholder {
       &:active,
       &:focus {
 
-        input {
-          background-color: #f2f3f9;
-        }
-
         input,
         .selectable {
           border-top-left-radius: 0;
@@ -169,10 +165,6 @@ textarea::placeholder {
       &:hover,
       &:active,
       &:focus {
-
-        input {
-          background-color: #f2f3f9;
-        }
 
         input,
         .selectable:not(.absolute) {
@@ -206,6 +198,7 @@ textarea::placeholder {
 
           .input,
           .textarea {
+            color: $dark;
             position: relative;
             z-index: 0;
 
@@ -217,15 +210,13 @@ textarea::placeholder {
                 cursor: pointer;
               }
 
-              transition: background-color .1s ease-in;
-
               &.open {
-                background-color: $light;
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
+                border-bottom-color: rgba(nth($grays, 3), .5);
+                border-color: $input-focus-border-color;
               }
 
-              color: $primary;
               border-color: $input-border-color;
             }
           }
@@ -234,7 +225,7 @@ textarea::placeholder {
 
       .selectable {
         background-color: $white;
-        border: 1px solid $input-border-color;
+        border: 1px solid $input-focus-border-color;
         border-top: none;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;

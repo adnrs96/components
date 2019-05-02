@@ -98,7 +98,7 @@
     .navbar-menu {
       @include desktop {
         .navbar-item {
-          color: #000;
+          color: $dark-blue;
 
           &:before {
             background-color: $primary;
@@ -146,7 +146,7 @@
 
     .navbar-item {
       text-transform: uppercase;
-      font-size: nth($sizes, 9);
+      font-size: nth($sizes, 8);
       margin: 0 .45rem;
       font-weight: 600;
       letter-spacing: .1rem;
@@ -172,7 +172,7 @@
             line-height: 1.75rem;
             height: 1.75rem;
             border-radius: 2rem;
-            color: #000;
+            color: $dark-blue;
           }
         }
 

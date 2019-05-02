@@ -1,42 +1,49 @@
 <template>
-  <s-layout :class="[{'is-stars': dark}]">
+  <s-layout :background="dark ? 'dark' : undefined">
     <s-container>
-      <s-div>
+      <s-div padding="normal">
         <s-level>
-          <p
+          <s-text
             slot="left"
-            class="is-footer-text is-size-8 has-text-uppercase has-text-weight-bold has-letter-spacing-large"
+            highlight
+            letter-spacing="large"
+            small
+            color="gray-2"
           >
             PASSIONATELY BUILT WITH
             <s-icon icon="heart" />IN AMSTERDAM
-          </p>
-          <p
+          </s-text>
+          <s-text
             slot="right"
-            class="is-footer-text is-size-8 has-text-uppercase has-text-right has-spans has-text-weight-bold"
+            highlight
+            small
+            color="gray-2"
           >
-            <span class="has-letter-spacing-large">&copy; 2019 ASYNCY, Inc.</span>
+            <span>
+              &copy; 2019. Brought by ASYNCY, Inc.
+            </span>
             <a
-              :class="[`has-text-${dark ? 'white' : 'dark'}`]"
+              :class="[`has-text-${dark ? 'dark-blue' : 'primary'}`]"
               href="//asyncy.click/slack"
               title="Storyscript Slack"
             >
               <i class="mdi mdi-slack" />
             </a>
             <a
-              :class="[`has-text-${dark ? 'white' : 'dark'}`]"
-              href="//twitter.com/_storyscript"
+              :class="[`has-text-${dark ? 'dark-blue' : 'primary'}`]"
+              href="//twitter.com/storyscript_"
               title="Storyscript Twitter"
             >
               <i class="mdi mdi-twitter" />
             </a>
             <a
-              :class="[`has-text-${dark ? 'white' : 'dark'}`]"
+              :class="[`has-text-${dark ? 'dark-blue' : 'primary'}`]"
               href="//github.com/storyscript"
               title="Storyscript Github"
             >
               <i class="mdi mdi-github-circle" />
             </a>
-          </p>
+          </s-text>
         </s-level>
       </s-div>
     </s-container>

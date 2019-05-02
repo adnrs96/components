@@ -1,19 +1,32 @@
 <template>
-  <section :class="['hero', 'jumbo', { 'is-stars': stars }, { [`is-${size}`]: size }]">
-    <div class="hero-head">
+  <s-layout
+    hero
+    :class="['jumbo', { [`is-${size}`]: size }]"
+  >
+    <template slot="head">
       <slot name="header" />
-    </div>
-    <div class="hero-body">
-      <div class="container is-widescreen">
-        <p class="is-size-8 has-text-uppercase has-text-centered has-text-weight-bold has-letter-spacing-xlarge">
+    </template>
+    <template slot="body">
+      <s-div size="full">
+        <s-text
+          highlight
+          color="dark-blue"
+          alignment="centered"
+        >
           <template v-if="$slots.small">
             <slot name="small" />
           </template>
           <template v-else>
             {{ small }}
           </template>
-        </p>
-        <h1 :class="['is-size-1', 'has-text-centered', { [`into-${into}`]: into }]">
+        </s-text>
+      </s-div>
+      <s-div size="full">
+        <s-text
+          head="1"
+          alignment="centered"
+          :class="{[`into-${into}`]: into }"
+        >
           <span v-if="into" />
           <span>
             <template v-if="$slots.title">
@@ -24,14 +37,16 @@
             </template>
           </span>
           <span v-if="into" />
-        </h1>
+        </s-text>
+      </s-div>
+      <s-div size="full">
         <slot />
-      </div>
-    </div>
-    <div class="hero-footer">
+      </s-div>
+    </template>
+    <template slot="footer">
       <slot name="footer" />
-    </div>
-  </section>
+    </template>
+  </s-layout>
 </template>
 
 <script>
@@ -81,23 +96,35 @@ export default {
 ### Playground
 
 ```jsx
-<div>
-  <s-jumbo size="fullheight" into="bracket" small="developer marketplace runtime">
-    <s-navbar slot="header" dark :items="[{ name: 'Blog' }, { name: 'Documentation' }]" />
-    <template slot="title">
-  Storyscript amplifies <br /> the developer
-</template>
-    <div class="columns is-centered is-desktop">
-      <div class="column is-half">
-        <s-form-beta />
-      </div>
-    </div>
-    <div slot="footer" class="has-text-centered">
-      <s-icon icon="separator" />
-      <p class="has-text-weight-normal">Discover our mission to raise <br />any developer into a 10x developer.</p>
-      <s-icon icon="arrow-down" stroke="white" />
-    </div>
-  </s-jumbo>
-</div>
+<s-jumbo
+  size="fullheight"
+  small="developer marketplace runtime"
+>
+  <s-navbar
+    slot="header"
+    :items="[{ name: 'Blog' }, { name: 'Documentation' }]"
+  />
+  <template slot="title">Storyscript amplifies <br /> the developer</template>
+  <s-container>
+    <s-div size="full">
+      <s-form-beta />
+    </s-div>
+  </s-container>
+  <s-div
+    size="full"
+    slot="footer"
+    class="has-text-centered"
+  >
+    <s-icon icon="separator" />
+    <s-text
+      alignment="centered"
+      p="2"
+    >Discover our mission to raise <br />any developer into a 10x developer.</s-text>
+    <s-icon
+      icon="arrow-down"
+      stroke="#0a0a0a"
+    />
+  </s-div>
+</s-jumbo>
 ```
 </docs>
