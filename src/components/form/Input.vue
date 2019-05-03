@@ -1,7 +1,10 @@
 <template>
-  <div :class="['field', {disabled},{'has-addons': (hasAddons && isGrouped === undefined)},{[`has-addons-${hasAddons}`]: typeof hasAddons === typeof '' && isGrouped === undefined},{'is-grouped': isGrouped},{[`is-grouped-${isGrouped}`]: typeof isGrouped === typeof ''}]">
+  <div
+    :class="['field', {disabled},{'has-addons': (hasAddons && isGrouped === undefined)},{[`has-addons-${hasAddons}`]: typeof hasAddons === typeof '' && isGrouped === undefined},{'is-grouped': isGrouped},{[`is-grouped-${isGrouped}`]: typeof isGrouped === typeof ''},{'tags input':tags}]"
+    @click="onFocusField"
+  >
     <label
-      v-if="label && type !== 'switch'"
+      v-if="label && !['switch', 'checkbox', 'radio'].includes(type)"
       class="label"
       :for="`input-${_uid}`"
     >{{ label }}</label>
@@ -11,14 +14,27 @@
     >
       <slot name="left" />
     </div>
+    <template v-if="tags">
+      <s-tag
+        v-for="(tag, id) of tags"
+        :key="`list-${_uid}-tags-${id}`"
+        :color="tagsColor"
+        class="control"
+        deletable
+        @click="deleteTag($event, id)"
+      >
+        {{ tag }}
+      </s-tag>
+    </template>
     <div :class="['control', {'has-icons-left': iconLeft}, {'has-icons-right': iconRight || valid !== undefined }, {'is-loading': loading}]">
       <textarea
         v-if="type ==='textarea'"
         :id="`input-${_uid}`"
         :value="value"
+        :name="name"
         :placeholder="placeholder"
         :disabled="disabled"
-        :class="[{'input': type !== 'textarea'}, {'textarea': type === 'textarea'}, {'has-fixed-size': fixed}, {'is-rtl': type === 'switch'}, {[`is-${size}`]: size !== 'normal'}, {'switch': type === 'switch'}, {'is-rounded': rounded}, {[`is-${valid ? 'success' : 'danger'}`]: valid !== undefined }, {[`has-background-${background}`]: background}]"
+        :class="[{'input': !['textarea', 'checkbox', 'radio'].includes(type)}, {'is-radio': type === 'radio'}, {'textarea': type === 'textarea'}, {'has-fixed-size': fixed}, {'is-rtl': type === 'switch'}, {[`is-${size}`]: size !== 'normal'}, {'switch': type === 'switch'}, {'is-rounded': rounded}, {[`is-${valid ? 'success' : 'danger'}`]: valid !== undefined }, {[`has-background-${background}`]: background}]"
         :readonly="readonly"
         :rows="rows"
         v-on="listeners"
@@ -26,20 +42,22 @@
       <input
         v-else
         :id="`input-${_uid}`"
+        ref="input"
+        :name="name"
         :disabled="disabled"
         :placeholder="placeholder"
-        :class="[{'input': type !== 'textarea'}, {'textarea': type === 'textarea'}, {'has-fixed-size': fixed}, {'is-rtl': type === 'switch'}, {[`is-${size}`]: size !== 'normal'}, {'switch': type === 'switch'}, {'is-rounded': rounded}, {[`is-${valid ? 'success' : 'danger'}`]: valid !== undefined }, {[`has-background-${background}`]: background}]"
+        :class="[{'input': !['textarea', 'checkbox', 'radio'].includes(type)}, {'is-radio': type === 'radio'}, {'textarea': type === 'textarea'}, {'has-fixed-size': fixed}, {'is-rtl': type === 'switch'}, {[`is-${size}`]: size !== 'normal'}, {'switch': type === 'switch'}, {'is-rounded': rounded}, {[`is-${valid ? 'success' : 'danger'}`]: valid !== undefined }, {[`has-background-${background}`]: background}]"
         :readonly="readonly"
         :type="type === 'switch' ? 'checkbox' : type"
-        :checked="type === 'switch' ? value : undefined"
-        :value="type !== 'switch' ? value : undefined"
+        :checked="['switch', 'radio'].includes(type) ? value : undefined"
+        :value="!['switch', 'radio'].includes(type) ? value : undefined"
         :aria-autocomplete="autocomplete"
         :autocomplete="autocomplete"
         v-on="listeners"
       >
       <label
-        v-if="label && type === 'switch'"
-        class="label is-rtl"
+        v-if="label && ['switch', 'radio', 'checkbox'].includes(type)"
+        :class="['label', {'is-rtl': type === 'switch'}]"
         :for="`input-${_uid}`"
       >{{ label }}</label>
       <span
@@ -99,17 +117,18 @@ export default {
   props: {
     disabled: { type: Boolean, default: undefined },
     hasAddons: { type: [Boolean, String], default: undefined, validator: v => [true, false, 'centered', 'right'].includes(v) },
-    isGrouped: { type: [Boolean, String], default: undefined, validator: v => [true, false, 'centered', 'right'].includes(v) },
+    isGrouped: { type: [Boolean, String], default: undefined, validator: v => [true, false, 'centered', 'right', 'multiline'].includes(v) },
     background: { type: String, default: undefined },
     label: { type: String, default: undefined },
     autocomplete: { type: String, default: undefined, validator: v => ['on', 'off'].includes(v) },
     type: {
       type: String,
       default: 'text',
-      validator: v => ['text', 'email', 'password', 'tel', 'textarea', 'switch'].includes(v)
+      validator: v => ['text', 'email', 'password', 'tel', 'textarea', 'switch', 'radio', 'tags'].includes(v)
     },
     value: { type: [String, Boolean], default: '' },
     placeholder: { type: String, default: undefined },
+    name: { type: String, default: undefined },
     size: {
       type: String,
       default: 'normal',
@@ -123,7 +142,9 @@ export default {
     iconLeft: { type: [String, Array], default: undefined },
     iconRight: { type: [String, Array], default: undefined },
     valid: { type: Boolean, default: undefined },
-    help: { type: String, default: undefined }
+    help: { type: String, default: undefined },
+    tags: { type: Array, default: undefined },
+    tagsColor: { type: String, default: 'primary' }
   },
   computed: {
     getType: function () {
@@ -146,6 +167,11 @@ export default {
     onChange: function (e) {
       this.$emit('change', e)
     },
+    deleteTag: function (e, id) {
+      if (e.type === 'delete') {
+        this.tags.splice(id, 1)
+      }
+    },
     onClick: function (e) { this.$emit('click', e) },
     onFocus: function (e) { this.$emit('focus', e) },
     onInput: function (e) {
@@ -153,8 +179,31 @@ export default {
       this.$emit('update', val)
       this.$emit('input', val)
     },
-    onKeydown: function (e) { this.$emit('keydown', e) },
-    onKeyup: function (e) { this.$emit('keyup', e) }
+    onKeydown: function (e) {
+      if (this.type === 'tags') {
+        if (['Backspace', 'Delete'].includes(e.code) && e.target.value.length === 0) {
+          e.preventDefault()
+          this.tags.splice(-1)
+        } else if (['Space', 'Comma', 'Tab', 'Enter'].includes(e.code)) {
+          e.preventDefault()
+          if (!this.tags.includes(e.target.value.trim()) && e.target.value.trim().length > 0) {
+            this.tags.push(e.target.value.trim())
+            this.$emit('input', '')
+            this.$emit('update', '')
+          }
+        } else {
+          this.$emit('keydown', e)
+        }
+      } else {
+        this.$emit('keydown', e)
+      }
+    },
+    onKeyup: function (e) { this.$emit('keyup', e) },
+    onFocusField: function () {
+      if (this.$refs.input) {
+        this.$refs.input.focus()
+      }
+    }
   }
 }
 </script>
@@ -184,14 +233,6 @@ new Vue({
     <s-input has-addons="centered" icon-left="email">
       <a slot="right" class="button"><i class="mdi mdi-magnify" /></a>
     </s-input>
-    <s-container centered-v-h row>
-    <s-div size="auto" v-tags>
-      <s-tag outline>lol</s-tag>
-      <s-input has-addons="centered" icon-left="tag-outline" size="small">
-        <a slot="right" class="button is-small"><i class="mdi mdi-plus" /></a>
-      </s-input>
-      </s-div>
-    </s-container>
     <s-input
       type="switch"
       v-model="checked"
@@ -199,9 +240,23 @@ new Vue({
       background="light"
       placeholder="hello world"
     />
+    <s-input
+      type="tags"
+      is-grouped="multiline"
+      :tags="tags"
+      placeholder="Topic name"
+      label="Topics (separate by commas)" />
+    <s-input
+      type="radio"
+      label="PUBLIC"
+      name="radio" />
+    <s-input
+      type="radio"
+      label="PRIVATE"
+      name="radio" />
   </section>`,
-  data: () => ({ input: 'value', checked: false }),
-  watch: { input: function () { console.log('value :', this.input) }, checked: function () { console.log('checked', this.checked) } },
+  data: () => ({ input: 'value', checked: false, tags: ['tag1', 'tag2'] }),
+  watch: { input: function () { console.log('value :', this.input) }, checked: function () { console.log('checked', this.checked) }, tags: { deep: true, handler: function() { console.log(this.tags) } } },
   methods: {
     reset: function () {
       console.log('reset')

@@ -3,9 +3,9 @@ $input-background-color: $white;
 $input-border-color: nth($grays, 3);
 $input-shadow: none;
 $input-hover-color: $dark;
-$input-hover-border-color: nth($grays, 2);
+$input-hover-border-color: nth($grays, 3);
 $input-focus-color: $dark;
-$input-focus-border-color: rgba(nth($grays, 3), .5);
+$input-focus-border-color: nth($grays, 2);
 $input-focus-box-shadow-size: 0;
 $input-focus-box-shadow-color: transparent;
 $input-disabled-color: rgba(nth($grays, 3), .5);
@@ -27,12 +27,11 @@ textarea::placeholder {
 }
 
 .field {
+
   .label {
-    text-transform: uppercase;
     font-size: nth($sizes, 8);
-    color: nth($grays, 3);
+    color: $dark;
     font-weight: 600;
-    letter-spacing: 1.5px;
 
     &:not(:last-child) {
       margin-bottom: .5rem;
@@ -45,6 +44,15 @@ textarea::placeholder {
       .input,
       .textarea {
         padding-left: 2.75rem;
+      }
+    }
+
+    &.is-loading {
+      &:after {
+        right: 1rem;
+        top: 1rem;
+        border-color: transparent transparent $primary $primary;
+        border-width: 1px;
       }
     }
 
@@ -72,6 +80,27 @@ textarea::placeholder {
       &.is-small {
         width: 2.25rem;
         height: 2.25rem;
+      }
+    }
+  }
+
+  &.tags {
+    height: auto;
+    cursor: text;
+
+    .label {
+      display: none;
+    }
+
+    .control {
+      margin-bottom: 0 !important;
+
+      .input:not(.is-small) {
+        height: auto !important;
+        border: none;
+        width: auto;
+        padding: .6rem;
+        line-height: 1;
       }
     }
   }
@@ -154,6 +183,10 @@ textarea::placeholder {
         .selectable {
           border-top-left-radius: 0;
           border-top-right-radius: 0;
+
+          &.open {
+            border-top-color: $input-border-color !important;
+          }
         }
       }
     }
@@ -213,8 +246,7 @@ textarea::placeholder {
               &.open {
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
-                border-bottom-color: rgba(nth($grays, 3), .5);
-                border-color: $input-focus-border-color;
+                border-color: rgba($input-border-color, .5);
               }
 
               border-color: $input-border-color;
@@ -225,7 +257,7 @@ textarea::placeholder {
 
       .selectable {
         background-color: $white;
-        border: 1px solid $input-focus-border-color;
+        border: 1px solid rgba($input-border-color, .5);
         border-top: none;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
