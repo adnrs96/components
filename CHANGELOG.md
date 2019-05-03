@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.5.0](https://github.com/storyscript/components/compare/v2.4.0...v2.5.0) (2019-05-03)
+
+
+### Bug Fixes
+
+* **build:** fix build and add s-text component ([e2e375c](https://github.com/storyscript/components/commit/e2e375c))
+
+
+### Features
+
+* **radio+tags:** add these 2 input types ([ee39988](https://github.com/storyscript/components/commit/ee39988))
+
+
+
 # [2.4.0](https://github.com/storyscript/components/compare/v2.3.1...v2.4.0) (2019-05-02)
 
 
