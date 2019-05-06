@@ -48,7 +48,7 @@ $value in $paddings {
   }
 
   .has-top-outside-#{$padding} {
-    top: #{-$value - 2.75}rem
+    top: #{-$value - 4}rem
   }
 }
 
