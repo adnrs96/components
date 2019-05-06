@@ -240,6 +240,17 @@ new Vue({
       background="light"
       placeholder="hello world"
     />
+    <div class="field">
+      <div class="control">
+        <label class="label">Topics <small>(separate with spaces)</small></label>
+        <s-input
+          type="tags"
+          is-grouped="multiline"
+          :tags="tags"
+          placeholder="Topic name"
+          label="Topics (separate by commas)" />
+      </div>
+    </div>
     <s-input
       type="tags"
       is-grouped="multiline"
