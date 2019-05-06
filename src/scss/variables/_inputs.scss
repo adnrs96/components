@@ -82,6 +82,12 @@ textarea::placeholder {
         height: 2.25rem;
       }
     }
+
+    .field.tags {
+      height: auto !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
   }
 
   &.tags {
@@ -99,7 +105,7 @@ textarea::placeholder {
         height: auto !important;
         border: none;
         width: auto;
-        padding: .6rem;
+        padding: .885rem 1rem;
         line-height: 1;
       }
     }
