@@ -1,5 +1,8 @@
 <template>
-  <s-layout :background="dark ? 'dark' : undefined">
+  <s-layout
+    :background="dark ? 'dark' : dark === false ? 'gray-4' : undefined"
+    class="has-border-top-gray"
+  >
     <s-container>
       <s-div padding="normal">
         <s-level>
@@ -13,6 +16,12 @@
             PASSIONATELY BUILT WITH
             <s-icon icon="heart" />IN AMSTERDAM
           </s-text>
+          <s-button
+            arrow="arrow-up"
+            :state="dark ? 'dark' : 'light'"
+            size="small"
+            @click="scrollTop"
+          />
           <s-text
             slot="right"
             highlight
@@ -20,7 +29,7 @@
             color="gray-2"
           >
             <span>
-              &copy; 2019. Brought by ASYNCY, Inc.
+              Storyscript &copy; 2019
             </span>
             <a
               :class="[`has-text-${dark ? 'dark-blue' : 'primary'}`]"
@@ -56,7 +65,12 @@ export default {
   props: {
     dark: {
       type: Boolean,
-      default: false
+      default: undefined
+    }
+  },
+  methods: {
+    scrollTop: function () {
+      window.scrollTo(0, 0)
     }
   }
 }
@@ -69,6 +83,7 @@ export default {
 <section>
   <s-footer />
   <s-footer dark />
+  <s-footer :dark="false" />
 </section>
 ```
 </docs>

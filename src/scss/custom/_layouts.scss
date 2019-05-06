@@ -10,18 +10,29 @@
   flex-direction: row-reverse;
 }
 
+.has-border-top-gray {
+
+  &.has-background-gray-4 {
+    border-top: 1px solid darken(nth($grays, 4), 6.25%);
+  }
+
+  &.has-background-dark {
+    border-top: 1px solid darken($dark, 6.25%);
+  }
+}
+
 $paddings: ("none": 0,
-"min": .25,
-"small": .5,
-"1x": 1,
-"normal": 1.5,
-"2x": 2,
-"medium": 3,
-"3x5": 3.5,
-"large": 5,
-"7x5": 7.5,
-"9xx": 9.375,
-"max": 12.5);
+  "min": .25,
+  "small": .5,
+  "1x": 1,
+  "normal": 1.5,
+  "2x": 2,
+  "medium": 3,
+  "3x5": 3.5,
+  "large": 5,
+  "7x5": 7.5,
+  "9xx": 9.375,
+  "max": 12.5);
 
 @each $padding,
 $value in $paddings {

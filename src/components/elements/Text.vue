@@ -1,7 +1,7 @@
 <template>
   <component
     :is="getTag"
-    :class="[`is-size-${getSize}`, `has-text-${getColor}`, {'has-text-uppercase': highlight}, {[`has-text-${alignment}`]: alignment}, {'has-text-weight-bold': highlight}, {[`has-letter-spacing-${getLetterSpacing}`]: highlight || letterSpacing}, ...getPadding]"
+    :class="[`is-size-${getSize}`, `has-text-${getColor}`, {'has-text-uppercase': highlight && !preserveCase }, {[`has-text-${alignment}`]: alignment}, {'has-text-weight-bold': highlight || bold}, {[`has-letter-spacing-${getLetterSpacing}`]: highlight || letterSpacing}, ...getPadding]"
   >
     <slot />
   </component>
@@ -27,6 +27,14 @@ export default {
       type: String,
       default: '1',
       validator: v => ['0', '1', '2'].includes(v)
+    },
+    preserveCase: {
+      type: Boolean,
+      default: false
+    },
+    bold: {
+      type: Boolean,
+      default: false
     },
     li: {
       type: Boolean,

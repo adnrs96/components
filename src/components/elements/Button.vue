@@ -16,7 +16,10 @@
       <i :class="`mdi mdi-${icon || iconLeft}`" />
     </span>
     <!-- @slot Use this slot to place the button content -->
-    <span :class="{ 'is-hidden-mobile': arrowMobile }">
+    <span
+      v-if="$slots.default"
+      :class="{ 'is-hidden-mobile': arrowMobile }"
+    >
       <slot />
     </span>
     <template v-if="arrow">
@@ -159,10 +162,10 @@ export default {
       return (this.url && typeof this.url !== typeof '') ? this.url.href : this.url
     },
     getTarget: function () {
-      return (this.url && typeof this.url !== typeof '') ? this.url.target : this.url
+      return (this.url && typeof this.url !== typeof '') ? this.url.target : undefined
     },
     getTitle: function () {
-      return this.$slots.default[0].text
+      return (this.$slots.default || [{ text: undefined }])[0].text
     },
     arrowIcon: function () {
       return typeof this.arrow === typeof true ? 'arrow' : this.arrow

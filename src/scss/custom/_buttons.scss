@@ -143,12 +143,24 @@
   &.is-small {
     padding-top: .4rem;
     padding-bottom: .4rem;
+
+    svg {
+      width: 10px;
+      stroke-width: 7.5px;
+    }
   }
 
   &.has-arrow,
   &.is-borderless {
-    padding-left: .75rem;
-    padding-right: .75rem;
+    &:not(.is-small) {
+      padding-left: .8125rem;
+      padding-right: .8125rem;
+    }
+
+    &.is-small {
+      padding-left: .75rem;
+      padding-right: .75rem;
+    }
   }
 
   &:focus {
@@ -177,24 +189,23 @@
     font-size: 1rem;
   }
 
+  span+.btn-icon {
+    margin-left: 2rem;
+  }
+
   .btn-icon {
     &.arrow {
       @include mobile {
         margin: .5rem;
       }
 
-      margin-left: 2rem;
       height: .5rem;
     }
 
     &:not(.arrow):not(.search) {
-      margin-left: 2rem;
       height: 1.4rem;
     }
 
-    &.search {
-      margin-left: 2rem;
-    }
   }
 
   span+span {

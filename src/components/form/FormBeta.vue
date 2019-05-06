@@ -1,6 +1,6 @@
 <template>
   <form
-    :class="{ error, success }"
+    :class="{ error, success, dark }"
     action
     class="form-beta"
     @submit.prevent="submit"
@@ -10,6 +10,7 @@
       name="beta-email"
       placeholder="Enter your email"
       type="email"
+      autocomplete="off"
     >
     <s-button
       type="submit"
@@ -42,6 +43,10 @@ export default {
           } else { reject(new Error('clevertap undefined')) }
         })
       }
+    },
+    dark: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -87,6 +92,10 @@ export default {
 .form-beta {
   background-color: nth($grays, 4);
   border: 1px solid darken(nth($grays, 4), 10%);
+  &.dark {
+    background-color: $white;
+    border: 1px solid $primary;
+  }
   display: flex;
   align-items: center;
   flex: 1 1 100%;

@@ -1,7 +1,13 @@
 <template>
-  <s-layout class="join-beta">
-    <s-container class="story">
-      <s-div size="full">
+  <s-layout
+    class="join-beta"
+    :background="dark ? 'dark' : dark === false ? 'gray-4' : undefined"
+  >
+    <s-container
+      v-if="join"
+      class="story"
+    >
+      <s-div size="half">
         <s-text
           head="2"
           alignment="centered"
@@ -10,8 +16,8 @@
           Time to write your story.
         </s-text>
       </s-div>
-      <s-div size="full">
-        <s-form-beta />
+      <s-div size="half">
+        <s-form-beta :dark="typeof dark === typeof true" />
       </s-div>
     </s-container>
     <s-container
@@ -26,7 +32,8 @@
         <ul>
           <s-text
             v-if="section.name"
-            color="gray-2"
+            color="dark-blue"
+            :padding="['none', 'small']"
             li
             highlight
             v-text="section.name"
@@ -39,7 +46,7 @@
           >
             <component
               :is="internal && link.to ? 'router-link' : 'a'"
-              :class="`has-text-${link.color || 'dark'}`"
+              :class="`has-text-${link.color || 'gray-2'} has-text-weight-${link.bold ? 'semibold' : 'regular'}`"
               :href="link.href"
               :to="link.to"
               :title="link.title"
@@ -77,6 +84,10 @@ export default {
       type: Boolean,
       default: false
     },
+    join: {
+      type: Boolean,
+      default: true
+    },
     footer: {
       type: Boolean,
       default: false
@@ -84,6 +95,10 @@ export default {
     isPaddingless: {
       type: Boolean,
       default: false
+    },
+    dark: {
+      type: Boolean,
+      default: undefined
     }
   },
   data: () => ({
@@ -128,7 +143,8 @@ export default {
       }, {
         title: 'We are hiring!',
         href: '//angel.co/storyscript/jobs',
-        color: 'info'
+        // color: 'info',
+        bold: true
       }]
     }, {
       children: [{
@@ -136,8 +152,8 @@ export default {
         bind: { icon: true }
       }, {
         el: 's-text',
-        bind: { highlight: true, color: 'dark' },
-        text: '2019. Asyncy Inc.'
+        bind: { highlight: true, preserveCase: true, color: 'dark' },
+        text: '© 2019 Storyscript'
       }]
     }]
   })

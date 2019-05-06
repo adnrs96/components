@@ -27,25 +27,30 @@ export default {
       default: undefined,
       required: false
     }
-  },
-  data: () => ({ values: names })
+  }
 }
 </script>
 
 <docs>
 ### Playground
 
-```jsx
-const Icons = require('./icons').default;
-const names = Object.keys(Icons).reduce((arr, i) => [...arr, i.slice(5, i.length).replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()], []);
-
-<div class="columns is-vcentered is-centered is-gapless is-multiline">
-  <s-icon
-    v-for="icon of names"
-    class="column"
-    :title="icon"
-    :key="'icon-list-' + icon"
-    :icon="icon" />
-</div>
+```vue
+new Vue({
+  template: `<s-container centered-v-h>
+    <s-div
+      v-for="icon of names"
+      :key="'icon-list-' + _uid + '-' + icon">
+      <s-text small>{{ icon }}</s-text>
+      <s-icon
+        :title="icon"
+        :icon="icon" />
+    </s-div>
+  </s-container>`,
+  computed: {
+    names: function () {
+      return this.$icons
+    }
+  }
+});
 ```
 </docs>

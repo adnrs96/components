@@ -1,5 +1,6 @@
 import SIconArrow from './Arrow.vue'
 import SIconArrowDown from './ArrowDown.vue'
+import SIconArrowUp from './ArrowUp.vue'
 import SIconCalendar from './Calendar.vue'
 import SIconDots from './Dots.vue'
 import SIconFileBroken from './FileBroken.vue'
@@ -13,6 +14,7 @@ import SIconSeparator from './Separator.vue'
 export default {
   SIconArrow,
   SIconArrowDown,
+  SIconArrowUp,
   SIconCalendar,
   SIconDots,
   SIconFileBroken,
