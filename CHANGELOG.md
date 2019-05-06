@@ -1,6 +1,21 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.6.0](https://github.com/storyscript/components/compare/v2.5.0...v2.6.0) (2019-05-06)
+
+
+### Bug Fixes
+
+* **input:** fix style for input ([4d8f24a](https://github.com/storyscript/components/commit/4d8f24a))
+* **layout:** add more padding to the outside props for layout component ([3be1a6f](https://github.com/storyscript/components/commit/3be1a6f))
+
+
+### Features
+
+* **icons+footer+theme:** add arrow-up icon, scroll-to-top button, light/basic/dark themes ([7cd1526](https://github.com/storyscript/components/commit/7cd1526))
+
+
 
 # [2.5.0](https://github.com/storyscript/components/compare/v2.4.0...v2.5.0) (2019-05-03)
 
