@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.6.1](https://github.com/storyscript/components/compare/v2.6.0...v2.6.1) (2019-05-06)
+
+
+### Bug Fixes
+
+* **tags:** fix tag input ([d43bf64](https://github.com/storyscript/components/commit/d43bf64))
+
+
+
 ## [2.6.0](https://github.com/storyscript/components/compare/v2.5.0...v2.6.0) (2019-05-06)
 
 
