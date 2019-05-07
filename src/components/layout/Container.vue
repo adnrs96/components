@@ -1,5 +1,5 @@
 <template>
-  <div :class="['columns', ...classes, {'is-multiline': !row}, {'is-vcentered': centeredV || centeredVH}, {'is-centered': centeredH || centeredVH}, ...getPadding]">
+  <div :class="['columns', ...getClasses, {'is-multiline': !row}, {'is-vcentered': centeredV || centeredVH}, {'is-centered': centeredH || centeredVH}, ...getPadding]">
     <slot />
   </div>
 </template>
@@ -20,8 +20,13 @@ export default {
     row: { type: Boolean, default: false },
     centeredV: { type: Boolean, default: false },
     centeredH: { type: Boolean, default: false },
-    centeredVH: { type: Boolean, default: false }
-
+    centeredVh: { type: Boolean, default: false },
+    clean: { type: Boolean, default: false }
+  },
+  computed: {
+    getClasses: function () {
+      return this.clean ? [] : this.classes
+    }
   }
 }
 </script>
