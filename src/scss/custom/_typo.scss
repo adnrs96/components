@@ -1,9 +1,6 @@
 p {
   font-weight: 400;
-  display: flex;
-  flex: 1 1 auto;
-  flex-wrap: wrap;
-  align-items: center;
+  display: block;
 
   &.has-text-centered {
     justify-content: center;
@@ -28,6 +25,10 @@ p {
   a+a {
     margin-left: 1rem;
   }
+}
+
+.has-text-bottom {
+  vertical-align: text-bottom
 }
 
 h1,

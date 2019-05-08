@@ -27,8 +27,9 @@
             highlight
             small
             color="gray-2"
+            style="position:relative"
           >
-            <span>
+            <span class="has-text-bottom">
               Storyscript &copy; 2019
             </span>
             <a
