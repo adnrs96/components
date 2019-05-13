@@ -74,7 +74,7 @@ Storyscript logo as a component
 ## Playground
 
 ```jsx
-<s-container centered-v-h>
+<s-container centered-vh>
   <s-div>
     <s-logo />
     <s-logo variant="dark" />

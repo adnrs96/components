@@ -1,22 +1,22 @@
 <template>
   <s-layout
-    class="join-beta"
+    :class="['join-beta', {'is-paddingless': isPaddingless}]"
     :background="dark ? 'dark' : dark === false ? 'gray-4' : undefined"
   >
     <s-container
       v-if="join"
       class="story"
     >
-      <s-div size="half">
+      <s-div :size="full ? 'full' : 'half'">
         <s-text
           head="2"
           alignment="centered"
-          :padding="['none', 'medium']"
+          :padding="['none', '2x']"
         >
           Time to write your story.
         </s-text>
       </s-div>
-      <s-div size="half">
+      <s-div :size="full ? 'full' : 'half'">
         <s-form-beta :dark="typeof dark === typeof true" />
       </s-div>
     </s-container>
@@ -28,6 +28,7 @@
         v-for="(section, sid) of footerElements"
         :key="`footer-${_uid}-section-${sid}`"
         size="one-quarter"
+        padding="normal"
       >
         <ul>
           <s-text
@@ -76,11 +77,11 @@
 export default {
   name: 'SJoin',
   props: {
-    crew: {
+    internal: {
       type: Boolean,
       default: false
     },
-    internal: {
+    full: {
       type: Boolean,
       default: false
     },
@@ -166,7 +167,7 @@ export default {
 ```jsx
 <section>
   <s-join
-    crew
+    full
     is-paddingless
     footer
   />

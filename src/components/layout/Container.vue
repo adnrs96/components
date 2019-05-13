@@ -1,5 +1,5 @@
 <template>
-  <div :class="['columns', ...getClasses, {'is-multiline': !row}, {'is-vcentered': centeredV || centeredVH}, {'is-centered': centeredH || centeredVH}, ...getPadding]">
+  <div :class="['columns', ...getClasses, {'is-multiline': !row}, {'is-vcentered': centeredV || centeredVh}, {'is-centered': centeredH || centeredVh}, ...getPadding]">
     <slot />
   </div>
 </template>

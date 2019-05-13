@@ -36,7 +36,7 @@ export default {
 
 ```vue
 new Vue({
-  template: `<s-container centered-v-h>
+  template: `<s-container centered-vh>
     <s-div
       v-for="icon of names"
       :key="'icon-list-' + _uid + '-' + icon">

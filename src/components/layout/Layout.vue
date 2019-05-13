@@ -12,7 +12,7 @@
         <slot name="head" />
       </div>
       <div class="hero-body">
-        <s-container centered-v-h>
+        <s-container centered-vh>
           <slot name="body" />
         </s-container>
       </div>
@@ -70,7 +70,7 @@ export default {
 <docs>
 ```jsx
 <s-layout background="light" foreground="white" rounded shadow padding="large" margin="max" outside>
-  <s-container centered-v-h>
+  <s-container centered-vh>
     <s-div size="one-quarter" background="light">
       hello
     </s-div>

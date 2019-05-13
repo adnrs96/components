@@ -20,6 +20,5 @@
   <h1 class="is-size-3 has-text-centered">I'm a middle-centered text</h1>
   <h1 class="is-size-3 has-text-right">I'm a right-centered text</h1>
   <h1 class="is-size-3 has-text-uppercase">I'm an uppercased text</h1>
-
 </div>
 ```
