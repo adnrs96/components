@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.6.4](https://github.com/storyscript/components/compare/v2.6.3...v2.6.4) (2019-05-13)
+
+
+### Bug Fixes
+
+* **padding+vh:** fixing v-centering + padding footer ([93c3d84](https://github.com/storyscript/components/commit/93c3d84))
+
+
+
 ### [2.6.3](https://github.com/storyscript/components/compare/v2.6.2...v2.6.3) (2019-05-08)
 
 
