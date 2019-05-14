@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.6.9](https://github.com/storyscript/components/compare/v2.6.8...v2.6.9) (2019-05-14)
+
+
+### Bug Fixes
+
+* **left-icon:** fix condition if icon is defined ([fa82a9a](https://github.com/storyscript/components/commit/fa82a9a))
+
+
+
 ### [2.6.8](https://github.com/storyscript/components/compare/v2.6.7...v2.6.8) (2019-05-14)
 
 
