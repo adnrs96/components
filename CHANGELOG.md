@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.6.8](https://github.com/storyscript/components/compare/v2.6.7...v2.6.8) (2019-05-14)
+
+
+### Bug Fixes
+
+* **icon+button:** add pen icon and fix color ([7df1e6b](https://github.com/storyscript/components/commit/7df1e6b))
+
+
+
 ### [2.6.7](https://github.com/storyscript/components/compare/v2.6.6...v2.6.7) (2019-05-14)
 
 
