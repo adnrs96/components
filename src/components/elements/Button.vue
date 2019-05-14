@@ -14,7 +14,7 @@
       :class="['icon', {'round-left': iconLeft}]"
     >
       <i
-        v-if="typeof iconLeft === typeof ''"
+        v-if="typeof icon === typeof '' || typeof iconLeft === typeof ''"
         :class="`mdi mdi-${icon || iconLeft}`"
       />
       <s-icon
