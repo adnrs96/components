@@ -13,7 +13,14 @@
       v-if="icon || iconLeft"
       :class="['icon', {'round-left': iconLeft}]"
     >
-      <i :class="`mdi mdi-${icon || iconLeft}`" />
+      <i
+        v-if="typeof iconLeft === typeof ''"
+        :class="`mdi mdi-${icon || iconLeft}`"
+      />
+      <s-icon
+        v-else
+        v-bind="iconLeft"
+      />
     </span>
     <!-- @slot Use this slot to place the button content -->
     <span
@@ -119,10 +126,10 @@ export default {
       default: undefined
     },
     /**
-     * Sets the button icon in a left round
+     * Sets the button icon in a left round, set an object with SIcon props to set an internal icon
      */
     iconLeft: {
-      type: String,
+      type: [String, Object],
       default: undefined
     },
     /**
