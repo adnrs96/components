@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.6.5](https://github.com/storyscript/components/compare/v2.6.4...v2.6.5) (2019-05-14)
+
+
+### Bug Fixes
+
+* **buttons:** fix padding for links ([ff96f29](https://github.com/storyscript/components/commit/ff96f29))
+* **navbar:** fix navbar button size ([e8c83a8](https://github.com/storyscript/components/commit/e8c83a8))
+
+
+
 ### [2.6.4](https://github.com/storyscript/components/compare/v2.6.3...v2.6.4) (2019-05-13)
 
 
