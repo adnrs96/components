@@ -214,6 +214,9 @@ export default {
     <s-button state="primary" icon-left="account-circle">Join Beta</s-button>
     <s-button state="secondary" size="small" borderless icon-right="github-face">Secondary</s-button>
   </s-div>
+  <s-div>
+      <s-button :icon-left="{ icon: 'pen' }">Documentation</s-button>
+  </s-div>
 </s-container>
 ```
 </docs>

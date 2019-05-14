@@ -170,14 +170,26 @@
   &.is-outlined {
     .round-left {
       background-color: $primary;
-      color: $white;
+
+      &,
+      &>svg {
+        color: $white;
+        fill: currentColor;
+        stroke: currentColor;
+      }
     }
   }
 
   &:not(.is-outlined) {
     .round-left {
       background-color: $white;
-      color: $primary;
+
+      &,
+      &>svg {
+        color: $primary;
+        fill: currentColor;
+        stroke: currentColor;
+      }
     }
   }
 
