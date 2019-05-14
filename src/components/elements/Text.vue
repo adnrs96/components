@@ -53,6 +53,10 @@ export default {
       type: Boolean,
       default: false
     },
+    span: {
+      type: Boolean,
+      default: false
+    },
     alignment: {
       type: String,
       default: undefined,
@@ -67,7 +71,7 @@ export default {
       return this.color ? this.color : this.highlight ? 'gray-4' : this.head ? 'dark-blue' : this.p === '2' ? 'dark' : 'gray-2'
     },
     getTag: function () {
-      return this.li ? 'li' : this.head ? `h${this.head}` : 'p'
+      return this.span ? 'span' : this.li ? 'li' : this.head ? `h${this.head}` : 'p'
     },
     getLetterSpacing: function () {
       return this.letterSpacing ? this.letterSpacing : this.highlight ? 'medium' : undefined
