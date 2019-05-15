@@ -88,8 +88,11 @@ $value in $paddings {
     padding: 3rem 2rem;
   }
 
-  h1 {
-    margin-bottom: 3rem;
+  &.has-background {
+    @include backgroundImage('bg/header-bg', 'png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 250px;
   }
 
   $intos: (bracket, chevron, hash, slash);

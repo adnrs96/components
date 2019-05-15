@@ -1,16 +1,19 @@
 <template>
   <s-layout
     hero
-    :class="['jumbo', { [`is-${size}`]: size }]"
+    :class="['jumbo', { [`is-${size}`]: size }, {'has-background': background}]"
   >
     <template slot="head">
       <slot name="header" />
     </template>
     <template slot="body">
-      <s-div size="full">
+      <s-div
+        v-if="$slots.small || small"
+        size="full"
+      >
         <s-text
           highlight
-          color="dark-blue"
+          color="gray-2"
           alignment="centered"
         >
           <template v-if="$slots.small">
@@ -21,7 +24,10 @@
           </template>
         </s-text>
       </s-div>
-      <s-div size="full">
+      <s-div
+        v-if="$slots.title || title"
+        size="full"
+      >
         <s-text
           head="1"
           alignment="centered"
@@ -40,7 +46,9 @@
         </s-text>
       </s-div>
       <s-div size="full">
-        <slot />
+        <s-container centered-vh>
+          <slot />
+        </s-container>
       </s-div>
     </template>
     <template slot="footer">
@@ -87,6 +95,10 @@ export default {
       type: String,
       default: undefined,
       validator: v => ['medium', 'large', 'fullheight'].includes(v)
+    },
+    background: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -99,6 +111,7 @@ export default {
 <s-jumbo
   size="fullheight"
   small="developer marketplace runtime"
+  background
 >
   <s-navbar
     slot="header"

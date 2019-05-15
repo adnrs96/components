@@ -1,0 +1,21 @@
+@mixin backgroundImage($name, $ext) {
+  background-image: url('~@/assets/img/#{$name}.#{$ext}');
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    background-image: url("~@/assets/img/#{$name}@2x.#{$ext}");
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3),
+  only screen and (min--moz-device-pixel-ratio: 3),
+  only screen and (-o-min-device-pixel-ratio: 3),
+  only screen and (min-device-pixel-ratio: 3),
+  only screen and (min-resolution: 384dpi),
+  only screen and (min-resolution: 3dppx) {
+    background-image: url("~@/assets/img/#{$name}@3x.#{$ext}");
+  }
+}

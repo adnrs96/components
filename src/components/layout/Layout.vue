@@ -1,25 +1,22 @@
 <template>
   <section :class="[...getBackground, ...getMargin, {hero}]">
     <slot name="absolute" />
-    <div
-      v-if="$slots.default"
-      :class="['container', {'is-fluid': full}, ...getContainerClasses(!narrow), ...getPadding, ...isOutside]"
-    >
-      <slot />
+    <div :class="['container', {'is-fluid': full}, ...getContainerClasses(!narrow), ...getPadding, ...isOutside]">
+      <template v-if="hero">
+        <div class="hero-head">
+          <slot name="head" />
+        </div>
+        <div class="hero-body">
+          <s-container centered-vh>
+            <slot name="body" />
+          </s-container>
+        </div>
+        <div class="hero-footer">
+          <slot name="footer" />
+        </div>
+      </template>
+      <slot v-else />
     </div>
-    <template v-if="hero">
-      <div class="hero-head">
-        <slot name="head" />
-      </div>
-      <div class="hero-body">
-        <s-container centered-vh>
-          <slot name="body" />
-        </s-container>
-      </div>
-      <div class="hero-footer">
-        <slot name="footer" />
-      </div>
-    </template>
   </section>
 </template>
 
