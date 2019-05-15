@@ -84,7 +84,9 @@ $value in $paddings {
 }
 
 .jumbo {
-  .navbar {
+
+  .navbar,
+  .hero-body {
     padding: 3rem 2rem;
   }
 

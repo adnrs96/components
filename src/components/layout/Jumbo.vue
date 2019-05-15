@@ -46,9 +46,7 @@
         </s-text>
       </s-div>
       <s-div size="full">
-        <s-container centered-vh>
-          <slot />
-        </s-container>
+        <slot />
       </s-div>
     </template>
     <template slot="footer">
@@ -94,7 +92,7 @@ export default {
     size: {
       type: String,
       default: undefined,
-      validator: v => ['medium', 'large', 'fullheight'].includes(v)
+      validator: v => ['small', 'normal', 'medium', 'large', 'fullheight'].includes(v)
     },
     background: {
       type: Boolean,

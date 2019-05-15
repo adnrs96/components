@@ -7,9 +7,11 @@
           <slot name="head" />
         </div>
         <div class="hero-body">
-          <s-container centered-vh>
-            <slot name="body" />
-          </s-container>
+          <div class="container">
+            <s-container centered-vh>
+              <slot name="body" />
+            </s-container>
+          </div>
         </div>
         <div class="hero-footer">
           <slot name="footer" />
