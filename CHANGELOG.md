@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.7.0](https://github.com/storyscript/components/compare/v2.6.10...v2.7.0) (2019-05-15)
+
+
+### Features
+
+* **header+layout:** improve layouts + add header background in jumbos ([6993f41](https://github.com/storyscript/components/commit/6993f41))
+
+
+
 ### [2.6.10](https://github.com/storyscript/components/compare/v2.6.9...v2.6.10) (2019-05-14)
 
 
