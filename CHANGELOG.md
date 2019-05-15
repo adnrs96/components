@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.7.2](https://github.com/storyscript/components/compare/v2.7.1...v2.7.2) (2019-05-15)
+
+
+### Bug Fixes
+
+* **layout:** fix header ([1f8f502](https://github.com/storyscript/components/commit/1f8f502))
+
+
+
 ### [2.7.1](https://github.com/storyscript/components/compare/v2.7.0...v2.7.1) (2019-05-15)
 
 
