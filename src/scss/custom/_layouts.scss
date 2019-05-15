@@ -85,15 +85,19 @@ $value in $paddings {
 
 .jumbo {
 
-  .navbar,
+  .navbar {
+    padding: 3rem 2rem 0;
+  }
+
   .hero-body {
-    padding: 3rem 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   &.has-background {
     @include backgroundImage('bg/header-bg', 'png');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center calc(4rem + 50%);
     background-size: auto 250px;
   }
 
