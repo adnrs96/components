@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.7.4](https://github.com/storyscript/components/compare/v2.7.3...v2.7.4) (2019-05-15)
+
+
+### Bug Fixes
+
+* **layout+btn:** add headerbg, fix large button font size, update logo ([1e4c0c2](https://github.com/storyscript/components/commit/1e4c0c2))
+* **typo:** fix gilroy headers weight ([2b44407](https://github.com/storyscript/components/commit/2b44407))
+
+
+
 ### [2.7.3](https://github.com/storyscript/components/compare/v2.7.2...v2.7.3) (2019-05-15)
 
 
