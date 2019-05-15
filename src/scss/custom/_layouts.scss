@@ -94,11 +94,20 @@ $value in $paddings {
     padding-right: 2rem;
   }
 
+  &.has-background,
+  &.has-background-large {
+    background-repeat: no-repeat;
+    background-size: auto 250px;
+  }
+
   &.has-background {
     @include backgroundImage('bg/header-bg', 'png');
-    background-repeat: no-repeat;
     background-position: center calc(4rem + 50%);
-    background-size: auto 250px;
+  }
+
+  &.has-background-large {
+    @include backgroundImage('bg/header-bg-big', 'png');
+    background-position: center 50%;
   }
 
   $intos: (bracket, chevron, hash, slash);

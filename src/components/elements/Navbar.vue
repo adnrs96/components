@@ -14,7 +14,6 @@
             icon
             :variant="black ? 'light' : dark ? 'dark' : undefined"
           />
-          <span class="is-separator" />
           <s-logo :variant="dark || black ? 'light' : undefined" />
         </a>
         <a

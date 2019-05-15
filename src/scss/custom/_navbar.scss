@@ -5,6 +5,16 @@
     background-color: nth($grays, 2)
   }
 
+  .navbar-brand {
+    svg:first-child {
+      margin-top: -.25rem;
+    }
+
+    svg+svg {
+      margin-left: 1rem;
+    }
+  }
+
   .is-separator {
     width: 1px;
     height: 1.5rem;

@@ -1,7 +1,7 @@
 <template>
   <s-layout
     hero
-    :class="['jumbo', { [`is-${size}`]: size }, {'has-background': background}]"
+    :class="['jumbo', { [`is-${size}`]: size }, {'has-background': background}, {'has-background-large': backgroundLarge}]"
   >
     <template slot="head">
       <slot name="header" />
@@ -95,6 +95,10 @@ export default {
       validator: v => ['small', 'normal', 'medium', 'large', 'fullheight'].includes(v)
     },
     background: {
+      type: Boolean,
+      default: false
+    },
+    backgroundLarge: {
       type: Boolean,
       default: false
     }
