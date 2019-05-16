@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.7.5](https://github.com/storyscript/components/compare/v2.7.4...v2.7.5) (2019-05-16)
+
+
+### Bug Fixes
+
+* **buttons:** fix buttons sizes + icons size ([2a12e55](https://github.com/storyscript/components/commit/2a12e55))
+
+
+
 ### [2.7.4](https://github.com/storyscript/components/compare/v2.7.3...v2.7.4) (2019-05-15)
 
 
