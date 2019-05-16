@@ -12,6 +12,7 @@
   &.is-large {
     height: 4rem;
     font-size: .9rem;
+    letter-spacing: .125rem;
   }
 
   font-weight: 600;
@@ -203,7 +204,7 @@
   }
 
   span+.btn-icon {
-    margin-left: 2rem;
+    margin-left: .625rem;
   }
 
   .btn-icon {
@@ -225,8 +226,14 @@
     margin-left: 1rem !important;
   }
 
+  span.icon {
+    font-size: 1rem;
+    height: 1rem;
+    width: 1.5rem;
+  }
+
   span+span.icon {
-    margin-left: 2rem !important;
+    margin-left: 1.75rem !important;
   }
 }
 
