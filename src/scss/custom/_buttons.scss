@@ -169,6 +169,12 @@
     box-shadow: none !important;
   }
 
+  span.icon.round-left {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+
   &.is-outlined {
     .round-left {
       background-color: $primary;
