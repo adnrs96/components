@@ -30,7 +30,7 @@
             style="position:relative"
           >
             <span class="has-text-bottom">
-              Storyscript &copy; 2019
+              2019. Asyncy, Inc.
             </span>
             <a
               :class="[`has-text-${dark ? 'dark-blue' : 'primary'}`]"

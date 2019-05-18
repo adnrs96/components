@@ -8,7 +8,7 @@
     <input
       v-model="email"
       name="beta-email"
-      placeholder="Enter your email"
+      placeholder="Email address"
       type="email"
       autocomplete="off"
     >

@@ -13,7 +13,7 @@
           alignment="centered"
           :padding="['none', '2x']"
         >
-          Time to write your story.
+          Write your own story.
         </s-text>
       </s-div>
       <s-div :size="full ? 'full' : 'half'">
