@@ -97,7 +97,7 @@ $value in $paddings {
   &.has-background,
   &.has-background-large {
     background-repeat: no-repeat;
-    background-size: auto 250px;
+    background-size: contain;
   }
 
   &.has-background {

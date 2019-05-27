@@ -1,10 +1,13 @@
 <template>
   <s-layout
     hero
-    :class="['jumbo', { [`is-${size}`]: size }, {'has-background': background}, {'has-background-large': backgroundLarge}]"
+    :class="['jumbo', { [`is-${size}`]: size }, {'has-background': background}, {'has-background-large': backgroundLarge}, {'has-background-dark-blue': dark}]"
   >
     <template slot="head">
-      <slot name="header" />
+      <slot
+        name="header"
+        :dark="dark"
+      />
     </template>
     <template slot="body">
       <s-div
@@ -13,7 +16,7 @@
       >
         <s-text
           highlight
-          color="gray-2"
+          :color="dark ? 'white' : 'gray-2'"
           alignment="centered"
         >
           <template v-if="$slots.small">
@@ -31,6 +34,7 @@
         <s-text
           head="1"
           alignment="centered"
+          :color="dark ? 'white' : undefined"
           :class="{[`into-${into}`]: into }"
         >
           <span v-if="into" />
@@ -82,13 +86,6 @@ export default {
       default: undefined,
       validator: v => ['bracket', 'chevron', 'hash', 'slash'].includes(v)
     },
-    /**
-     * Sets the stars background
-     */
-    stars: {
-      type: Boolean,
-      default: true
-    },
     size: {
       type: String,
       default: undefined,
@@ -99,6 +96,10 @@ export default {
       default: false
     },
     backgroundLarge: {
+      type: Boolean,
+      default: false
+    },
+    dark: {
       type: Boolean,
       default: false
     }
@@ -114,9 +115,12 @@ export default {
   size="fullheight"
   small="developer marketplace runtime"
   background
+  dark
 >
   <s-navbar
     slot="header"
+    slot-scope="{ dark }"
+    :dark="dark"
     :items="[{ name: 'Blog' }, { name: 'Documentation' }]"
   />
   <template slot="title">Storyscript amplifies <br /> the developer</template>
