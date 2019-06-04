@@ -151,10 +151,10 @@ export default {
       children: [{
         el: 's-logo',
         bind: { icon: true }
-      }, {
-        el: 's-text',
-        bind: { highlight: true, preserveCase: true, color: 'dark' },
-        text: '© 2019 Storyscript'
+      // }, {
+      //   el: 's-text',
+      //   bind: { highlight: true, preserveCase: true, color: 'dark' },
+      //   text: '© 2019 Storyscript'
       }]
     }]
   })
