@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.7.9](https://github.com/storyscript/components/compare/v2.7.8...v2.7.9) (2019-06-04)
+
+
+### Bug Fixes
+
+* **join:** fix join padding + centered message ([2e15355](https://github.com/storyscript/components/commit/2e15355))
+
+
+
 ### [2.7.8](https://github.com/storyscript/components/compare/v2.7.7...v2.7.8) (2019-05-27)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@storyscript/vue",
-  "version": "2.7.8",
+  "version": "2.7.9",
   "description": "Shared vue components for Storyscript",
   "author": "Storyscript",
   "scripts": {
