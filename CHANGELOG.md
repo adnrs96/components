@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.7.10](https://github.com/storyscript/components/compare/v2.7.9...v2.7.10) (2019-06-04)
+
+
+### Bug Fixes
+
+* **s-join:** remove unecessary copyright ([bf01823](https://github.com/storyscript/components/commit/bf01823))
+
+
+
 ### [2.7.9](https://github.com/storyscript/components/compare/v2.7.8...v2.7.9) (2019-06-04)
 
 
