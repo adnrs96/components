@@ -5,13 +5,13 @@
   >
     <s-container
       v-if="join"
+      centered-vh
       class="story"
     >
       <s-div :size="full ? 'full' : 'half'">
         <s-text
           head="2"
-          alignment="centered"
-          :padding="['none', '2x']"
+          :alignment="full ? 'centered' : 'left'"
         >
           Write your own story.
         </s-text>
