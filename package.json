@@ -1,6 +1,6 @@
 {
   "name": "@storyscript/vue",
-  "version": "2.7.10",
+  "version": "2.8.0",
   "description": "Shared vue components for Storyscript",
   "author": "Storyscript",
   "scripts": {
@@ -49,10 +49,12 @@
   },
   "homepage": "https://github.com/storyscript/components#readme",
   "license": "Apache-2.0",
-  "licenses": [{
-    "type": "Apache-2.0",
-    "url": "http://www.apache.org/licenses/LICENSE-2.0"
-  }],
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
   "lint-staged": {
     "*.vue": [
       "vue-cli-service lint",

@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.8.0](https://github.com/storyscript/components/compare/v2.7.10...v2.8.0) (2019-06-13)
+
+
+### Features
+
+* **guide+join+footer:** update dependencies + fix join spacing + fix footer dark colors ([bb8a377](https://github.com/storyscript/components/commit/bb8a377))
+
+
+
 ### [2.7.10](https://github.com/storyscript/components/compare/v2.7.9...v2.7.10) (2019-06-04)
 
 
