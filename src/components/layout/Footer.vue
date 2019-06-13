@@ -33,21 +33,21 @@
               2019. Asyncy, Inc.
             </span>
             <a
-              :class="[`has-text-${dark ? 'dark-blue' : 'primary'}`]"
+              :class="[`has-text-${dark ? 'light' : 'primary'}`]"
               href="//asyncy.click/slack"
               title="Storyscript Slack"
             >
               <i class="mdi mdi-slack" />
             </a>
             <a
-              :class="[`has-text-${dark ? 'dark-blue' : 'primary'}`]"
+              :class="[`has-text-${dark ? 'light' : 'primary'}`]"
               href="//twitter.com/storyscript_"
               title="Storyscript Twitter"
             >
               <i class="mdi mdi-twitter" />
             </a>
             <a
-              :class="[`has-text-${dark ? 'dark-blue' : 'primary'}`]"
+              :class="[`has-text-${dark ? 'light' : 'primary'}`]"
               href="//github.com/storyscript"
               title="Storyscript Github"
             >

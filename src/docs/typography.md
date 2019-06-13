@@ -1,6 +1,6 @@
 ### Font sizes
 
-```jsx
+```js
 <div>
   <h1 class="is-size-1">I'm a title size 1</h1>
   <h2 class="is-size-2">I'm a title size 2</h2>

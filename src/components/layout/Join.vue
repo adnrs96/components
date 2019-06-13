@@ -12,6 +12,7 @@
         <s-text
           head="2"
           :alignment="full ? 'centered' : 'left'"
+          :padding="['none', '2x']"
         >
           Write your own story.
         </s-text>

@@ -12,3 +12,5 @@ for (let item in components) {
 }
 
 Vue.prototype.$icons = Object.keys(Icons).reduce((arr, i) => [...arr, i.slice(5, i.length).replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()], [])
+
+export default {}
