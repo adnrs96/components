@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.8.1](https://github.com/storyscript/components/compare/v2.8.0...v2.8.1) (2019-06-14)
+
+
+### Bug Fixes
+
+* **icon+layouts:** improve footer + join layouts & new heart icon ([9887a06](https://github.com/storyscript/components/commit/9887a06))
+
+
+
 ## [2.8.0](https://github.com/storyscript/components/compare/v2.7.10...v2.8.0) (2019-06-13)
 
 
