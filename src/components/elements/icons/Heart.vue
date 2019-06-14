@@ -1,45 +1,67 @@
 <template>
   <svg
+    width="32"
+    height="26"
+    viewBox="0 0 32 26"
+    fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 0 376.23 209.36"
-    width="24"
-    height="12"
   >
+    <path
+      d="M14.4153 25.4375C-10.2923 16.0763 1.35943 -8.43973 15.3021 2.96574C15.6983 3.28983 16.3017 3.28983 16.6979 2.96574C30.6406 -8.43973 42.2923 16.0763 17.5847 25.4375C16.5766 25.8194 15.4234 25.8194 14.4153 25.4375Z"
+      fill="url(#paint0_linear)"
+    />
     <defs>
-      <clipPath id="clip-path">
-        <path
-          fill="none"
-          d="M188.11,19.26a67.07,67.07,0,0,0-93.59,1.22h0a67.09,67.09,0,0,0-1.25,93.57l0,0,1.28,1.28L188.11,209l93.6-93.59,1.28-1.28,0,0a67.07,67.07,0,0,0-1.25-93.56h0A67.09,67.09,0,0,0,188.11,19.26Z"
+      <linearGradient
+        id="paint0_linear"
+        x1="-4"
+        y1="6"
+        x2="16"
+        y2="26"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#EB0927" />
+        <stop
+          offset="0.199999"
+          stop-color="#EB0927"
         />
-      </clipPath>
+        <stop
+          offset="0.2"
+          stop-color="#FFA509"
+        />
+        <stop
+          offset="0.399999"
+          stop-color="#FFA509"
+        />
+        <stop
+          offset="0.4"
+          stop-color="#FFE806"
+        />
+        <stop
+          offset="0.599999"
+          stop-color="#FFE806"
+        />
+        <stop
+          offset="0.6"
+          stop-color="#3AD42C"
+        />
+        <stop
+          offset="0.799999"
+          stop-color="#3AD42C"
+        />
+        <stop
+          offset="0.8"
+          stop-color="#0198CF"
+        />
+        <stop
+          offset="0.999999"
+          stop-color="#0198CF"
+        />
+        <stop
+          offset="1"
+          stop-color="#B34DC4"
+        />
+      </linearGradient>
     </defs>
-    <g clip-path="url(#clip-path)">
-      <polygon
-        fill="#a67eff"
-        points="376.23 209.36 0 209.36 0 0 376.23 0 376.23 209.36"
-      />
-      <polyline
-        fill="#52dbff"
-        points="376.23 174.47 0 174.47 0 139.58 376.23 139.58"
-      />
-      <polyline
-        fill="#00dcab"
-        points="376.23 139.58 0 139.58 0 104.68 376.23 104.68"
-      />
-      <polyline
-        fill="#fd0"
-        points="376.23 104.68 0 104.68 0 69.79 376.23 69.79"
-      />
-      <polyline
-        fill="#ff8522"
-        points="376.23 69.79 0 69.79 0 34.89 376.23 34.89"
-      />
-      <polyline
-        fill="#fa496e"
-        points="376.23 34.89 0 34.89 0 0 376.23 0"
-      />
-    </g>
   </svg>
 </template>
 

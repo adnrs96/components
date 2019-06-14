@@ -22,7 +22,18 @@
     }
   }
 
+  h2 {
+    @include touch {
+      text-align: center !important;
+    }
+
+    @include mobile {
+      padding: 0;
+    }
+  }
+
   .is-half {
+
     .form-beta {
       margin-right: 0;
 

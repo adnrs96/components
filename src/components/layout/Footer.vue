@@ -11,10 +11,15 @@
             highlight
             letter-spacing="large"
             small
+            class="build-container"
             color="gray-2"
           >
-            PASSIONATELY BUILT WITH
-            <s-icon icon="heart" />IN AMSTERDAM
+            BUILT WITH
+            <s-icon
+              icon="heart"
+              :props="{ height: '14', width: '16' }"
+            />
+            IN AMSTERDAM
           </s-text>
           <s-button
             arrow="arrow-up"

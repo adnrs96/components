@@ -68,6 +68,12 @@ $value in $paddings {
   align-items: center;
 }
 
+.build-container {
+  svg {
+    vertical-align: text-bottom;
+  }
+}
+
 .is-footer-text {
   line-height: nth($line-heights, 2) !important;
 

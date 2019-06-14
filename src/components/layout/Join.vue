@@ -12,7 +12,7 @@
         <s-text
           head="2"
           :alignment="full ? 'centered' : 'left'"
-          :padding="['none', '2x']"
+          padding="2x"
         >
           Write your own story.
         </s-text>
@@ -59,8 +59,17 @@
             v-for="(child, cid) of section.children"
             :key="`footer-${_uid}-section-${sid}-child-${cid}`"
             li
+            :class="child.classes"
             p="2"
           >
+            <component
+              :is="c.el"
+              v-for="(c, ci) of child.children"
+              :key="`footer-${_uid}-section-${sid}-child-${cid}-c-${ci}`"
+              v-bind="c.bind"
+            >
+              {{ c.text }}
+            </component>
             <component
               :is="child.el"
               v-bind="child.bind"
@@ -150,8 +159,14 @@ export default {
       }]
     }, {
       children: [{
-        el: 's-logo',
-        bind: { icon: true }
+        classes: 'footer-logo-container',
+        children: [{
+          el: 's-logo',
+          bind: { icon: true, class: 's-logo-icon-small svg-inline' }
+        }, {
+          el: 's-logo',
+          bind: { class: 's-logo-small svg-inline' }
+        }]
       // }, {
       //   el: 's-text',
       //   bind: { highlight: true, preserveCase: true, color: 'dark' },
@@ -175,3 +190,18 @@ export default {
 </section>
 ```
 </docs>
+
+<style lang="scss" scoped>
+.s-logo-small {
+  height: 1.25rem;
+  margin-top: 0.1rem;
+}
+.s-logo-icon-small {
+  height: 2rem;
+}
+
+.footer-logo-container {
+  display: inline-flex;
+  align-items: center;
+}
+</style>
