@@ -93,6 +93,10 @@ $value in $paddings {
 
   .navbar {
     padding: 3rem 2rem 0;
+
+    @include mobile {
+      padding: 2rem 0 0;
+    }
   }
 
   .hero-body {

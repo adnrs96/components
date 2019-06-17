@@ -336,27 +336,31 @@
   }
 
   .navbar-burger {
+    border-radius: .625rem;
+
     span {
+      left: calc(50% - 14px);
+      width: 28px;
       transition-duration: .3s;
       height: 2px;
       border-radius: 2px;
     }
 
     span:nth-child(1) {
-      top: calc(50% - 3px);
+      top: calc(50% - 5px);
     }
 
     span:nth-child(2) {
-      top: calc(50% + 3px);
+      top: calc(50% + 5px);
     }
 
     &.is-active {
       span:nth-child(1) {
-        transform: translateY(3px) rotate(135deg);
+        transform: translateY(5px) rotate(135deg);
       }
 
       span:nth-child(2) {
-        transform: translateY(-3px) rotate(45deg);
+        transform: translateY(-5px) rotate(45deg);
         opacity: 1;
       }
     }
