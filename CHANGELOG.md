@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.8.2](https://github.com/storyscript/components/compare/v2.8.1...v2.8.2) (2019-06-17)
+
+
+### Bug Fixes
+
+* **navbar:** fix navbar behavior + update burger ([b4b20d7](https://github.com/storyscript/components/commit/b4b20d7))
+
+
+
 ### [2.8.1](https://github.com/storyscript/components/compare/v2.8.0...v2.8.1) (2019-06-14)
 
 
