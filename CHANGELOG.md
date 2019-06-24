@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.8.4](https://github.com/storyscript/components/compare/v2.8.3...v2.8.4) (2019-06-24)
+
+
+
 ### [2.8.3](https://github.com/storyscript/components/compare/v2.8.2...v2.8.3) (2019-06-24)
 
 
