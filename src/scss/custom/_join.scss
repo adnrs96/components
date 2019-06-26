@@ -1,20 +1,5 @@
 .join-beta {
-  &:not(.is-paddingless) {
-    margin-top: -10rem !important;
-    padding-top: 15rem !important;
-  }
-
-  &.is-paddingless {
-    padding-top: 3rem !important;
-  }
-
   .story {
-    padding: 10rem 0;
-
-    @include mobile {
-      padding: 3rem 0;
-    }
-
     .column {
       @include touch {
         text-align: center;

@@ -7,6 +7,7 @@
       v-if="join"
       centered-vh
       class="story"
+      :padding="['none', 'large']"
     >
       <s-div :size="full ? 'full' : 'half'">
         <s-text
