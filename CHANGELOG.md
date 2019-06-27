@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.8.6](https://github.com/storyscript/components/compare/v2.8.5...v2.8.6) (2019-06-27)
+
+
+### Bug Fixes
+
+* **layout+jumbo+button:** fix button title, layout + jumbo space improvements ([54ca2a6](https://github.com/storyscript/components/commit/54ca2a6))
+
+
+
 ### [2.8.5](https://github.com/storyscript/components/compare/v2.8.4...v2.8.5) (2019-06-26)
 
 
