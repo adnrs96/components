@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.8.7](https://github.com/storyscript/components/compare/v2.8.6...v2.8.7) (2019-06-27)
+
+
+### Bug Fixes
+
+* **button+layout:** fix button triming + layout background ([b8ee6d5](https://github.com/storyscript/components/commit/b8ee6d5))
+
+
+
 ### [2.8.6](https://github.com/storyscript/components/compare/v2.8.5...v2.8.6) (2019-06-27)
 
 
