@@ -48,7 +48,19 @@ $value in $paddings {
   }
 
   .has-top-outside-#{$padding} {
-    top: #{-$value - 4}rem
+    @include desktop {
+      top: #{-$value - 4}rem
+    }
+
+    @include touch {
+      top: #{-$value}rem
+    }
+  }
+}
+
+@include touch {
+  .level-left:not(:last-child) {
+    margin-bottom: .75rem;
   }
 }
 
@@ -99,15 +111,14 @@ $value in $paddings {
     }
   }
 
-  .hero-body {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   &.has-background,
   &.has-background-large {
     background-repeat: no-repeat;
     background-size: contain;
+
+    @include mobile {
+      background: none;
+    }
   }
 
   &.has-background {

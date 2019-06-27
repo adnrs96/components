@@ -172,7 +172,7 @@ export default {
       return (this.url && typeof this.url !== typeof '') ? this.url.target : undefined
     },
     getTitle: function () {
-      return (this.$slots.default || [{ text: undefined }])[0].text
+      return (this.$slots.default || [{ text: undefined }])[0].text.trim()
     },
     arrowIcon: function () {
       return typeof this.arrow === typeof true ? 'arrow' : this.arrow

@@ -15,6 +15,7 @@
         size="full"
       >
         <s-text
+          class="is-hidden-mobile"
           highlight
           :color="dark ? 'white' : 'gray-2'"
           alignment="centered"
