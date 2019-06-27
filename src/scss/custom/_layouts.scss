@@ -117,7 +117,7 @@ $value in $paddings {
     background-size: contain;
 
     @include mobile {
-      background: none;
+      background-image: none !important;
     }
   }
 
