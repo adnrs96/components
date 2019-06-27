@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.8.9](https://github.com/storyscript/components/compare/v2.8.8...v2.8.9) (2019-06-27)
+
+
+### Bug Fixes
+
+* **button:** fix getTitle ([f19d023](https://github.com/storyscript/components/commit/f19d023))
+
+
+
 ### [2.8.8](https://github.com/storyscript/components/compare/v2.8.7...v2.8.8) (2019-06-27)
 
 
