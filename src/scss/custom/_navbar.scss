@@ -314,6 +314,10 @@
 
     .navbar-dropdown {
       &:before {
+        @include touch {
+          display: none;
+        }
+
         content: '';
         display: block;
         position: absolute;
