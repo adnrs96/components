@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.9.1](https://github.com/storyscript/components/compare/v2.9.0...v2.9.1) (2019-06-28)
+
+
+### Bug Fixes
+
+* **tooltip+span:** fixed tooltip width + span svgs are aligned bottom-text ([6ccd72f](https://github.com/storyscript/components/commit/6ccd72f))
+
+
+
 ## [2.9.0](https://github.com/storyscript/components/compare/v2.8.9...v2.9.0) (2019-06-28)
 
 
