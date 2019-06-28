@@ -25,9 +25,10 @@
     color: nth($grays, 2);
     font-size: nth($sizes, 8);
     line-height: 1.5;
+    font-weight: normal;
     background-color: $white;
     border: 1px solid rgba($warning, 0.25);
-    text-align: center;
+    text-align: left;
     top: auto;
     bottom: 100%;
     width: 200px;
@@ -53,6 +54,12 @@
   &[data-tooltip-right] {
     &:before {
       left: -30%;
+    }
+  }
+
+  &[data-tooltip-align-center] {
+    &:before {
+      text-align: center;
     }
   }
 }

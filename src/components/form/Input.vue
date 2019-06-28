@@ -4,10 +4,13 @@
     @click="onFocusField"
   >
     <label
-      v-if="label && !['switch', 'checkbox', 'radio'].includes(type)"
+      v-if="(label || $slots.label) && !['switch', 'checkbox', 'radio'].includes(type)"
       class="label"
       :for="`input-${_uid}`"
-    >{{ label }}</label>
+    >
+      <slot name="label" />
+      {{ label }}
+    </label>
     <div
       v-if="(hasAddons || isGrouped) && $slots.left"
       class="control"
@@ -225,7 +228,18 @@ new Vue({
       @keyup.enter="input = ''"
       label="hello world"
       placeholder="hello world"
-    />
+    >
+      <template slot="label">
+  Docker pull URL
+  <s-text
+    span
+    data-tooltip="The Docker Hub Url to your public repository. We only pull images with the 'latest' tag."
+    data-tooltip-right
+  >
+    <s-icon icon="question-mark" />
+  </s-text>
+</template>
+    </s-input>
     <s-input
       background="light"
       placeholder="hello world"
