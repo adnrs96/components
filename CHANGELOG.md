@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.9.0](https://github.com/storyscript/components/compare/v2.8.9...v2.9.0) (2019-06-28)
+
+
+### Bug Fixes
+
+* **navbar:** improve navbar from design ([f271ec7](https://github.com/storyscript/components/commit/f271ec7))
+
+
+### Features
+
+* **icon+tooltip:** add question-mark icon + fix tooltip style ([efeccff](https://github.com/storyscript/components/commit/efeccff))
+
+
+
 ### [2.8.9](https://github.com/storyscript/components/compare/v2.8.8...v2.8.9) (2019-06-27)
 
 
