@@ -24,11 +24,13 @@
     padding: 0.75rem;
     color: nth($grays, 2);
     font-size: nth($sizes, 8);
+    line-height: 1.5;
     background-color: $white;
     border: 1px solid rgba($warning, 0.25);
     text-align: center;
     top: auto;
     bottom: 100%;
+    width: 200px;
     left: 50%;
     box-shadow: 0 7px 10px 0 rgba($black, 0.05);
     transform: translate(-50%, -1rem);

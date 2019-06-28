@@ -41,6 +41,10 @@ h5 {
   color: $dark-blue;
 }
 
+span svg {
+  vertical-align: text-bottom;
+}
+
 input {
   font-size: nth($sizes, 7)
 }
