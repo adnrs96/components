@@ -15,7 +15,7 @@
           :alignment="full ? 'centered' : 'left'"
           padding="2x"
         >
-          Write your own story.
+          What story will you write?
         </s-text>
       </s-div>
       <s-div :size="full ? 'full' : 'half'">
