@@ -147,14 +147,14 @@ export default {
         to: { name: 'about' }
       }, {
         title: 'Jobs',
-        href: '//angel.co/storyscript/jobs'
+        href: '//jobs.lever.co/storyscript'
       }, {
         title: 'Contact',
         href: '//storyscript.io/contact',
         to: { name: 'contact' }
       }, {
         title: 'We are hiring!',
-        href: '//angel.co/storyscript/jobs',
+        href: '//jobs.lever.co/storyscript',
         // color: 'info',
         bold: true
       }]
