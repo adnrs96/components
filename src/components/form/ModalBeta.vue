@@ -26,7 +26,7 @@
               clean
               centered-vh
             >
-              <s-div size="6">
+              <s-div size="8">
                 <form
                   :class="{ error, success }"
                   action
