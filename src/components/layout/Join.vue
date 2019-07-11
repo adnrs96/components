@@ -19,7 +19,10 @@
         </s-text>
       </s-div>
       <s-div :size="full ? 'full' : 'half'">
-        <s-form-beta :dark="typeof dark === typeof true" />
+        <s-button @click="$emit('showBetaModal')">
+          Join beta
+        </s-button>
+        <!-- <s-form-beta :dark="typeof dark === typeof true" /> -->
       </s-div>
     </s-container>
     <s-container
