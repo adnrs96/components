@@ -46,7 +46,7 @@
                     v-model="username"
                     group-vertical
                     name="beta-username"
-                    placeholder="GitHub username"
+                    placeholder="GitHub Username"
                     required
                     autocomplete="off"
                   />
