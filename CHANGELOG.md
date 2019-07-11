@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.10.1](https://github.com/storyscript/components/compare/v2.10.0...v2.10.1) (2019-07-11)
+
+
+### Bug Fixes
+
+* **join:** move form-beta to button emitting showBetaModal event ([7d4d80e](https://github.com/storyscript/components/commit/7d4d80e))
+
+
+
 ## [2.10.0](https://github.com/storyscript/components/compare/v2.9.4...v2.10.0) (2019-07-11)
 
 
