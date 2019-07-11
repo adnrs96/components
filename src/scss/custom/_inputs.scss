@@ -5,6 +5,49 @@ textarea::placeholder {
 
 .field {
 
+  &.is-group-vertical {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+
+    .control {
+      .input {
+        background-color: #f9f9fc;
+      }
+    }
+
+    &:first-of-type {
+      margin-top: 1.5rem;
+
+      .control {
+        input {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 1.5rem;
+
+      .control {
+        .input {
+          border-top: none;
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+    }
+
+    &:not(:first-of-type):not(:last-of-type) {
+      .control {
+        input {
+          border-top: none;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
   &.tags {
     height: auto;
     cursor: text;

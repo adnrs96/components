@@ -1,6 +1,14 @@
 <template>
   <div
-    :class="['field', {disabled},{'has-addons': (hasAddons && isGrouped === undefined)},{[`has-addons-${hasAddons}`]: typeof hasAddons === typeof '' && isGrouped === undefined},{'is-grouped': isGrouped},{[`is-grouped-${isGrouped}`]: typeof isGrouped === typeof ''},{'tags input':tags}]"
+    :class="[
+      'field',
+      {disabled},
+      {'is-group-vertical': groupVertical },
+      {'has-addons': (hasAddons && isGrouped === undefined)},
+      {[`has-addons-${hasAddons}`]: typeof hasAddons === typeof '' && isGrouped === undefined},
+      {'is-grouped': isGrouped},
+      {[`is-grouped-${isGrouped}`]: typeof isGrouped === typeof ''},
+      {'tags input':tags}]"
     @click="onFocusField"
   >
     <label
@@ -56,6 +64,7 @@
         :value="!['switch', 'radio'].includes(type) ? value : undefined"
         :aria-autocomplete="autocomplete"
         :autocomplete="autocomplete"
+        :required="required"
         v-on="listeners"
       >
       <label
@@ -137,6 +146,8 @@ export default {
       default: 'normal',
       validator: v => ['small', 'normal', 'medium', 'large'].includes(v)
     },
+    required: { type: Boolean, default: false },
+    groupVertical: { type: Boolean, default: false },
     rounded: { type: Boolean, default: false },
     fixed: { type: Boolean, default: false },
     rows: { type: Number, default: undefined },

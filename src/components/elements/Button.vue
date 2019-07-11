@@ -6,6 +6,7 @@
     :target="getTarget"
     :title="getTitle"
     :to="to"
+    :type="type"
     :class="['button', `is-${state}`, { [`is-${size}`]: size !== 'normal' }, { 'is-loading': loading }, { 'is-fullwidth': full }, { 'is-rounded': rounded }, { 'is-link': link }, { 'is-outlined': outlined }, { 'is-borderless': borderless }, { 'has-arrow': arrow }, { 'has-mobile-arrow': arrowMobile }]"
     @click="handleClick"
   >
@@ -82,6 +83,13 @@ export default {
     full: {
       type: Boolean,
       default: false
+    },
+    /**
+     * Sets the button type
+     */
+    type: {
+      type: String,
+      default: undefined
     },
     /**
      * Sets the button rounded

@@ -7,6 +7,7 @@ import STag from './elements/Tag'
 import SText from './elements/Text'
 import SFormBeta from './form/FormBeta'
 import SInput from './form/Input'
+import SModalBeta from './form/ModalBeta'
 import SSelect from './form/Select'
 import SContainer from './layout/Container'
 import SDiv from './layout/Div'
@@ -27,6 +28,7 @@ export const plugin = {
   SText,
   SFormBeta,
   SInput,
+  SModalBeta,
   SSelect,
   SContainer,
   SDiv,
