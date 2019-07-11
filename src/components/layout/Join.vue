@@ -18,7 +18,10 @@
           What story will you write?
         </s-text>
       </s-div>
-      <s-div :size="full ? 'full' : 'half'">
+      <s-div
+        :size="full ? 'full' : 'half'"
+        class="has-text-centered"
+      >
         <s-button @click="$emit('showBetaModal')">
           Join beta
         </s-button>
