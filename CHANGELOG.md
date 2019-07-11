@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.10.4](https://github.com/storyscript/components/compare/v2.10.3...v2.10.4) (2019-07-11)
+
+
+### Bug Fixes
+
+* **beta-modal:** add v-click-outside to close ([255187c](https://github.com/storyscript/components/commit/255187c))
+
+
+
 ### [2.10.3](https://github.com/storyscript/components/compare/v2.10.2...v2.10.3) (2019-07-11)
 
 
