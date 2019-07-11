@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.10.2](https://github.com/storyscript/components/compare/v2.10.1...v2.10.2) (2019-07-11)
+
+
+### Bug Fixes
+
+* **modal-beta:** fix input sizes ([0710bb9](https://github.com/storyscript/components/commit/0710bb9))
+* **modal-beta:** fix typo username placeholder ([91c3c55](https://github.com/storyscript/components/commit/91c3c55))
+
+
+
 ### [2.10.1](https://github.com/storyscript/components/compare/v2.10.0...v2.10.1) (2019-07-11)
 
 
