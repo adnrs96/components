@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.10.0](https://github.com/storyscript/components/compare/v2.9.4...v2.10.0) (2019-07-11)
+
+
+### Features
+
+* **modal-beta:** add modal-beta component ([0d22edd](https://github.com/storyscript/components/commit/0d22edd))
+
+
+
 ### [2.9.4](https://github.com/storyscript/components/compare/v2.9.3...v2.9.4) (2019-07-05)
 
 
