@@ -1,7 +1,10 @@
 <template>
   <div :class="['modal', {'is-active': open }]">
     <div class="modal-background" />
-    <div class="modal-content is-rounded">
+    <div
+      v-click-outside="hide"
+      class="modal-content is-rounded"
+    >
       <s-layout
         foreground="white"
         rounded
@@ -116,8 +119,8 @@ export default {
     }
   },
   methods: {
-    show () { this.open = true },
-    hide () { this.open = false },
+    show () { setTimeout(() => (this.open = true), 50) },
+    hide () { if (this.open) this.open = false },
     submit (e) {
       if (this.sending) return
       if (!this.isEmail) {
