@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.10.3](https://github.com/storyscript/components/compare/v2.10.2...v2.10.3) (2019-07-11)
+
+
+### Bug Fixes
+
+* **join:** align the button ([c7dd943](https://github.com/storyscript/components/commit/c7dd943))
+
+
+
 ### [2.10.2](https://github.com/storyscript/components/compare/v2.10.1...v2.10.2) (2019-07-11)
 
 
