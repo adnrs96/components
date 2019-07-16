@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.11.0](https://github.com/storyscript/components/compare/v2.10.4...v2.11.0) (2019-07-16)
+
+
+### Bug Fixes
+
+* **tags:** fix tags ([4b66a1d](https://github.com/storyscript/components/commit/4b66a1d))
+
+
+### Features
+
+* **breadcrumbs:** improve breadcrumbs component + icon pagination ([5cd871c](https://github.com/storyscript/components/commit/5cd871c))
+
+
+
 ### [2.10.4](https://github.com/storyscript/components/compare/v2.10.3...v2.10.4) (2019-07-11)
 
 
