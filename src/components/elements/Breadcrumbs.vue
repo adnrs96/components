@@ -4,9 +4,6 @@
     aria-label="breadcrumbs"
   >
     <ul>
-      <li>
-        <s-icon icon="home" />
-      </li>
       <li
         v-for="(item, idx) of items"
         :key="`breadcrumbs-list-${_uid}-${idx}`"
@@ -46,6 +43,8 @@ export default {
 </docs>
 
 <style lang="scss">
+@import 'src/scss/variables/_colors';
+
 .breadcrumb {
   &.has-pagination-separator {
     ul {
@@ -53,17 +52,20 @@ export default {
       li {
         span,
         a {
-          padding: 0 0.75rem;
+          padding: 0 0.5rem;
           text-transform: uppercase;
-          font-size: 0.9rem;
+          font-size: 0.875rem;
+          line-height: 1.43;
+          letter-spacing: 1px;
           font-weight: 600;
-          color: #464769; // nth($grays, 2);
+          color: nth($grays, 2);
         }
         &.active,
         &:last-child {
           span,
           a {
             font-weight: 600;
+            color: $dark-blue;
           }
         }
         &:first-child {
@@ -72,16 +74,14 @@ export default {
             height: 1rem;
           }
         }
-        &:nth-child(2):before {
-          display: none;
-        }
-        &:not(:first-child):not(:nth-child(2)):before {
+        &:not(:first-child):before {
           content: "";
-          background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMSAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlPSIjOTc5Nzk3Ij48cG9seWxpbmUgcG9pbnRzPSI1IDEgMTAgNiA1IDExIiAvPjxwb2x5bGluZSBwb2ludHM9IjIgMSA3IDYgMiAxMSIgLz48L2c+PC9zdmc+");
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cG9seWxpbmUgc3Ryb2tlPSIjODg4Q0E3IiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9Im5vbi16ZXJvIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHBvaW50cz0iNSAyIDExIDggNSAxNCIvPjwvc3ZnPg==");
           background-repeat: no-repeat;
           background-size: contain;
           width: 1rem;
           height: 1rem;
+          margin-top: -2px;
         }
       }
     }
