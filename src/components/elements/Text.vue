@@ -1,7 +1,7 @@
 <template>
   <component
     :is="getTag"
-    :class="[`is-size-${getSize}`, `has-text-${getColor}`, {'has-text-uppercase': highlight && !preserveCase }, {[`has-text-${alignment}`]: alignment}, {'has-text-weight-semi-bold': semiBold && !bold}, {'has-text-weight-bold': highlight || bold}, {[`has-letter-spacing-${getLetterSpacing}`]: highlight || letterSpacing}, ...getPadding]"
+    :class="[`is-size-${getSize}`, `has-text-${getColor}`, {'has-text-uppercase': highlight && !preserveCase }, {[`has-text-${alignment}`]: alignment}, {'has-text-weight-semibold': semiBold && !bold}, {'has-text-weight-bold': highlight || bold}, {[`has-letter-spacing-${getLetterSpacing}`]: highlight || letterSpacing}, ...getPadding]"
   >
     <slot />
   </component>
