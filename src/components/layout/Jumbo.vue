@@ -1,7 +1,7 @@
 <template>
   <s-layout
     hero
-    :class="['jumbo', { [`is-${size}`]: size }, {'has-background': background}, {'has-background-large': backgroundLarge}, {'has-background-dark-blue': dark}]"
+    :class="['jumbo', { [`is-${size}`]: size }, {'has-background': background}, {'has-background-mono': mono}, {'has-background-large': backgroundLarge}, {'has-background-dark-blue': dark}]"
   >
     <template slot="head">
       <slot
@@ -101,6 +101,10 @@ export default {
       default: false
     },
     dark: {
+      type: Boolean,
+      default: false
+    },
+    mono: {
       type: Boolean,
       default: false
     }
