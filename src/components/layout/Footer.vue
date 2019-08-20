@@ -14,7 +14,7 @@
             class="build-container"
             color="gray-2"
           >
-            BUILT WITH
+            PASSIONATELY BUILT WITH
             <s-icon
               icon="heart"
               :props="{ height: '14', width: '16' }"
@@ -23,7 +23,7 @@
           </s-text>
           <s-button
             arrow="arrow-up"
-            :state="dark ? 'dark' : 'light'"
+            :state="dark ? 'dark' : 'white'"
             size="small"
             @click="scrollTop"
           />
@@ -35,7 +35,7 @@
             style="position:relative"
           >
             <span class="has-text-bottom">
-              2019. Asyncy, Inc.
+              Storyscript © {{ new Date().getFullYear() }}
             </span>
             <a
               :class="[`has-text-${dark ? 'light' : 'primary'}`]"
