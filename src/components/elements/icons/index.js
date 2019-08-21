@@ -12,6 +12,7 @@ import SIconQuestionMark from './QuestionMark.vue'
 import SIconRocket from './Rocket.vue'
 import SIconSearch from './Search.vue'
 import SIconSeparator from './Separator.vue'
+import SIconCheckMark from './CheckMark.vue'
 
 export default {
   SIconArrow,
@@ -27,5 +28,6 @@ export default {
   SIconRocket,
   SIconQuestionMark,
   SIconSearch,
-  SIconSeparator
+  SIconSeparator,
+  SIconCheckMark
 }
