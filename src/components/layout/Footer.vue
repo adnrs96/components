@@ -23,7 +23,7 @@
           </s-text>
           <s-button
             arrow="arrow-up"
-            :state="dark ? 'dark' : 'white'"
+            :state="dark ? 'dark' : whiteArrow ? 'white' : 'light'"
             size="small"
             @click="scrollTop"
           />
@@ -72,6 +72,10 @@ export default {
     dark: {
       type: Boolean,
       default: undefined
+    },
+    whiteArrow: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -89,6 +93,7 @@ export default {
 <section>
   <s-footer />
   <s-footer dark />
+  <s-footer whiteArrow :dark="false" />
   <s-footer :dark="false" />
 </section>
 ```
