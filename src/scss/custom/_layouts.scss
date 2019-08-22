@@ -134,7 +134,7 @@ $value in $paddings {
 
   &.has-background-mono {
     @include backgroundImage('bg/header-mono-bg', 'png');
-    background-position: center 50%;
+    background-position: center calc(4rem + 50%);
   }
 
   $intos: (bracket, chevron, hash, slash);

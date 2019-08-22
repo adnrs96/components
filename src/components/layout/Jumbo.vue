@@ -1,7 +1,7 @@
 <template>
   <s-layout
     hero
-    :class="['jumbo', { [`is-${size}`]: size }, {'has-background': background}, {'has-background-mono': mono}, {'has-background-large': backgroundLarge}, {'has-background-dark-blue': dark}, {'has-background-light': light}]"
+    :class="['jumbo', { [`is-${size}`]: size }, {'has-background': background}, {'has-background-mono': backgroundMono}, {'has-background-large': backgroundLarge}, {'has-background-dark-blue': dark}, {'has-background-light': light}]"
   >
     <template slot="head">
       <slot
@@ -108,7 +108,7 @@ export default {
       type: Boolean,
       default: false
     },
-    mono: {
+    backgroundMono: {
       type: Boolean,
       default: false
     }
