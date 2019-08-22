@@ -152,6 +152,10 @@ export default {
         href: '//storyscript.io/about',
         to: { name: 'about' }
       }, {
+      //   title: 'Pricing',
+      //   href: '//storyscript.io/pricing',
+      //   to: { name: 'pricing' }
+      // }, {
         title: 'Jobs',
         href: '//jobs.lever.co/storyscript'
       }, {
