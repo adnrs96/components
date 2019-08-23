@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.12.0](https://github.com/storyscript/components/compare/v2.11.2...v2.12.0) (2019-08-23)
+
+
+### Bug Fixes
+
+* **footer:** add whiteArrow prop for the back2top arrow ([88cbc6f](https://github.com/storyscript/components/commit/88cbc6f))
+
+
+### Features
+
+* **icon:** add check-mark icon ([8f9ea5b](https://github.com/storyscript/components/commit/8f9ea5b))
+* **jumbo:** add mono background ([3d65fc4](https://github.com/storyscript/components/commit/3d65fc4))
+
+
+
 ### [2.11.2](https://github.com/storyscript/components/compare/v2.11.1...v2.11.2) (2019-07-17)
 
 
