@@ -6,12 +6,12 @@
     <s-container
       v-if="join"
       centered-vh
-      class="story"
-      :padding="['none', 'large']"
+      class="story request-access"
+      :padding="['none']"
     >
       <s-div :size="full ? 'full' : 'half'">
         <s-text
-          head="2"
+          head="3"
           :alignment="full ? 'centered' : 'left'"
           padding="2x"
         >
@@ -203,6 +203,13 @@ export default {
 </docs>
 
 <style lang="scss" scoped>
+.request-access {
+  margin-bottom: 5rem;
+  background: #E5E7F2;
+  border-radius: .3125rem;
+  padding: 3.1875rem 5.875rem 3.1875rem 4rem;
+}
+
 .s-logo-small {
   height: 1.25rem;
   margin-top: 0.1rem;
