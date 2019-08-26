@@ -23,7 +23,7 @@
         class="has-text-centered"
       >
         <s-button @click="$emit('showBetaModal')">
-          Join beta
+          Request Access
         </s-button>
         <!-- <s-form-beta :dark="typeof dark === typeof true" /> -->
       </s-div>
