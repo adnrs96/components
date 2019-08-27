@@ -103,7 +103,7 @@ export default {
               case 'requestAccess':
               default: {
                 window['clevertap'].profile.push({ Site: { Email: email, 'GitHub Username': username, Identity: email } })
-                window['clevertap'].event.push('Request Access', { Source: 'Website', 'GitHub Username': username, Email: email })
+                window['clevertap'].event.push('Interested in Free Access', { Source: 'Website', 'GitHub Username': username, Email: email })
                 resolve()
                 break
               }
