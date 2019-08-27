@@ -94,12 +94,6 @@ export default {
                 resolve()
                 break
               }
-              case 'interestedInOnPremises': {
-                window['clevertap'].profile.push({ Site: { Email: email, 'GitHub Username': username, Identity: email } })
-                window['clevertap'].event.push('Interested in On Premises', { Source: 'Website', 'GitHub Username': username, Email: email })
-                resolve()
-                break
-              }
               case 'requestAccess':
               default: {
                 window['clevertap'].profile.push({ Site: { Email: email, 'GitHub Username': username, Identity: email } })
