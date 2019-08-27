@@ -35,7 +35,7 @@
 
     &:hover,
     &:active {
-      border-color: $primary;
+      border-color: $dark-blue;
       color: $white;
       background-color: darken($primary, 5%);
     }
