@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.12.6](https://github.com/storyscript/components/compare/v2.12.5...v2.12.6) (2019-08-27)
+
+
+### Bug Fixes
+
+* **button:** fix color on hover ([eb479e1](https://github.com/storyscript/components/commit/eb479e1))
+
+
+
 ### [2.12.5](https://github.com/storyscript/components/compare/v2.12.4...v2.12.5) (2019-08-27)
 
 
