@@ -209,7 +209,8 @@ export default {
 .request-access {
   background: #E5E7F2;
   border-radius: .3125rem;
-  min-width: 100%;
+  width: 100%;
+  margin: 0;
   justify-content: space-between;
 }
 
