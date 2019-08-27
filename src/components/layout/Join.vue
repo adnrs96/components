@@ -8,20 +8,20 @@
       :padding="['none', 'large']"
     >
       <s-container
-        centered-vh
-        class="story request-access"
+        centered-v
+        class="story request-access has-padding-medium"
       >
         <s-div :size="full ? 'full' : 'half'">
           <s-text
             head="3"
-            :alignment="full ? 'centered' : 'left'"
+            :alignment="full ? 'centered' : 'centered'"
             padding="2x"
           >
             What story will you write?
           </s-text>
         </s-div>
         <s-div
-          :size="full ? 'full' : 'half'"
+          :size="full ? 'full' : '5'"
           class="has-text-centered"
         >
           <s-button @click="$emit('showBetaModal')">
@@ -209,8 +209,8 @@ export default {
 .request-access {
   background: #E5E7F2;
   border-radius: .3125rem;
-  padding: 3.1875rem 5.875rem 3.1875rem 4rem;
-  width: 100%;
+  min-width: 100%;
+  justify-content: space-between;
 }
 
 .s-logo-small {
