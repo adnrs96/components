@@ -10,6 +10,7 @@
       <s-container
         centered-v
         class="story request-access has-padding-medium"
+        :class="{background}"
       >
         <s-div :size="full ? 'full' : 'half'">
           <s-text
@@ -120,6 +121,10 @@ export default {
     dark: {
       type: Boolean,
       default: undefined
+    },
+    background: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -207,11 +212,13 @@ export default {
 
 <style lang="scss" scoped>
 .request-access {
-  background: #E5E7F2;
-  border-radius: .3125rem;
   width: 100%;
   margin: 0;
   justify-content: space-between;
+  &.background {
+    background: #E5E7F2;
+    border-radius: .3125rem;
+  }
 }
 
 .s-logo-small {
