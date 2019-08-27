@@ -5,28 +5,31 @@
   >
     <s-container
       v-if="join"
-      centered-vh
-      class="story"
       :padding="['none', 'large']"
     >
-      <s-div :size="full ? 'full' : 'half'">
-        <s-text
-          head="2"
-          :alignment="full ? 'centered' : 'left'"
-          padding="2x"
-        >
-          What story will you write?
-        </s-text>
-      </s-div>
-      <s-div
-        :size="full ? 'full' : 'half'"
-        class="has-text-centered"
+      <s-container
+        centered-vh
+        class="story request-access"
       >
-        <s-button @click="$emit('showBetaModal')">
-          Join beta
-        </s-button>
+        <s-div :size="full ? 'full' : 'half'">
+          <s-text
+            head="3"
+            :alignment="full ? 'centered' : 'left'"
+            padding="2x"
+          >
+            What story will you write?
+          </s-text>
+        </s-div>
+        <s-div
+          :size="full ? 'full' : 'half'"
+          class="has-text-centered"
+        >
+          <s-button @click="$emit('showBetaModal')">
+            Request Access
+          </s-button>
         <!-- <s-form-beta :dark="typeof dark === typeof true" /> -->
-      </s-div>
+        </s-div>
+      </s-container>
     </s-container>
     <s-container
       v-if="footer"
@@ -203,6 +206,13 @@ export default {
 </docs>
 
 <style lang="scss" scoped>
+.request-access {
+  background: #E5E7F2;
+  border-radius: .3125rem;
+  padding: 3.1875rem 5.875rem 3.1875rem 4rem;
+  width: 100%;
+}
+
 .s-logo-small {
   height: 1.25rem;
   margin-top: 0.1rem;

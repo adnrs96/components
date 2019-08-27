@@ -58,7 +58,7 @@
                     type="submit"
                     :loading="sending"
                   >
-                    {{ success ? 'Thanks !' : 'Request Access' }}
+                    {{ success ? 'Thanks !' : 'Get Started' }}
                   </s-button>
                 </form>
               </s-div>
@@ -87,15 +87,33 @@ export default {
       default: function (email, username) {
         return new Promise((resolve, reject) => {
           if (typeof window['clevertap'] !== 'undefined') {
-            window['clevertap'].profile.push({ Site: { Email: email, 'GitHub Username': username, Identity: email } })
-            window['clevertap'].event.push('Interested in beta', { Source: 'Website', 'GitHub Username': username, Email: email })
-            resolve()
+            switch (this.mode) {
+              case 'interestedInBusiness': {
+                window['clevertap'].profile.push({ Site: { Email: email, 'GitHub Username': username, Identity: email } })
+                window['clevertap'].event.push('Interested in Business', { Source: 'Website', 'GitHub Username': username, Email: email })
+                resolve()
+                break
+              }
+              case 'interestedInOnPremises': {
+                window['clevertap'].profile.push({ Site: { Email: email, 'GitHub Username': username, Identity: email } })
+                window['clevertap'].event.push('Interested in On Premises', { Source: 'Website', 'GitHub Username': username, Email: email })
+                resolve()
+                break
+              }
+              case 'requestAccess':
+              default: {
+                window['clevertap'].profile.push({ Site: { Email: email, 'GitHub Username': username, Identity: email } })
+                window['clevertap'].event.push('Interested in Free Access', { Source: 'Website', 'GitHub Username': username, Email: email })
+                resolve()
+                break
+              }
+            }
           } else { reject(new Error('clevertap undefined')) }
         })
       }
     }
   },
-  data: () => ({ open: false, email: '', username: '', sending: false, error: false, success: false }),
+  data: () => ({ open: false, email: '', username: '', sending: false, error: false, success: false, mode: undefined }),
   computed: {
     isEmail: function () {
       return this.email.trim().length === 0 ? undefined : (/^(([^<>()\\[\]\\.,;:\s@\\"]+(\.[^<>()\\[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\]\\.,;:\s@\\"]+\.)+[^<>()[\]\\.,;:\s@\\"]{2,})$/i).test(this.email)
@@ -119,7 +137,10 @@ export default {
     }
   },
   methods: {
-    show () { setTimeout(() => (this.open = true), 50) },
+    show (evt) {
+      if (evt) this.mode = evt
+      setTimeout(() => (this.open = true), 50)
+    },
     hide () { if (this.open) this.open = false },
     submit (e) {
       if (this.sending) return
