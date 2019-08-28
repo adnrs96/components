@@ -25,7 +25,10 @@
           :size="full ? 'full' : '5'"
           class="has-text-centered"
         >
-          <s-button @click="$emit('showBetaModal')">
+          <s-button
+            class="is-size-5"
+            @click="$emit('showBetaModal')"
+          >
             Request Access
           </s-button>
         <!-- <s-form-beta :dark="typeof dark === typeof true" /> -->

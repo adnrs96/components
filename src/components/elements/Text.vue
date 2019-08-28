@@ -26,7 +26,7 @@ export default {
     p: {
       type: String,
       default: '1',
-      validator: v => ['0', '1', '2'].includes(v)
+      validator: v => ['0', '1', '2', '3'].includes(v)
     },
     preserveCase: {
       type: Boolean,
@@ -69,7 +69,7 @@ export default {
   },
   computed: {
     getSize: function () {
-      return this.small ? '8' : this.highlight ? '7' : this.head ? this.head : this.p === '0' ? '4' : this.p === '1' ? '5' : '6'
+      return this.small ? '8' : this.highlight ? '7' : this.head ? this.head : this.p === '0' ? '4' : this.p === '1' ? '5' : this.p === '2' ? '6' : '7'
     },
     getColor: function () {
       return this.color ? this.color : this.highlight ? 'gray-4' : this.head ? 'dark-blue' : this.p === '2' ? 'dark' : 'gray-2'
