@@ -26,7 +26,7 @@
     <!-- @slot Use this slot to place the button content -->
     <span
       v-if="$slots.default"
-      :class="{ 'is-hidden-mobile': arrowMobile }"
+      :class="{ 'is-hidden-mobile': arrowMobile, 'has-text-uppercase': uppercase }"
     >
       <slot />
     </span>
@@ -148,6 +148,13 @@ export default {
       default: undefined
     },
     /**
+     * Sets the button uppercase
+     */
+    uppercase: {
+      type: Boolean,
+      default: false
+    },
+    /**
      * Remove the button padding
      */
     borderless: {
@@ -162,7 +169,11 @@ export default {
     url: {
       type: [String, Object],
       default: undefined,
-      validator: v => ((typeof v === typeof '') || (Object.keys(v || {}).length === 2 && Object.keys(v).includes('href') && Object.keys(v).includes('target')))
+      validator: v =>
+        typeof v === typeof '' ||
+        (Object.keys(v || {}).length === 2 &&
+          Object.keys(v).includes('href') &&
+          Object.keys(v).includes('target'))
     },
     /**
      * the route to redirect (button as router-link)
@@ -174,13 +185,19 @@ export default {
   },
   computed: {
     getUrl: function () {
-      return (this.url && typeof this.url !== typeof '') ? this.url.href : this.url
+      return this.url && typeof this.url !== typeof ''
+        ? this.url.href
+        : this.url
     },
     getTarget: function () {
-      return (this.url && typeof this.url !== typeof '') ? this.url.target : undefined
+      return this.url && typeof this.url !== typeof ''
+        ? this.url.target
+        : undefined
     },
     getTitle: function () {
-      return ((this.$slots.default || [{ text: undefined }])[0].text || '').trim()
+      return (
+        (this.$slots.default || [{ text: undefined }])[0].text || ''
+      ).trim()
     },
     arrowIcon: function () {
       return typeof this.arrow === typeof true ? 'arrow' : this.arrow
@@ -212,7 +229,7 @@ export default {
     <s-button state="primary" link>Push Me</s-button>
   </s-div>
   <s-div>
-    <s-button state="secondary" arrow>Secondary</s-button>
+    <s-button state="secondary" arrow uppercase>Secondary</s-button>
     <s-button state="primary" outlined :url="{ href: '//storyscript.io', target: '_blank' }">storyscript.io</s-button>
   </s-div>
   <s-div>
