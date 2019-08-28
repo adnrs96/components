@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.13.0](https://github.com/storyscript/components/compare/v2.11.2...v2.13.0) (2019-08-28)
+
+
+### Bug Fixes
+
+* **button:** fix color on hover ([eb479e1](https://github.com/storyscript/components/commit/eb479e1))
+* **button:** set the buttons not uppercased by default, add the prop to force it ([cf06620](https://github.com/storyscript/components/commit/cf06620))
+* **footer:** add whiteArrow prop for the back2top arrow ([88cbc6f](https://github.com/storyscript/components/commit/88cbc6f))
+
+
+### Features
+
+* **icon:** add check-mark icon ([8f9ea5b](https://github.com/storyscript/components/commit/8f9ea5b))
+* **jumbo:** add mono background ([3d65fc4](https://github.com/storyscript/components/commit/3d65fc4))
+
+
+
 ### [2.12.8](https://github.com/storyscript/components/compare/v2.12.7...v2.12.8) (2019-08-27)
 
 
