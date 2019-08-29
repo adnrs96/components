@@ -6,6 +6,7 @@ import SIconDots from './Dots.vue'
 import SIconFileBroken from './FileBroken.vue'
 import SIconHeart from './Heart.vue'
 import SIconHome from './Home.vue'
+import SIconInformation from './Information.vue'
 import SIconPaginationNext from './PaginationNext.vue'
 import SIconPen from './Pen.vue'
 import SIconQuestionMark from './QuestionMark.vue'
@@ -23,6 +24,7 @@ export default {
   SIconFileBroken,
   SIconHeart,
   SIconHome,
+  SIconInformation,
   SIconPaginationNext,
   SIconPen,
   SIconRocket,
