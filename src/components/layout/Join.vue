@@ -27,7 +27,7 @@
         >
           <s-button
             class="is-size-5"
-            @click="$emit('showBetaModal')"
+            @click="goToPricing()"
           >
             Request Access
           </s-button>
@@ -163,10 +163,10 @@ export default {
         href: '//storyscript.io/about',
         to: { name: 'about' }
       }, {
-      //   title: 'Pricing',
-      //   href: '//storyscript.io/pricing',
-      //   to: { name: 'pricing' }
-      // }, {
+        title: 'Pricing',
+        href: '//storyscript.io/pricing',
+        to: { name: 'pricing' }
+      }, {
         title: 'Jobs',
         href: '//jobs.lever.co/storyscript'
       }, {
@@ -195,7 +195,12 @@ export default {
       //   text: '© 2019 Storyscript'
       }]
     }]
-  })
+  }),
+  methods: {
+    goToPricing () {
+      window.location.assign('https://storyscript.io/pricing')
+    }
+  }
 }
 </script>
 
