@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.15.2](https://github.com/storyscript/components/compare/v2.15.1...v2.15.2) (2019-09-03)
+
+
+### Bug Fixes
+
+* **join:** fix join routing to pricing ([f82953f](https://github.com/storyscript/components/commit/f82953f))
+
+
+
 ### [2.15.1](https://github.com/storyscript/components/compare/v2.15.0...v2.15.1) (2019-09-03)
 
 
