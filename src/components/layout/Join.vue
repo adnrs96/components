@@ -27,7 +27,8 @@
         >
           <s-button
             class="is-size-5"
-            @click="goToPricing()"
+            :url="!internal ? 'https://storyscript.io/pricing' : undefined"
+            :to="internal ? { name: 'pricing' } : undefined"
           >
             Get Started
           </s-button>
@@ -195,12 +196,7 @@ export default {
       //   text: '© 2019 Storyscript'
       }]
     }]
-  }),
-  methods: {
-    goToPricing () {
-      window.location.assign('https://storyscript.io/pricing')
-    }
-  }
+  })
 }
 </script>
 
