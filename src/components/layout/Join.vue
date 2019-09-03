@@ -29,7 +29,7 @@
             class="is-size-5"
             @click="goToPricing()"
           >
-            Request Access
+            Get Started
           </s-button>
         <!-- <s-form-beta :dark="typeof dark === typeof true" /> -->
         </s-div>
