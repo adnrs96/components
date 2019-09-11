@@ -5,6 +5,7 @@
   >
     <s-container
       v-if="join"
+      :slot="!contained ? 'absolute' : 'default'"
       :padding="['none', 'large']"
     >
       <s-container
@@ -12,7 +13,9 @@
         class="story request-access has-padding-medium"
         :class="{background}"
       >
-        <s-div :size="full ? 'full' : 'half'">
+        <s-div
+          :size="full ? 'full' : 'half'"
+        >
           <s-text
             head="3"
             :alignment="full ? 'centered' : 'centered'"
@@ -129,6 +132,10 @@ export default {
     background: {
       type: Boolean,
       default: false
+    },
+    contained: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -206,9 +213,10 @@ export default {
 ```jsx
 <section>
   <s-join
-    full
     is-paddingless
     footer
+    background
+    :dark="false"
   />
 </section>
 ```
