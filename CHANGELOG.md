@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.15.4](https://github.com/storyscript/components/compare/v2.15.3...v2.15.4) (2019-09-17)
+
+
+### Bug Fixes
+
+* **s-footer:** fix center button alignment ([ff65463](https://github.com/storyscript/components/commit/ff65463))
+
+
+
 ### [2.15.3](https://github.com/storyscript/components/compare/v2.15.2...v2.15.3) (2019-09-11)
 
 
