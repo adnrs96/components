@@ -2,12 +2,7 @@
 tests
 
 #sources and node_modules
-src/assets
-src/components
-src/directives
-src/docs
-src/utils
-src/main.js
+src
 node_modules
 
 #styleguide
@@ -16,7 +11,7 @@ styleguide.config.js
 
 
 #build tools
-.circleci
+build
 
 #linter
 .eslintrc*
@@ -36,6 +31,5 @@ jest.config.js
 babel.config.js
 .browserslistrc
 
-#build unnecessary files (demo.html + unminified umd file)
+#build unnecessary files
 dist/demo.html
-dist/storyscript-vue.umd.js
