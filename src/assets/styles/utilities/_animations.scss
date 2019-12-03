@@ -1,0 +1,16 @@
+.animate-wheel {
+  animation-name: wheel;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+@keyframes wheel {
+  from {
+    @apply rotate;
+  }
+
+  to {
+    @apply rotate-360deg;
+  }
+}

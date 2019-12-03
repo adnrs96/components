@@ -1,0 +1,30 @@
+name: Storyscript Components Library Unit Tests
+
+on: [push]
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 13.x]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Caching dependencies
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: v1-deps-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            v1-deps-${{ hashFiles('yarn.lock') }}
+            v1-deps-
+      - name: Install dependencies
+        run: yarn
+      - name: Lint
+        run: yarn lint
+      - name: Run Unit Tests
+        run: yarn test:unit
+      - name: Upload to Codecov
+        run: bash <(curl -s https://codecov.io/bash -t $CODECOV_TOKEN)
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

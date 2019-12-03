@@ -1,4 +1,4 @@
-import { ThemeColorsEnum, AccentColorsEnum } from './theme'
+import { ThemeColorsEnum, AccentColorsEnum } from './Theme'
 
 export declare class StoryscriptPlugin {
   constructor(store: any)

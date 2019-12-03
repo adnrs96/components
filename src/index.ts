@@ -5,9 +5,8 @@ import _Vue, { PluginFunction, VueConstructor } from 'vue'
 import StoryscriptPlugin from '@/storyscript'
 
 const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => {
-
   if (!options.store) {
-    throw new Error('Please provide vuex store.');
+    throw new Error('Please provide vuex store.')
   }
 
   if (Vue !== _Vue) {
@@ -15,7 +14,7 @@ const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => 
   }
 
   const Modules = modules as {[_:string]: any }
-  for (let key in modules) {
+  for (const key in modules) {
     options.store.registerModule(key, Modules[key], { preserveState: !!options.store.state[key] })
   }
 
@@ -32,7 +31,6 @@ const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => 
       Vue.component(key, component as typeof Vue)
     }
   }
-
 }
 
 export { ThemeColorsEnum, AccentColorsEnum } from '&/theme'

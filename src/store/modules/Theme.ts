@@ -1,13 +1,12 @@
 import { ThemeColorsEnum, AccentColorsEnum, ITheme } from '&/theme'
 
 const state: ITheme = {
-    color: ThemeColorsEnum.LIGHT,
-    accent: AccentColorsEnum.INDIGO
+  color: ThemeColorsEnum.LIGHT,
+  accent: AccentColorsEnum.INDIGO
 }
 
 const getters = {
   getTheme: (state: any) => state,
-  isThemeLight: (state: any) => state.color === ThemeColorsEnum.LIGHT,
   getThemeColor: (state: any) => state.color,
   getThemeAccent: (state: any) => state.accent
 }
