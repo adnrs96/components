@@ -1,9 +1,9 @@
 import { shallowMount, Wrapper, createLocalVue } from '@vue/test-utils'
 import Icon from '@/components/Icon/Icon.vue'
-import { IPath } from '&/icon'
+import { IPath, IIcon } from '&/icon'
 import Vuex, { Store } from 'vuex'
 import themeStore from '@/store/modules/Theme'
-const icons = require('./icons.json')
+const icons = require('@/components/Icon/icons.json')
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -139,7 +139,7 @@ describe('Icon.vue', () => {
               propsData
             })
             icon.setProps({ icon: 'key' })
-            expect((icon.vm as any).storyLogoFill(icons.find(i => i.name === 'key')?.path, -1)).toEqual(undefined)
+            expect((icon.vm as any).storyLogoFill(icons.find((i: IIcon) => i.name === 'key')?.path, -1)).toEqual(undefined)
             icon.destroy()
           })
         })
@@ -155,7 +155,7 @@ describe('Icon.vue', () => {
                 propsData
               })
               icon.setProps({ icon: 'story' })
-              expect((icon.vm as any).storyLogoFill((icons.find(i => i.name === 'story')?.path as IPath[])[i], -1)).toEqual(undefined)
+              expect((icon.vm as any).storyLogoFill((icons.find((i: IIcon) => i.name === 'story')?.path as IPath[])[i], -1)).toEqual(undefined)
               icon.destroy()
             })
             ++i
@@ -196,7 +196,7 @@ describe('Icon.vue', () => {
             propsData
           })
           icon.setProps({ icon: 'story' })
-          expect((icon.vm as any).path).toEqual(icons.find(i => i.name === 'story')?.path)
+          expect((icon.vm as any).path).toEqual(icons.find((i: IIcon) => i.name === 'story')?.path)
           icon.destroy()
         })
       })
@@ -210,7 +210,7 @@ describe('Icon.vue', () => {
             propsData
           })
           icon.setProps({ icon: 'dot' })
-          expect((icon.vm as any).circle).toEqual([icons.find(i => i.name === 'dot')?.circle])
+          expect((icon.vm as any).circle).toEqual([icons.find((i: IIcon) => i.name === 'dot')?.circle])
           icon.destroy()
         })
       })
@@ -236,7 +236,7 @@ describe('Icon.vue', () => {
             propsData
           })
           icon.setProps({ icon: 'heart' })
-          expect((icon.vm as any).defs).toEqual(icons.find(i => i.name === 'heart')?.defs)
+          expect((icon.vm as any).defs).toEqual(icons.find((i: IIcon) => i.name === 'heart')?.defs)
           icon.destroy()
         })
       })

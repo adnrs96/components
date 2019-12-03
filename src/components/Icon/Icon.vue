@@ -81,7 +81,7 @@ export default class SIcon extends Vue {
   private readonly emptyIcon: IIcon = { name: '', width: 0, height: 0 }
 
   private get current (): IIcon {
-    return this.icons.find(i => i.name === this.icon) || this.emptyIcon
+    return this.icons.find((i: IIcon) => i.name === this.icon) || this.emptyIcon
   }
 
   private get cursor (): string {
