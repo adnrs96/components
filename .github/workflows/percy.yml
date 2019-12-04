@@ -1,0 +1,32 @@
+name: Percy screenshots
+
+on: [pull_request]
+
+jobs:
+  percy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Caching dependencies
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: v1-deps-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            v1-deps-${{ hashFiles('yarn.lock') }}
+            v1-deps-
+      - name: Install dependencies
+        run: yarn
+      - name: Build styleguide
+        run: yarn build:styleguide
+      - name: Start styleguide
+        run: docker run -d -p 6060:80 -v `pwd`/styleguide:/usr/share/nginx/html nginx
+      - name: Start Percy
+        uses: percy/exec-action@master
+        with:
+          command: "yarn test:percy-headless"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
