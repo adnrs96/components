@@ -77,7 +77,7 @@ export default class SIcon extends Vue {
   @Prop({ type: Boolean, default: false }) readonly clickable!: boolean
   @Prop({ type: String, default: undefined }) readonly color!: string | undefined
 
-  private readonly icons: Array<IIcon> = [...(Icons as unknown as Array<IIcon>)]
+  private readonly icons: Array<IIcon> = Icons as unknown as Array<IIcon>
   private readonly emptyIcon: IIcon = { name: '', width: 0, height: 0 }
 
   private get current (): IIcon {
@@ -97,7 +97,7 @@ export default class SIcon extends Vue {
   }
 
   private get fill (): string {
-    return (this.current.path as IPath)?.fill ? 'fill-current' : (this.current.circle as ICircle)?.stroke ? 'fill-current' : ''
+    return (this.current.path as IPath)?.fill ? 'fill-current' : (this.current.circle as ICircle)?.fill ? 'fill-current' : ''
   }
 
   private storyLogoFill (p: IPath, idx: number): string | undefined {

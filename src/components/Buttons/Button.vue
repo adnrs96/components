@@ -10,7 +10,7 @@
       border,
       'focus:outline-none'
     ]"
-    @click="!disabled ? $emit('click') : ''"
+    @click="$emit('click', $event)"
   >
     <slot />
   </component>

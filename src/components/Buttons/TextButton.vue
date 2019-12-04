@@ -8,7 +8,6 @@
     <s-text
       :p="['regular', 'medium'].includes(size) ? '2' : ['small', 'smaller'].includes(size) ? '3' : '5'"
       :weight="['regular', 'medium', 'small'].includes(size) ? 'semibold' : 'medium'"
-      tag="span"
       :class="[
         defaultColor
       ]"
