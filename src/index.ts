@@ -3,7 +3,7 @@ import modules from '@/store/modules'
 import './assets/styles/tailwind.scss'
 import _Vue, { PluginFunction, VueConstructor } from 'vue'
 import StoryscriptPlugin from '@/storyscript'
-const icons = require('@/components/Icon/icons.json')
+import icons from './components/Icon/icons.json'
 
 const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => {
   if (!options.store) {
