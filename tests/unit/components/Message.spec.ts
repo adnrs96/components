@@ -30,6 +30,9 @@ describe('Message.vue', () => {
                 propsData: {
                   level,
                   darker: true
+                },
+                stubs: {
+                  's-text': '<div />'
                 }
               })
               expect((message.vm as any).color).toEqual(
@@ -56,6 +59,9 @@ describe('Message.vue', () => {
               localVue,
               propsData: {
                 level
+              },
+              stubs: {
+                's-text': '<div />'
               }
             })
             expect((message.vm as any).color).toEqual(

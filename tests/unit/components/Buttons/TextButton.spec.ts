@@ -21,6 +21,9 @@ describe('TextButton.vue', () => {
           localVue,
           propsData: {
             disabled: true
+          },
+          stubs: {
+            's-text': '<div />'
           }
         })
         expect((btn.vm as any).defaultColor).toEqual('text-white')
@@ -36,6 +39,9 @@ describe('TextButton.vue', () => {
                   localVue,
                   propsData: {
                     secondary: true
+                  },
+                  stubs: {
+                    's-text': '<div />'
                   }
                 })
                 store.commit('setThemeColor', ThemeColorsEnum[theme])
@@ -47,7 +53,10 @@ describe('TextButton.vue', () => {
               it(`should return text-${theme === 'LIGHT' ? 'white' : 'gray-50'}`, () => {
                 const btn: Wrapper<TextButton> = shallowMount(TextButton, {
                   store,
-                  localVue
+                  localVue,
+                  stubs: {
+                    's-text': '<div />'
+                  }
                 })
                 store.commit('setThemeColor', ThemeColorsEnum[theme])
                 expect((btn.vm as any).defaultColor).toEqual(`text-${theme === 'LIGHT' ? 'white' : 'gray-50'}`)
