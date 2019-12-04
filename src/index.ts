@@ -3,7 +3,7 @@ import modules from '@/store/modules'
 import './assets/styles/tailwind.scss'
 import _Vue, { PluginFunction, VueConstructor } from 'vue'
 import StoryscriptPlugin from '@/storyscript'
-import icons from '@/components/Icon/icons.json'
+const icons = require('@/components/Icon/icons.json')
 
 const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => {
   if (!options.store) {
@@ -11,6 +11,7 @@ const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => 
   }
 
   if (Vue !== _Vue) {
+    /* eslint-disable no-console */
     console.error('multiple instances of Vue detected')
   }
 

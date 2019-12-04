@@ -247,6 +247,24 @@ describe('Button.vue', () => {
                   btn.destroy()
                 })
               })
+              describe('secondary', () => {
+                it(`should return active:bg-gray-${
+                  theme !== 'DARK' ? '10' : '90'
+                }`, () => {
+                  const btn = shallowMount(Button, {
+                    localVue,
+                    store,
+                    propsData: {
+                      secondary: true
+                    }
+                  })
+                  store.commit('setThemeColor', ThemeColorsEnum[theme])
+                  expect((btn.vm as any).active).toEqual(
+                    `active:bg-gray-${theme !== 'DARK' ? '10' : '90'}`
+                  )
+                  btn.destroy()
+                })
+              })
               it(`should return active:bg-gray-${
                 theme === 'DARK' ? '10' : '90'
               }`, () => {

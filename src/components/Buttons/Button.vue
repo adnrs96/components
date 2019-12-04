@@ -106,10 +106,24 @@ export default class SButton extends Vue {
      * bg-green-90
      * bg-yellow-90
      * bg-indigo-90
+     * active:bg-gray-10 active:bg-gray-90
+     * active:bg-pink-90
+     * active:bg-pink-90
+     * active:bg-magenta-90
+     * active:bg-orange-90
+     * active:bg-lemon-90
+     * active:bg-blue-90
+     * active:bg-red-90
+     * active:bg-green-90
+     * active:bg-yellow-90
+     * active:bg-indigo-90
      */
     if (this.disabled) return ''
     if (this.themeAccent !== undefined && this.accent) {
       return `active:bg-${AccentColorsEnum[this.themeAccent].toLowerCase()}-90`
+    }
+    if (this.secondary) {
+      return `active:bg-gray-${this.themeColor !== ThemeColorsEnum.DARK ? '10' : '90'}`
     }
     return `active:bg-gray-${this.themeColor === ThemeColorsEnum.DARK ? '10' : '90'}`
   }
