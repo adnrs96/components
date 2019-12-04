@@ -57,7 +57,7 @@ export default class Text extends Vue {
 
   private get defaultColor (): string {
     /* text-black text-white */
-    return `text-${this.themeColor === ThemeColorsEnum.DARK ? 'white' : 'black'}`
+    return `text-${this.themeColor === ThemeColorsEnum.LIGHT ? 'black' : 'white'}`
   }
 
   private get fontSize (): string {

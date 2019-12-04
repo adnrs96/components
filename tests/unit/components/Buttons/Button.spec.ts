@@ -85,6 +85,24 @@ describe('Button.vue', () => {
                   btn.destroy()
                 })
               })
+              describe('secondary', () => {
+                it(`should return bg-${
+                  theme !== 'DARK' ? 'white' : 'black'
+                }`, () => {
+                  const btn = shallowMount(Button, {
+                    localVue,
+                    store,
+                    propsData: {
+                      secondary: true
+                    }
+                  })
+                  store.commit('setThemeColor', ThemeColorsEnum[theme])
+                  expect((btn.vm as any).bg).toEqual(
+                    `bg-${theme !== 'DARK' ? 'white' : 'black'}`
+                  )
+                  btn.destroy()
+                })
+              })
               it(`should return bg-${
                 theme === 'DARK' ? 'white' : 'black'
               }`, () => {
@@ -282,6 +300,33 @@ describe('Button.vue', () => {
             })
           }
         }
+      })
+    })
+
+    describe('border', () => {
+      describe('disabled', () => {
+        describe('DARK', () => {
+          it('should return \'border border-gray-30\'', () => {
+            const btn: Wrapper<Button> = shallowMount(Button, {
+              store,
+              localVue
+            })
+            store.commit('setThemeColor', ThemeColorsEnum.DARK)
+            expect((btn.vm as any).border).toEqual('border border-gray-30')
+            btn.destroy()
+          })
+        })
+        describe('LIGHT', () => {
+          it('should return an empty string', () => {
+            const btn: Wrapper<Button> = shallowMount(Button, {
+              store,
+              localVue
+            })
+            store.commit('setThemeColor', ThemeColorsEnum.LIGHT)
+            expect((btn.vm as any).border).toEqual('')
+            btn.destroy()
+          })
+        })
       })
     })
   })

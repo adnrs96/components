@@ -29,14 +29,28 @@ describe('TextButton.vue', () => {
       describe('themes', () => {
         for (const theme in ThemeColorsEnum) {
           if (isNaN(Number(theme))) {
+            describe('secondary', () => {
+              it(`should return text-${theme !== 'LIGHT' ? 'white' : 'gray-50'}`, () => {
+                const btn: Wrapper<TextButton> = shallowMount(TextButton, {
+                  store,
+                  localVue,
+                  propsData: {
+                    secondary: true
+                  }
+                })
+                store.commit('setThemeColor', ThemeColorsEnum[theme])
+                expect((btn.vm as any).defaultColor).toEqual(`text-${theme !== 'LIGHT' ? 'white' : 'gray-50'}`)
+                btn.destroy()
+              })
+            })
             describe(theme, () => {
-              it(`should return text-${theme === 'LIGHT' ? 'white' : 'black'}`, () => {
+              it(`should return text-${theme === 'LIGHT' ? 'white' : 'gray-50'}`, () => {
                 const btn: Wrapper<TextButton> = shallowMount(TextButton, {
                   store,
                   localVue
                 })
                 store.commit('setThemeColor', ThemeColorsEnum[theme])
-                expect((btn.vm as any).defaultColor).toEqual(`text-${theme === 'LIGHT' ? 'white' : 'black'}`)
+                expect((btn.vm as any).defaultColor).toEqual(`text-${theme === 'LIGHT' ? 'white' : 'gray-50'}`)
                 btn.destroy()
               })
             })

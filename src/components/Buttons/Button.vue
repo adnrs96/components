@@ -7,6 +7,7 @@
       cursor,
       padding,
       active,
+      border,
       'focus:outline-none'
     ]"
     @click="!disabled ? $emit('click') : ''"
@@ -24,9 +25,6 @@ import { Getter } from 'vuex-class'
   name: 'SButton'
 })
 export default class SButton extends Vue {
-  protected themeColors = ThemeColorsEnum
-  protected accentColors = AccentColorsEnum
-
   @Prop({ type: Boolean, default: false }) readonly disabled!: boolean
   @Prop({
     type: String,
@@ -35,6 +33,8 @@ export default class SButton extends Vue {
   }) readonly size!: string
 
   @Prop({ type: Boolean, default: false }) readonly accent!: boolean
+
+  @Prop({ type: Boolean, default: false }) readonly secondary!: boolean
 
   @Getter('getThemeColor')
   public readonly themeColor!: ThemeColorsEnum
@@ -45,6 +45,13 @@ export default class SButton extends Vue {
   protected get rounded (): string {
     /* rounded-xl rounded-md */
     return `rounded-${['regular', 'medium'].includes(this.size) ? 'xl' : 'md'}`
+  }
+
+  private get border (): string {
+    if (this.secondary) {
+      return !this.disabled && !this.accent && this.themeColor === ThemeColorsEnum.LIGHT ? 'border border-gray-30' : ''
+    }
+    return !this.disabled && !this.accent && this.themeColor === ThemeColorsEnum.DARK ? 'border border-gray-30' : ''
   }
 
   private get bg (): string {
@@ -67,6 +74,9 @@ export default class SButton extends Vue {
     }
     if (this.themeAccent !== undefined && this.accent) {
       return `bg-${AccentColorsEnum[this.themeAccent].toLowerCase()}-70`
+    }
+    if (this.secondary) {
+      return `bg-${this.themeColor !== ThemeColorsEnum.DARK ? 'white' : 'black'}`
     }
     return `bg-${this.themeColor === ThemeColorsEnum.DARK ? 'white' : 'black'}`
   }
