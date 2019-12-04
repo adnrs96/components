@@ -10,13 +10,9 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator'
-import SText from './Text.vue'
 
 @Component({
-  name: 'SMessage',
-  components: {
-    SText
-  }
+  name: 'SMessage'
 })
 export default class SMessage extends Vue {
   @Prop({ type: Boolean, default: false }) readonly darker!: boolean

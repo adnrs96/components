@@ -65,7 +65,7 @@
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator'
 import { IIcon, IPath, ICircle, IDef } from '&/icon'
-const Icons = require('./icons.json')
+import Icons from './icons.json'
 
 @Component({
   name: 'SIcon'

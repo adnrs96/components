@@ -1,9 +1,8 @@
+import _Vue, { PluginFunction, VueConstructor } from 'vue'
 import components from '@/components'
 import modules from '@/store/modules'
 import './assets/styles/tailwind.scss'
-import _Vue, { PluginFunction, VueConstructor } from 'vue'
 import StoryscriptPlugin from '@/storyscript'
-import icons from './components/Icon/icons.json'
 
 const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => {
   if (!options.store) {
@@ -32,12 +31,6 @@ const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => 
     if (component) {
       Vue.component(key, component as typeof Vue)
     }
-  }
-
-  if (options.styleguide) {
-    Object.defineProperty(Vue.prototype, '$icons', {
-      get () { return Object.values(icons) }
-    })
   }
 }
 

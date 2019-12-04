@@ -22,17 +22,11 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator'
-import SButton from './Button.vue'
-import SText from '@/components/Text.vue'
 import { ThemeColorsEnum } from '&/theme'
 import { Getter } from 'vuex-class'
 
 @Component({
-  name: 'SGradientBorderButton',
-  components: {
-    SButton,
-    SText
-  }
+  name: 'SGradientBorderButton'
 })
 export default class GradientBorderButton extends Vue {
   @Prop({ type: Boolean, default: false }) readonly disabled!: boolean

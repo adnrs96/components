@@ -1,7 +1,6 @@
 import Vue, { PluginFunction } from 'vue'
 
 export { ThemeColorsEnum, AccentColorsEnum } from './theme'
-export { IStop, IPath, ILinearGradient, IIcon, IDef, ICircle } from './icon'
 
 import './storyscript'
 import './vue'

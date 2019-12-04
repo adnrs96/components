@@ -21,14 +21,10 @@
 <script lang="ts">
 import { Component } from 'vue-property-decorator'
 import SButton from './Button.vue'
-import SText from '@/components/Text.vue'
-import { ThemeColorsEnum } from '../../../types/theme'
+import { ThemeColorsEnum } from '&/theme'
 
 @Component({
-  name: 'STextButton',
-  components: {
-    SText
-  }
+  name: 'STextButton'
 })
 export default class STextButton extends SButton {
   private get defaultColor (): string {
