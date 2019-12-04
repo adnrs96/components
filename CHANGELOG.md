@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/storyscript/components/compare/v2.15.4...v3.0.0) (2019-12-04)
+
+
+### Bug Fixes
+
+* **button:** fix purge issue on active: pseudo-classes ([958a063](https://github.com/storyscript/components/commit/958a063))
+* **components:** review ([361e2c7](https://github.com/storyscript/components/commit/361e2c7))
+* **lint:** fix lint issues ([f034e99](https://github.com/storyscript/components/commit/f034e99))
+
+
+### Features
+
+* **button:** add missing props and tests ([76361b0](https://github.com/storyscript/components/commit/76361b0))
+* **button:** add secondary prop to gradient buttom ([6f0d634](https://github.com/storyscript/components/commit/6f0d634))
+* add components and tests ([e23eaeb](https://github.com/storyscript/components/commit/e23eaeb))
+
 ### [2.15.4](https://github.com/storyscript/components/compare/v2.15.3...v2.15.4) (2019-09-17)
 
 
