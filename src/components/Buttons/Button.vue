@@ -1,6 +1,7 @@
 <template>
   <component
     :is="'button'"
+    :type="`${submit ? 'submit' : 'button'}`"
     :class="[
       rounded,
       bg,
@@ -35,6 +36,8 @@ export default class SButton extends Vue {
   @Prop({ type: Boolean, default: false }) readonly accent!: boolean
 
   @Prop({ type: Boolean, default: false }) readonly secondary!: boolean
+
+  @Prop({ type: Boolean, default: false }) readonly submit!: boolean
 
   @Getter('getThemeColor')
   public readonly themeColor!: ThemeColorsEnum

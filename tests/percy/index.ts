@@ -26,6 +26,8 @@ describe('Percy', () => {
     { name: 'SText', path: 'Components/SText' },
     { name: 'SMessage', path: 'Components/SMessage' },
     { name: 'SIcon', path: 'Components/SIcon' }
+    // { name: 'SScrollbar', path: 'Componens/SScrollbar' },
+    // { name: 'SModal', path: 'Componens/SModal' }, // both gives me a 404, I need to find out why
   ]
   let page: puppeteer.Page
   let browser: puppeteer.Browser
@@ -56,7 +58,13 @@ describe('Percy', () => {
     for (const p of pages) {
       await page.goto(`${BASE_URL}/#!/${p.path}`)
       await page.waitFor(1000)
+      if (p.name === 'SModal') {
+        await page.click('#percy-open-btn')
+      }
       await percySnapshot(page, p.name)
+      if (p.name === 'SModal') {
+        await page.click('#close-modal-btn')
+      }
       ++i
     }
     expect(i).toEqual(pages.length)
