@@ -32,6 +32,9 @@ const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => 
       Vue.component(key, component as typeof Vue)
     }
   }
+
+  /* eslint-disable-next-line no-unused-expressions */
+  document.querySelector('body')?.classList.add('text-black')
 }
 
 export { ThemeColorsEnum, AccentColorsEnum } from '&/theme'

@@ -1,4 +1,3 @@
-import { ThemeColorsEnum } from '&/theme'
 import { Wrapper, shallowMount, createLocalVue } from '@vue/test-utils'
 import Text from '@/components/Text.vue'
 import Vuex, { Store } from 'vuex'
@@ -14,26 +13,6 @@ const store: Store<any> = new Vuex.Store({
 
 describe('Text.vue', () => {
   describe('getters', () => {
-    describe('defaultColor', () => {
-      describe('themes', () => {
-        for (const theme in ThemeColorsEnum) {
-          if (isNaN(Number(theme))) {
-            describe(theme, () => {
-              it(`should return text-${theme === 'DARK' ? 'white' : 'black'}`, () => {
-                const text: Wrapper<Text> = shallowMount(Text, {
-                  store,
-                  localVue
-                })
-                store.commit('setThemeColor', ThemeColorsEnum[theme])
-                expect((text.vm as any).defaultColor).toEqual(`text-${theme === 'DARK' ? 'white' : 'black'}`)
-                text.destroy()
-              })
-            })
-          }
-        }
-      })
-    })
-
     describe('fontSize', () => {
       describe('headings', () => {
         it('should return text-5xl for and h1', () => {

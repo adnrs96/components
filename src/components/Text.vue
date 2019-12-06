@@ -8,7 +8,6 @@
       fontSize,
       fontWeight,
       letterSpacing,
-      defaultColor,
       { ease },
       { shimmer },
       { 'bg-transparent': !shimmer },
@@ -54,11 +53,6 @@ export default class Text extends Vue {
 
   @Getter('getThemeColor')
   private readonly themeColor!: ThemeColorsEnum
-
-  private get defaultColor (): string {
-    /* text-black text-white */
-    return `text-${this.themeColor === ThemeColorsEnum.LIGHT ? 'black' : 'white'}`
-  }
 
   private get fontSize (): string {
     /* text-base text-5xl text-2xl text-lg text-sm text-xs */
