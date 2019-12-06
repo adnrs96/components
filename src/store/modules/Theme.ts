@@ -1,7 +1,7 @@
 import { ThemeColorsEnum, AccentColorsEnum, ITheme } from '&/theme'
 
 const state: ITheme = {
-  color: ThemeColorsEnum.DARK,
+  color: ThemeColorsEnum.LIGHT,
   accent: AccentColorsEnum.INDIGO
 }
 
