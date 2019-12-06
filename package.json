@@ -1,6 +1,6 @@
 {
   "name": "@storyscript/vue",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "scripts": {
     "serve": "vue-cli-service styleguidist",
     "build": "yarn build:styleguide && yarn build:lib",
@@ -9,7 +9,8 @@
     "test:percy-headless": "HEADLESS=true TEST_MODE=percy vue-cli-service test:unit --runInBand",
     "lint": "vue-cli-service lint",
     "build:lib": "rollup -c build/lib.rollup.config.js",
-    "build:styleguide": "vue-cli-service styleguidist:build"
+    "build:styleguide": "vue-cli-service styleguidist:build",
+    "pre-release": "standard-version"
   },
   "main": "dist/vue.storyscript.cjs.js",
   "module": "dist/vue.storyscript.esm.js",

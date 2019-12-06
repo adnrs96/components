@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/storyscript/components/compare/v2.15.4...v3.1.0) (2019-12-06)
+
+
+### Features
+
+* **button:** add missing props and tests ([76361b0](https://github.com/storyscript/components/commit/76361b040892d5620cf0e30707dcaad91804353b))
+* **button:** add secondary prop to gradient buttom ([6f0d634](https://github.com/storyscript/components/commit/6f0d634f05ad92e30092e455ca00bc7f6a355454))
+* **icons:** add help-circle,intercom,spectrum,book,disc icons ([7de8190](https://github.com/storyscript/components/commit/7de8190078d132354c931e18e96ab6dbbee8fd6f))
+* add components and tests ([e23eaeb](https://github.com/storyscript/components/commit/e23eaebe5816e3a54759b61743cda8e8be48b44c))
+
+
+### Bug Fixes
+
+* **button:** fix purge issue on active: pseudo-classes ([958a063](https://github.com/storyscript/components/commit/958a063827cf77744c60ce397e0d80c1669ddf9e))
+* **components:** review ([361e2c7](https://github.com/storyscript/components/commit/361e2c76c8d0f742e74ae7f55e3c32ffd5e67c9d))
+* **lint:** fix lint issues ([f034e99](https://github.com/storyscript/components/commit/f034e99a65ed49157422c69fc8b38cc0f41feb50))
+
 ## [3.0.0](https://github.com/storyscript/components/compare/v2.15.4...v3.0.0) (2019-12-04)
 
 
