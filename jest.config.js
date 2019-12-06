@@ -32,6 +32,7 @@ module.exports = {
     '!src/(styleguide|index|storyscript).ts',
     '!src/components/index.ts',
     '!src/utils/*.{js,ts}',
+    '!src/directives/*.ts',
     '!src/store/**/*.{js,ts}',
     '!src/docs/**/*.vue'
   ]

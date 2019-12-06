@@ -1,6 +1,7 @@
-import _Vue, { PluginFunction, VueConstructor } from 'vue'
+import _Vue, { PluginFunction, VueConstructor, DirectiveOptions } from 'vue'
 import components from '@/components'
 import modules from '@/store/modules'
+import directives from '@/directives'
 import './assets/styles/tailwind.scss'
 import StoryscriptPlugin from '@/storyscript'
 
@@ -19,6 +20,14 @@ const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => 
     options.store.registerModule(key, Modules[key], { preserveState: !!options.store.state[key] })
   }
 
+  const Directives = directives as {[_:string]: any }
+  for (const key in directives) {
+    const directive = Directives[key]
+    if (directives) {
+      Vue.directive(key, directive as DirectiveOptions)
+    }
+  }
+
   const plugin = new StoryscriptPlugin(options.store)
 
   Object.defineProperty(Vue.prototype, '$storyscript', {
@@ -35,6 +44,7 @@ const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => 
 }
 
 export { ThemeColorsEnum, AccentColorsEnum } from '&/theme'
+export { IDisplay } from '&/display'
 
 export default {
   install

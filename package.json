@@ -49,6 +49,7 @@
     "husky": "3.1.0",
     "lint-staged": "9.5.0",
     "lodash": "4.17.15",
+    "perfect-scrollbar": "1.4.0",
     "postcss-font-magician": "2.3.1",
     "puppeteer": "2.0.0",
     "rollup": "1.27.8",
@@ -66,12 +67,12 @@
     "vue-cli-plugin-styleguidist": "4.0.7",
     "vue-styleguidist": "4.0.7",
     "vue-template-compiler": "2.6.10",
-    "vuex": "3.1.2",
     "webpack": "4.41.2"
   },
   "dependencies": {
     "vue-property-decorator": "8.3.0",
     "vue-runtime-helpers": "1.1.2",
+    "vuex": "3.1.2",
     "vuex-class": "0.3.2"
   },
   "config": {
