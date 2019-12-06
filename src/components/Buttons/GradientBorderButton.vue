@@ -11,6 +11,7 @@
         padding,
         active
       ]"
+      @click="$emit('click', $event)"
     >
       <s-text
         p="5"

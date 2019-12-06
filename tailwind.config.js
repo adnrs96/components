@@ -11,6 +11,7 @@ module.exports = {
         sm: '.25rem',
         md: '.3125rem',
         xl: '.4375rem',
+        '2xl': '.625rem',
         '3xl': '1.875rem'
       },
       spacing: {
@@ -35,6 +36,9 @@ module.exports = {
       },
       maxWidth: {
         xxs: '10rem'
+      },
+      opacity: {
+        65: '.65'
       }
     },
     letterSpacing: {

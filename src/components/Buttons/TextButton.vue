@@ -4,6 +4,7 @@
     :size="size"
     :accent="accent"
     :secondary="secondary"
+    @click="$emit('click', $event)"
   >
     <s-text
       :p="['regular', 'medium'].includes(size) ? '2' : ['small', 'smaller'].includes(size) ? '3' : '5'"
