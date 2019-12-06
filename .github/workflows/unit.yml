@@ -28,3 +28,5 @@ jobs:
         run: bash <(curl -s https://codecov.io/bash -t $CODECOV_TOKEN)
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - name: Build library
+        command: yarn build:lib

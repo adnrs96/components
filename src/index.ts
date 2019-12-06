@@ -47,7 +47,6 @@ const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => 
 }
 
 export { ThemeColorsEnum, AccentColorsEnum } from '&/theme'
-export { IDisplay } from '&/display'
 
 export default {
   install
