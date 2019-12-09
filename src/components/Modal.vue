@@ -1,39 +1,46 @@
 <template>
-  <s-scrollbar
+  <div
     v-show="open"
-    ref="modalScrollbar"
-    class="w-full h-screen bg-gray-100 opacity-65 py-8"
   >
     <div
-      v-click-outside="hide"
-      :class="[
-        'flex flex-col items-center w-auto max-w-lg mx-auto',
-        rounded,
-        bg
-      ]"
+      class="w-screen h-screen z-40 fixed inset-0 bg-gray-100 opacity-65"
+    />
+    <s-scrollbar
+      ref="modalScrollbar"
+      class="z-50 fixed inset-0 w-screen h-screen py-8 opacity-100"
     >
-      <div class="w-full flex justify-end -mt-4 ml-4">
-        <div
-          v-if="closable"
-          id="modal-close-btn"
-          class="w-8 h-8 bg-gray-30 rounded-full flex items-center justify-center cursor-pointer"
-          @click="hide"
-        >
-          <s-icon
-            icon="cross"
-            clickable
-          />
-        </div>
-      </div>
       <div
+        v-click-outside="hide"
         :class="[
-          padding
+          'flex flex-col items-center w-auto mx-auto max-w-3xl',
+          rounded,
+          bg
         ]"
       >
-        <slot />
+        <div class="w-full flex justify-end -mt-4 ml-4">
+          <div
+            v-if="closable"
+            id="modal-close-btn"
+            class="w-8 h-8 bg-gray-30 rounded-full flex items-center justify-center cursor-pointer"
+            @click="hide"
+          >
+            <s-icon
+              icon="cross"
+              clickable
+            />
+          </div>
+        </div>
+        <div
+          :class="[
+            padding,
+            'w-full'
+          ]"
+        >
+          <slot />
+        </div>
       </div>
-    </div>
-  </s-scrollbar>
+    </s-scrollbar>
+  </div>
 </template>
 
 <script lang="ts">
@@ -112,7 +119,9 @@ SModal
 
 ```
 <div>
-  <s-modal ref="modal">Ceci n'est pas une modal.</s-modal>
+  <s-modal ref="modal">
+    <div class="flex items-center justify-center">Ceci n'est pas une modal.</div>
+  </s-modal>
   <s-text-button id="percy-open-btn" size="small" accent @click="$refs.modal.show()">Open</s-text-button>
 </div>
 ```
