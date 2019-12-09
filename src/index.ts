@@ -2,6 +2,7 @@ import _Vue, { PluginFunction, VueConstructor, DirectiveOptions } from 'vue'
 import components from '@/components'
 import modules from '@/store/modules'
 import directives from '@/directives'
+import './assets/styles/tailwind.scss'
 import StoryscriptPlugin from '@/storyscript'
 
 const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => {
