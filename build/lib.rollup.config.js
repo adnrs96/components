@@ -17,11 +17,12 @@ export default {
   }],
   plugins: [
     postcss({
-      use: ['sass']
+      use: ['sass'],
+      extract: true
     }),
     typescript(),
     vue({
-      css: true
+      css: false
     }),
     json({ compact: true })
   ]
