@@ -1,7 +1,7 @@
 import vue from 'rollup-plugin-vue'
 import typescript from 'rollup-plugin-typescript'
+import postcss from 'rollup-plugin-postcss'
 import json from '@rollup/plugin-json'
-import postcss from 'rollup-plugin-postcss'	
 
 process.env.NODE_ENV = 'production'
 
@@ -16,7 +16,7 @@ export default {
     file: 'dist/vue.storyscript.esm.js'
   }],
   plugins: [
-    postcss({	
+    postcss({
       use: ['sass'],
       extract: true
     }),
