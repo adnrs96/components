@@ -16,7 +16,8 @@
   "module": "dist/vue.storyscript.esm.js",
   "files": [
     "dist",
-    "types"
+    "types",
+    "src/assets/styles"
   ],
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "1.3.0",
@@ -52,6 +53,7 @@
     "postcss-font-magician": "2.3.1",
     "puppeteer": "2.0.0",
     "rollup": "1.27.8",
+    "rollup-plugin-copy": "^3.1.0",
     "rollup-plugin-postcss": "2.0.3",
     "rollup-plugin-typescript": "1.0.1",
     "rollup-plugin-vue": "5.1.4",
