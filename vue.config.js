@@ -5,6 +5,9 @@ module.exports = {
       alias: {
         '&': path.resolve(__dirname, 'types/')
       }
+    },
+    devServer: {
+      disableHostCheck: true
     }
   }
 }

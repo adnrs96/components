@@ -3,6 +3,7 @@ const path = require('path')
 module.exports = {
   // set your styleguidist configuration here
   title: 'Storyscript',
+  serverPort: process.env.PORT || 6060,
   components: 'src/components/**/[A-Z]*.vue',
   pagePerSection: true,
   version: require('./package.json').version,
