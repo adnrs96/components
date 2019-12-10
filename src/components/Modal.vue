@@ -12,12 +12,12 @@
       <div
         v-click-outside="hide"
         :class="[
-          'flex flex-col items-center w-auto mx-auto max-w-3xl',
+          'relative flex flex-col items-center w-fit-content mx-auto max-w-2xl',
           rounded,
           bg
         ]"
       >
-        <div class="w-full flex justify-end -mt-4 ml-4">
+        <div class="absolute top-0 right-0 -mt-4 -mr-4">
           <div
             v-if="closable"
             id="modal-close-btn"
@@ -97,7 +97,7 @@ export default class SModal extends Vue implements IDisplay {
   }
 
   private get padding (): string {
-    return 'pt-8 pb-10 px-24'
+    return 'pt-10 pb-16 px-28'
   }
 
   private get bg (): string {

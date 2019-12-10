@@ -22,7 +22,8 @@ module.exports = {
         '1/2': '.125rem', // 2px
         '7/8': '.875rem', // 14px
         14: '3.5rem', // 56px
-        22: '5.5rem' // 88px
+        22: '5.5rem', // 88px
+        28: '7rem'
       },
       boxShadow: {
         sm: '0 3px 5px rgba(0, 0, 0, 0.05)',

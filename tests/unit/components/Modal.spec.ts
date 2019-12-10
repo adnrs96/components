@@ -101,8 +101,8 @@ describe('Modal.vue', () => {
       })
     })
     describe('padding', () => {
-      it('should return \'pt-8 pb-10 px-24\'', () => {
-        expect(vm.padding).toEqual('pt-8 pb-10 px-24')
+      it('should return \'pt-10 pb-16 px-28\'', () => {
+        expect(vm.padding).toEqual('pt-10 pb-16 px-28')
       })
     })
     describe('bg', () => {
