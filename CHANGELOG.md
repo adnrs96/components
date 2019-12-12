@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/storyscript/components/compare/v3.3.0...v3.4.0) (2019-12-12)
+
+
+### Features
+
+* **icons:** add icons ([9f8197f](https://github.com/storyscript/components/commit/9f8197feb1839c4f9170237bb50ed1d7a1c8d9a6))
+
 ## [3.3.0](https://github.com/storyscript/components/compare/v3.2.7...v3.3.0) (2019-12-11)
 
 
