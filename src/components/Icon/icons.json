@@ -983,5 +983,28 @@
         "stroke-linejoin": "round"
       }
     ]
+  },
+  {
+    "name": "paper-plane",
+    "width": 16,
+    "height": 16,
+    "path": [
+      {
+        "d": "M14.6667 1.33337L7.33337 8.66671",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        "stoke-width": 1.5
+      },
+      {
+        "d": "M14.6667 1.33337L10 14.6667L7.33337 8.66671L1.33337 6.00004L14.6667 1.33337Z",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        "stoke-width": 1.5
+      }
+    ]
   }
 ]

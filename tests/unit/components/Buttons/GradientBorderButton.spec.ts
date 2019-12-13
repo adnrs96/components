@@ -70,50 +70,6 @@ describe('GradientBorderButton', () => {
       })
     })
 
-    describe('cursor', () => {
-      describe('disabled', () => {
-        it('should return \'cursor-not-allowed\'', () => {
-          const btn: Wrapper<GradientBorderButton> = shallowMount(GradientBorderButton, {
-            store,
-            localVue,
-            propsData: {
-              disabled: true
-            },
-            stubs: {
-              's-text': '<div />'
-            }
-          })
-          expect((btn.vm as any).cursor).toEqual('cursor-not-allowed')
-          btn.destroy()
-        })
-      })
-      it('should return \'cursor-pointer\'', () => {
-        const btn: Wrapper<GradientBorderButton> = shallowMount(GradientBorderButton, {
-          store,
-          localVue,
-          stubs: {
-            's-text': '<div />'
-          }
-        })
-        expect((btn.vm as any).cursor).toEqual('cursor-pointer')
-        btn.destroy()
-      })
-    })
-
-    describe('padding', () => {
-      it('should return \'px-3 py-1', () => {
-        const btn: Wrapper<GradientBorderButton> = shallowMount(GradientBorderButton, {
-          store,
-          localVue,
-          stubs: {
-            's-text': '<div />'
-          }
-        })
-        expect((btn.vm as any).padding).toEqual('px-3 py-1')
-        btn.destroy()
-      })
-    })
-
     describe('rounded', () => {
       it('should return \'rounded-sm\'', () => {
         const btn: Wrapper<GradientBorderButton> = shallowMount(GradientBorderButton, {
@@ -176,6 +132,61 @@ describe('GradientBorderButton', () => {
                 })
                 store.commit('setThemeColor', ThemeColorsEnum[theme])
                 expect((btn.vm as any).active).toEqual(`active:bg-gray-${theme === 'DARK' ? '10' : '90'}`)
+                btn.destroy()
+              })
+            })
+          }
+        }
+      })
+    })
+
+    describe('bg', () => {
+      describe('themes', () => {
+        for (const theme in ThemeColorsEnum) {
+          if (isNaN(Number(theme))) {
+            describe(theme, () => {
+              describe('disabled', () => {
+                it('should return bg-gray-20', () => {
+                  const btn = shallowMount(GradientBorderButton, {
+                    store,
+                    localVue,
+                    propsData: {
+                      disabled: true
+                    }
+                  })
+                  expect((btn.vm as any).bg).toEqual('bg-gray-20')
+                  btn.destroy()
+                })
+              })
+              describe('secondary', () => {
+                it(`should return bg-${
+                  theme !== 'DARK' ? 'white' : 'black'
+                }`, () => {
+                  const btn = shallowMount(GradientBorderButton, {
+                    localVue,
+                    store,
+                    propsData: {
+                      secondary: true
+                    }
+                  })
+                  store.commit('setThemeColor', ThemeColorsEnum[theme])
+                  expect((btn.vm as any).bg).toEqual(
+                    `bg-${theme !== 'DARK' ? 'white' : 'black'}`
+                  )
+                  btn.destroy()
+                })
+              })
+              it(`should return bg-${
+                theme === 'DARK' ? 'white' : 'black'
+              }`, () => {
+                const btn = shallowMount(GradientBorderButton, {
+                  localVue,
+                  store
+                })
+                store.commit('setThemeColor', ThemeColorsEnum[theme])
+                expect((btn.vm as any).bg).toEqual(
+                  `bg-${theme === 'DARK' ? 'white' : 'black'}`
+                )
                 btn.destroy()
               })
             })

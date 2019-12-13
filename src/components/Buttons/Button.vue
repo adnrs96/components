@@ -50,14 +50,14 @@ export default class SButton extends Vue {
     return `rounded-${['regular', 'medium'].includes(this.size) ? 'xl' : 'md'}`
   }
 
-  private get border (): string {
+  protected get border (): string {
     if (this.secondary) {
       return !this.disabled && !this.accent && this.themeColor === ThemeColorsEnum.LIGHT ? 'border border-gray-30' : ''
     }
     return !this.disabled && !this.accent && this.themeColor === ThemeColorsEnum.DARK ? 'border border-gray-30' : ''
   }
 
-  private get bg (): string {
+  protected get bg (): string {
     /**
      * bg-white bg-black bg-gray-90 bg-gray-20
      * bg-pink-20 bg-pink-70
@@ -84,19 +84,19 @@ export default class SButton extends Vue {
     return `bg-${this.themeColor === ThemeColorsEnum.DARK ? 'white' : 'black'}`
   }
 
-  private get cursor ():string {
+  protected get cursor ():string {
     /* cursor-pointer cursor-not-allowed */
     return `cursor-${this.disabled ? 'not-allowed' : 'pointer'}`
   }
 
-  private get padding (): string {
+  protected get padding (): string {
     return this.size === 'small' ? 'p-3'
       : this.size === 'medium' ? 'p-7/8'
         : this.size === 'smaller' ? 'px-3 py-2'
           : this.size === 'smallest' ? 'px-3 py-1' : 'p-4'
   }
 
-  private get active (): string {
+  protected get active (): string {
     /**
      * bg-gray-10 bg-gray-90
      * bg-pink-90
