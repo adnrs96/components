@@ -35,13 +35,9 @@
 import { Component } from 'vue-property-decorator'
 import { ThemeColorsEnum } from '&/theme'
 import SButton from './Button.vue'
-import SText from '@/components/Text.vue'
 
 @Component({
-  name: 'SGradientBorderButton',
-  components: {
-    SText
-  }
+  name: 'SGradientBorderButton'
 })
 export default class GradientBorderButton extends SButton {
   protected get bg (): string {

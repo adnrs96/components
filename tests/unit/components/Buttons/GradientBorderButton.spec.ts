@@ -11,6 +11,9 @@ const store: Store<any> = new Vuex.Store({
   getters: { ...themeStore.getters },
   mutations: { ...themeStore.mutations }
 })
+const stubs = {
+  's-text': '<div'
+}
 
 describe('GradientBorderButton', () => {
   describe('getters', () => {
@@ -23,9 +26,7 @@ describe('GradientBorderButton', () => {
             propsData: {
               disabled: true
             },
-            stubs: {
-              's-text': '<div />'
-            }
+            stubs
           })
           expect((btn.vm as any).defaultColor).toEqual('text-gray-100')
           btn.destroy()
@@ -43,9 +44,7 @@ describe('GradientBorderButton', () => {
                     propsData: {
                       secondary: true
                     },
-                    stubs: {
-                      's-text': '<div />'
-                    }
+                    stubs
                   })
                   store.commit('setThemeColor', ThemeColorsEnum[theme])
                   expect((btn.vm as any).defaultColor).toEqual(`text-${theme !== 'DARK' ? 'gray-100' : 'white'}`)
@@ -56,9 +55,7 @@ describe('GradientBorderButton', () => {
                 const btn: Wrapper<GradientBorderButton> = shallowMount(GradientBorderButton, {
                   store,
                   localVue,
-                  stubs: {
-                    's-text': '<div />'
-                  }
+                  stubs
                 })
                 store.commit('setThemeColor', ThemeColorsEnum[theme])
                 expect((btn.vm as any).defaultColor).toEqual(`text-${theme === 'DARK' ? 'gray-100' : 'white'}`)
@@ -75,9 +72,7 @@ describe('GradientBorderButton', () => {
         const btn: Wrapper<GradientBorderButton> = shallowMount(GradientBorderButton, {
           store,
           localVue,
-          stubs: {
-            's-text': '<div />'
-          }
+          stubs
         })
         expect((btn.vm as any).rounded).toEqual('rounded-md')
         btn.destroy()
@@ -90,9 +85,7 @@ describe('GradientBorderButton', () => {
           const btn: Wrapper<GradientBorderButton> = shallowMount(GradientBorderButton, {
             store,
             localVue,
-            stubs: {
-              's-text': '<div />'
-            },
+            stubs,
             propsData: {
               disabled: true
             }
@@ -110,9 +103,7 @@ describe('GradientBorderButton', () => {
                   const btn: Wrapper<GradientBorderButton> = shallowMount(GradientBorderButton, {
                     store,
                     localVue,
-                    stubs: {
-                      's-text': '<div />'
-                    },
+                    stubs,
                     propsData: {
                       secondary: true
                     }
@@ -126,9 +117,7 @@ describe('GradientBorderButton', () => {
                 const btn: Wrapper<GradientBorderButton> = shallowMount(GradientBorderButton, {
                   store,
                   localVue,
-                  stubs: {
-                    's-text': '<div />'
-                  }
+                  stubs
                 })
                 store.commit('setThemeColor', ThemeColorsEnum[theme])
                 expect((btn.vm as any).active).toEqual(`active:bg-gray-${theme === 'DARK' ? '10' : '90'}`)
@@ -152,7 +141,8 @@ describe('GradientBorderButton', () => {
                     localVue,
                     propsData: {
                       disabled: true
-                    }
+                    },
+                    stubs
                   })
                   expect((btn.vm as any).bg).toEqual('bg-gray-20')
                   btn.destroy()
@@ -167,7 +157,8 @@ describe('GradientBorderButton', () => {
                     store,
                     propsData: {
                       secondary: true
-                    }
+                    },
+                    stubs
                   })
                   store.commit('setThemeColor', ThemeColorsEnum[theme])
                   expect((btn.vm as any).bg).toEqual(
@@ -181,7 +172,8 @@ describe('GradientBorderButton', () => {
               }`, () => {
                 const btn = shallowMount(GradientBorderButton, {
                   localVue,
-                  store
+                  store,
+                  stubs
                 })
                 store.commit('setThemeColor', ThemeColorsEnum[theme])
                 expect((btn.vm as any).bg).toEqual(
