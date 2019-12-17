@@ -4,6 +4,7 @@ import modules from '@/store/modules'
 import directives from '@/directives'
 import './assets/styles/tailwind.scss'
 import StoryscriptPlugin from '@/storyscript'
+import ThemeStore from '@/store/modules/Theme'
 
 const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => {
   if (!options.store) {
@@ -47,6 +48,7 @@ const install: PluginFunction<any> = (Vue: typeof _Vue, options?: any): void => 
 }
 
 export { ThemeColorsEnum, AccentColorsEnum } from '&/theme'
+export { ThemeStore }
 
 export default {
   install
