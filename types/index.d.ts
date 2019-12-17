@@ -4,7 +4,7 @@ import Vue, { PluginFunction } from 'vue'
 import './storyscript'
 import './vue'
 
-export { ThemeColorsEnum, AccentColorsEnum } from './theme'
+export { ThemeColorsEnum, AccentColorsEnum, ThemeStore } from './theme'
 export { IDisplay } from './display'
 export { IScrollbar } from './scrollbar'
 

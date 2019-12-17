@@ -6,13 +6,13 @@ const state: ITheme = {
 }
 
 const getters = {
-  getTheme: (state: any) => state,
-  getThemeColor: (state: any) => state.color,
-  getThemeAccent: (state: any) => state.accent
+  getTheme: (state: ITheme) => state,
+  getThemeColor: (state: ITheme) => state.color,
+  getThemeAccent: (state: ITheme) => state.accent
 }
 
 const mutations = {
-  setThemeColor: (state: any, color: ThemeColorsEnum) => {
+  setThemeColor: (state: ITheme, color: ThemeColorsEnum) => {
     const body = document.querySelector('body')
 
     state.color = color
@@ -24,7 +24,7 @@ const mutations = {
       body.classList.add('text-black')
     }
   },
-  setAccentColor: (state: any, accent: AccentColorsEnum) => {
+  setAccentColor: (state: ITheme, accent: AccentColorsEnum) => {
     state.accent = accent
   }
 }
