@@ -14,17 +14,17 @@ jobs:
         with:
           node-version: 12
       - name: Caching dependencies
-          id: cache-deps
-          uses: actions/cache@v1
-          with:
-            path: node_modules
-            key: v1-deps-${{ hashFiles('yarn.lock') }}
-            restore-keys: |
-              v1-deps-${{ hashFiles('yarn.lock') }}
-              v1-deps-
+        id: cache-deps
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: v1-deps-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            v1-deps-${{ hashFiles('yarn.lock') }}
+            v1-deps-
       - name: Installing dependencies
-          if: steps.cache-deps.outputs.cache-hit != 'true'
-          run: yarn 
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: yarn 
       - name: Build library
         run: yarn build:lib
       - name: Uploading artifacts
