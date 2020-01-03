@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.4](https://github.com/storyscript/components/compare/v3.5.3...v3.5.4) (2020-01-03)
+
+
+### Bug Fixes
+
+* **modal:** fix modal alignment ([8ea407f](https://github.com/storyscript/components/commit/8ea407f0e6242e360c756e3b3128a8faf0363544))
+
 ### [3.5.3](https://github.com/storyscript/components/compare/v3.5.2...v3.5.3) (2019-12-17)
 
 ### [3.5.2](https://github.com/storyscript/components/compare/v3.5.1...v3.5.2) (2019-12-17)
