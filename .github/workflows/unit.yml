@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Caching dependencies
+        id: cache-deps
         uses: actions/cache@v1
         with:
           path: node_modules
@@ -18,8 +19,9 @@ jobs:
           restore-keys: |
             v1-deps-${{ hashFiles('yarn.lock') }}
             v1-deps-
-      - name: Install dependencies
-        run: yarn
+      - name: Installing dependencies
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: yarn 
       - name: Lint
         run: yarn lint
       - name: Run Unit Tests
