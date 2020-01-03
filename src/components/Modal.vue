@@ -7,12 +7,12 @@
     />
     <s-scrollbar
       ref="modalScrollbar"
-      class="z-50 fixed inset-0 w-screen h-screen py-8 opacity-100"
+      class="z-50 flex fixed inset-0 w-screen h-screen py-8 opacity-100"
     >
       <div
         v-click-outside="hide"
         :class="[
-          'relative flex flex-col items-center w-fit-content mx-auto max-w-2xl',
+          'relative flex flex-col items-center w-fit-content m-auto max-w-2xl',
           rounded,
           bg
         ]"
