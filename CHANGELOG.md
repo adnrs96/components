@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.5](https://github.com/storyscript/components/compare/v3.1.0...v3.5.5) (2020-01-06)
+
+
+### Features
+
+* **button:** add more sizes to the gradient button ([224772f](https://github.com/storyscript/components/commit/224772ff8cf3070833a7d96070d8016104a365a6))
+* **icon:** add book-open icon ([427700a](https://github.com/storyscript/components/commit/427700a45fec245d8f1c25756334ac8e333051eb))
+* **icons:** add icons ([9f8197f](https://github.com/storyscript/components/commit/9f8197feb1839c4f9170237bb50ed1d7a1c8d9a6))
+* **scrollbar+modal:** add scrollbar and modal ([80edd26](https://github.com/storyscript/components/commit/80edd26c93dac34501d54bcbf31ce1c4b93dd596))
+
+
+### Bug Fixes
+
+* **modal:** fix modal alignment ([8ea407f](https://github.com/storyscript/components/commit/8ea407f0e6242e360c756e3b3128a8faf0363544))
+* fix imports ([63057fa](https://github.com/storyscript/components/commit/63057fab47dffd9c74ecd7b74d02a03002be063d))
+* **modal:** fix modal behavior ([51bcb1a](https://github.com/storyscript/components/commit/51bcb1a6d889d6964d247178eac8effa24ee6b60))
+
 ### [3.5.4](https://github.com/storyscript/components/compare/v3.5.3...v3.5.4) (2020-01-03)
 
 
