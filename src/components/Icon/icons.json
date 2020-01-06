@@ -1006,5 +1006,44 @@
         "stoke-width": 1.5
       }
     ]
+  },
+  {
+    "name": "align-left",
+    "width": 16,
+    "height": 16,
+    "path": [
+      {
+        "d": "M11.3333 6.66663H2",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        "stoke-width": 1.5
+      },
+      {
+        "d": "M14 4H2",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        "stoke-width": 1.5
+      },
+      {
+        "d": "M14 9.33337H2",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        "stoke-width": 1.5
+      },
+      {
+        "d": "M11.3333 12H2",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round",
+        "stoke-width": 1.5
+      }
+    ]
   }
 ]
