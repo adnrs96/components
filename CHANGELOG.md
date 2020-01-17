@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/storyscript/components/compare/v3.5.6...v3.6.0) (2020-01-17)
+
+
+### Features
+
+* **icons:** add home icon ([8b8e52c](https://github.com/storyscript/components/commit/8b8e52c2533a8648a6711ecafba28a1a88a5af26))
+
 ### [3.5.6](https://github.com/storyscript/components/compare/v3.5.5...v3.5.6) (2020-01-17)
 
 ### [3.5.5](https://github.com/storyscript/components/compare/v3.1.0...v3.5.5) (2020-01-06)
