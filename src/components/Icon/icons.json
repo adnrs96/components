@@ -1045,5 +1045,54 @@
         "stoke-width": 1.5
       }
     ]
+  },
+  {
+    "name": "list-dots",
+    "width": 16,
+    "height": 16,
+    "path": [
+      {
+        "d": "M5.33301 4H13.9997",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      },
+      {
+        "d": "M5.33301 8H13.9997",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      },
+      {
+        "d": "M5.33301 12H13.9997",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      },
+      {
+        "d": "M2 4H2.00667",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      },
+      {
+        "d": "M2 8H2.00667",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      },
+      {
+        "d": "M2 12H2.00667",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      }
+    ]
   }
 ]
