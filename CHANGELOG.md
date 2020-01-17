@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/storyscript/components/compare/v3.6.0...v3.7.0) (2020-01-17)
+
+
+### Features
+
+* **icons:** add simple and double-quotes ([fb592f7](https://github.com/storyscript/components/commit/fb592f7b9e2ebac823e5e2933a554b523019c173))
+
 ## [3.6.0](https://github.com/storyscript/components/compare/v3.5.6...v3.6.0) (2020-01-17)
 
 
