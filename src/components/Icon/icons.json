@@ -1153,5 +1153,33 @@
         "stroke-linejoin": "round"
       }      
     ]
+  },
+  {
+    "name": "map",
+    "width": 16,
+    "height": 16,
+    "path": [
+      {
+        "d": "M0.666504 3.99992V14.6666L5.33317 11.9999L10.6665 14.6666L15.3332 11.9999V1.33325L10.6665 3.99992L5.33317 1.33325L0.666504 3.99992Z",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      },
+      {
+        "d": "M5.3335 1.33325V11.9999",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      },
+      {
+        "d": "M10.6665 4V14.6667",
+        "stroke": "currentColor",
+        "fill": "none",
+        "stroke-linecap": "round",
+        "stroke-linejoin": "round"
+      }
+    ]
   }
 ]
